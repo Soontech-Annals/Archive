@@ -93,3 +93,25 @@ function getEntriesInCategory(category) {
         return entry.path[0] === category;
     });
 }
+
+// Create markdown table of categories and number of entries
+
+const categories = data.categories.map((category) => {
+    return [`[${category}](${encodeURI(category)})`, getEntriesInCategory(category).length];
+});
+
+const maxCategoryLength = categories.reduce((max, category) => {
+    return Math.max(max, category[0].length);
+}, 10);
+
+const maxEntryLength = categories.reduce((max, category) => {
+    return Math.max(max, category[1].toString().length);
+}, 7);
+
+const categoryTable = categories.map((category) => {
+    return `| ${category[0].padEnd(maxCategoryLength)} | ${category[1].toString().padStart(maxEntryLength)} |`;
+}).join("\n");
+
+const categoryTableString = `# Categories\n\n| Category${" ".repeat(maxCategoryLength - 8)} | Entries |\n|${"-".repeat(maxCategoryLength + 2)}|${"-".repeat(maxEntryLength + 2)}|\n${categoryTable}`;
+
+fs.writeFileSync(Path.join(__dirname, "Archive", "README.md"), categoryTableString, "utf8");
