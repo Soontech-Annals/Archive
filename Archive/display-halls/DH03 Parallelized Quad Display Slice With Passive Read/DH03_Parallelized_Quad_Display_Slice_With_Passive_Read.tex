@@ -1,0 +1,100 @@
+% Options here are passed to the article class.
+% Most common options: 10pt, 11pt, 12pt
+\documentclass[10pt]{datasheet}
+
+% Input encoding and typographical rules for English language
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[english]{isodate}
+
+% tikz is used to draw images in this example, but you can
+% also use \includegraphics{}.
+\usepackage{graphicx}
+
+% These define global texts that are used in headers and titles.
+\title{DH03: Parallelized Quad Display Slice With Passive Read}
+\author{51 mayday, Obi, and hampter}
+\tags{display-halls, quad-display, slice, passive-read, parallelized}
+\date{December 2022}
+\revision{Revision 1}
+
+\begin{document}
+\maketitle
+
+\section{Features}
+
+\begin{itemize}
+\item{Minimum hoppers \& chests for this layout}
+\item{Fully hopper locked}
+\item{In-slice lists for which chests need to be restocked from empty}
+\item{Each quarter-slice can restock and call in parallel}
+\item{All inventories easily reachable/visible}
+\item{Control logic somewhat simple}
+\end{itemize}
+
+\section{Applications}
+
+\begin{itemize}
+\item{Encoded quad-display hall}
+\end{itemize}
+
+\section{General Description}
+The DH03 quad display slice has 4 box displays with passive read ability and parallelized control logic. It has a fully hopperlocked layout with no visible pistons. The bottom displays has one buffer box with global first box placement. For full hopperlocking, the top displays require a gap every 32 blocks. Box collection is not fully reliable. Top display will break if used aggressively.
+% Switch to next column
+\vfill\break
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.48\textwidth]{QuadBulk_V5_3.png}
+    \caption{\centering DH03 Quad Display Slice}
+\end{figure}
+
+% For wide tables, a single column layout is better. It can be switched
+% page-by-page.
+\onecolumn
+
+\section{Device Specifications}
+
+\begin{table}[h]
+    \caption{Device Specifications}
+    \begin{tabularx}{\textwidth}{l | c c c | c | X}
+        \thickhline
+        \textbf{Parameter} & \textbf{Min.} & \textbf{Typ.} & \textbf{Max.} &
+        \textbf{Unit} & \textbf{Conditions} \\
+        \hline
+        Item Throughput  & 8 & - & - & gt & Normal Usage \\
+        \hline
+        MC Version & 1.16 & 1.17.1 & - & MCV & Latest version at time of writing: 1.19.3\\
+        \hline
+        Dimensions & & 1 x 33 x 22 & & Blocks & \\
+        \thickhline
+\end{tabularx}
+\end{table}
+\newpage
+\section{Testing Data}
+\begin{table}[h]
+\caption{Executed Tests}
+\begin{tabularx}{\textwidth}{l | X}
+    \thickhline
+    \textbf{Test} & \textbf{Result} \\
+    \hline
+    Display operation & Box displays were able to replace boxes when emptied. \\
+    \thickhline
+\end{tabularx}
+\end{table}
+
+\section{Download Information}
+\begin{table}[h]
+    \caption{Download Information}
+    \begin{tabularx}{\textwidth}{l | l | l | X}
+        \thickhline
+        \textbf{Identifier} & \textbf{MC} & \textbf{File} & \textbf{Description} \\
+        \hline
+        DH03 & 1.17.1 & DH03\_QuadBulk\_V5\_3.litematic & Litematic of slice. \\
+        \hline
+        \thickhline
+    \end{tabularx}
+\end{table}
+
+\end{document}
+

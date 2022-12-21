@@ -1,0 +1,1083 @@
+{
+    "version": 1,
+    "categories": [
+        "box-variable",
+        "chest-halls",
+        "data-storage",
+        "decoders",
+        "display-halls",
+        "encoded-systems",
+        "encoders",
+        "everything-bagel",
+        "external-bulk",
+        "item-memory",
+        "item-variable",
+        "logic-and-computation",
+        "merging",
+        "resources",
+        "splitting",
+        "transport",
+        "wiring"
+    ],
+    "entries": [
+        {
+            "path": [
+                "box-variable",
+                "BV01 Simple Hopperspeed Grouper"
+            ],
+            "identifier": "BV01",
+            "title": "Simple Hopperspeed Grouper",
+            "authors": [
+                "Andrews54757"
+            ],
+            "tags": [
+                "box-variable",
+                "hopperspeed"
+            ],
+            "date": "October 2022",
+            "revision": "1",
+            "description": "A simple hopper speed box grouper using svars. Given an input of varying boxes, it will buffer boxes with the same type to be outputted in a group when requested. Useful for reducing encoder calls. \n\nHas 9 svar slices with two double chests of buffer for each type. Easily expandable. Hopperlocking not included.",
+            "image": "grouper.png",
+            "tex": "BV01_Simple_Hopperspeed_Grouper.tex",
+            "pdf": "BV01_Simple_Hopperspeed_Grouper.pdf",
+            "features": [
+                "Hopperspeed with 16gt output type switching delay",
+                "Contains 9 1wt tileable svars",
+                "132 buffer slots per slice"
+            ],
+            "applications": [
+                "Optimizing box merging",
+                "Reducing Encoder Usage"
+            ],
+            "specifications": {
+                "Input Throughput": {
+                    "unit": "HS",
+                    "conditions": "Normal Usage",
+                    "max": "1"
+                },
+                "Output Throughput": {
+                    "unit": "HS",
+                    "conditions": "Normal Usage",
+                    "max": "1"
+                },
+                "Switching Delay": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "16"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.2",
+                    "min": "1.16",
+                    "typ": "1.17.1"
+                },
+                "Dimensions": {
+                    "unit": "Blks",
+                    "conditions": "",
+                    "typ": "17 x 18 x 28"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "BV01",
+                    "mc": "1.17.1",
+                    "file": "BV01_hopperspeed_grouper_p1.litematic",
+                    "description": "Litematic of grouper device",
+                    "sha256": "286c51558f89ea7fd86f764922eef816fa99ac889e1d93c38940c12bf0e51630"
+                }
+            ]
+        },
+        {
+            "path": [
+                "chest-halls",
+                "CH01 Parallelized Encoded Chest Hall"
+            ],
+            "identifier": "CH01",
+            "title": "Parallelized Encoded Chest Hall",
+            "authors": [
+                "Andrews54757"
+            ],
+            "tags": [
+                "chest-halls",
+                "parallelized",
+                "decimal-encoding",
+                "hopperlocked",
+                "10-chests"
+            ],
+            "date": "October 2022",
+            "revision": "1",
+            "description": "The CH01 is a fully hopperlocked 10 item per slice encoded chest hall with a backend sporting up to 20x HS parallelization. It is able to insert both loose items and boxes into chests allowing for item/box hybrid functionality.\n\nThe transport mechanism for this hall does not support overflow protection. Extra items may despawn. It is recommended that the comparator readouts are used to limit the insertion amounts as needed to prevent overflow.\n\nComparator readouts are streamed from the chests at 10 codes / 8 gt. This is initiated by a pulsed signal.\n\nAll toggle states are self-repairable. The repair process is initiated by a pulsed signal.",
+            "image": "chesthall.png",
+            "tex": "CH01_Parallelized_Encoded_Chest_Hall.tex",
+            "pdf": "CH01_Parallelized_Encoded_Chest_Hall.pdf",
+            "features": [
+                "800 chests, 10 chests per slice with 24 blocks of width",
+                "Fully parallelizable (19x hopperspeed for items, 1x hopperspeed for box insertion)",
+                "100% hopperlocked with sectional unlocking",
+                "10/8 gt streamed comparator outputs",
+                "Self-repairable toggle states with Auto-Fix sequence",
+                "Low active lag, +1 ms at 1x HS, +6 ms at 20x HS"
+            ],
+            "specifications": {
+                "Input Throughput": {
+                    "unit": "HS",
+                    "conditions": "Normal Usage",
+                    "max": "1"
+                },
+                "Output Throughput": {
+                    "unit": "HS",
+                    "conditions": "Normal Usage",
+                    "min": "1",
+                    "max": "20"
+                },
+                "Order Execution Interval": {
+                    "unit": "gt",
+                    "conditions": "Dependant on unloader's used capacity",
+                    "min": "88",
+                    "typ": "106"
+                },
+                "Passive Lag": {
+                    "unit": "ms",
+                    "conditions": "Ryzen 5 3600, 2GB RAM. MC 1.18.1 with Lithium.",
+                    "min": "1.5",
+                    "typ": "2.8",
+                    "max": "3.5"
+                },
+                "Active Lag": {
+                    "unit": "ms",
+                    "conditions": "Ryzen 5 3600, 2GB RAM. MC 1.18.1 with Lithium.",
+                    "min": "+1",
+                    "max": "+6"
+                },
+                "Hopper Count": {
+                    "unit": "Hoppers",
+                    "conditions": "",
+                    "typ": "884"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.2",
+                    "min": "1.16",
+                    "typ": "1.18.2"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "24 x 91 x 108"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "CH01",
+                    "mc": "1.18.2",
+                    "file": "CH01_encoded_chest_hall_p30.litematic",
+                    "description": "Litematic of chest hall with inventories.",
+                    "sha256": "70f0ae9110df998b62cd06ee2cee12fcd096514b88a048e71ddac1451b5b8310"
+                }
+            ],
+            "relatedComponents": [
+                {
+                    "identifier": "DDL01",
+                    "description": "10BPS 2 Digit Decimal Decoder"
+                }
+            ]
+        },
+        {
+            "path": [
+                "data-storage",
+                "DS01 Streamable Bit RAM"
+            ],
+            "identifier": "DS01",
+            "title": "Streamable Bit RAM",
+            "authors": [
+                "Andrews54757"
+            ],
+            "tags": [
+                "data-storage",
+                "RAM",
+                "streamable",
+                "binary"
+            ],
+            "date": "October 2022",
+            "revision": "1",
+            "description": "The DS01 is a RAM module that stores 1600 bits of data in locked repeaters. Each bit is addressable through three 4-bit inputs. It is able to stream all of its stored data such that one bit is outputted per level every 4gt-8gt.",
+            "image": "sram.png",
+            "tex": "DS01_Streamable_Bit_RAM.tex",
+            "pdf": "DS01_Streamable_Bit_RAM.pdf",
+            "features": [
+                "Constant time writes to individually addressible bits.",
+                "RAM contents can be streamed at a certain rate.",
+                "Matrix decoding addresses memory modules individually to reduce lag."
+            ],
+            "applications": [
+                "Storing boolean flags for use in streamed logic.",
+                "Reducing unecessary bulk calls in restock systems."
+            ],
+            "specifications": {
+                "Write Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "120"
+                },
+                "Output Throughput Per Level": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "4",
+                    "max": "8"
+                },
+                "Write Active Lag": {
+                    "unit": "ms",
+                    "conditions": "Ryzen 5 3600, 2GB RAM. MC 1.18.1 with Lithium.",
+                    "min": "+0.2",
+                    "typ": "+0.5",
+                    "max": "+1.0"
+                },
+                "Stream Active Lag": {
+                    "unit": "ms",
+                    "conditions": "Ryzen 5 3600, 2GB RAM. MC 1.18.1 with Lithium.",
+                    "min": "+1",
+                    "typ": "+3",
+                    "max": "+5"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.2",
+                    "min": "1.16",
+                    "typ": "1.17.1"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "50 x 32 x 50"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "DS011600",
+                    "mc": "1.17.1",
+                    "file": "DS011600_1600_bit_RAM_p1.litematic",
+                    "description": "Litematic of RAM with 1600 bits. Inventories not included.",
+                    "sha256": "ee8f81873c022cc98e9fd9518b306471588b0995a7a9e9378618fb7129d18e47"
+                },
+                {
+                    "identifier": "DS01600",
+                    "mc": "1.18.2",
+                    "file": "DS01600_600_bit_ram.litematic",
+                    "description": "Litematic of RAM with 600 bits. Wired slightly better. 36x32x36 blocks. Inventories not included.",
+                    "sha256": "e1afd8c91b2a562c37dc2deb0bc30eb1c603d44ae151b476f46025feffe0a521"
+                }
+            ]
+        },
+        {
+            "path": [
+                "decoders",
+                "DC01 6 Bit Binary Decoder"
+            ],
+            "identifier": "DC01",
+            "title": "6 Bit Binary Decoder",
+            "authors": [
+                "Dzreams"
+            ],
+            "tags": [
+                "decoders",
+                "binary"
+            ],
+            "date": "October 2022",
+            "revision": "1",
+            "description": "The DC01 decoder takes six bits and outputs a pulse at one of 64 slices corresponding to the code.",
+            "image": "6bit.png",
+            "tex": "DC01_6_Bit_Decoder.tex",
+            "pdf": "DC01_6_Bit_Decoder.pdf",
+            "features": [
+                "Constant time decoding. 14gt latency.",
+                "Slim profile. 4 blocks wide.",
+                "6gt throughput.",
+                "QC based logic."
+            ],
+            "applications": [
+                "Decoding binary signals for use in external bulk systems"
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "6",
+                    "typ": "8"
+                },
+                "Latency": {
+                    "unit": "gt",
+                    "conditions": "Input to Output",
+                    "min": "14"
+                },
+                "Active Lag": {
+                    "unit": "ms",
+                    "conditions": "At Hopperspeed. Ryzen 5 3600, 2GB RAM. MC 1.18.1 with Lithium.",
+                    "min": "+4.0",
+                    "typ": "4.5",
+                    "max": "+5.0"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.2",
+                    "min": "1.16",
+                    "typ": "1.17.1"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "73 x 10 x 4"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "DC01",
+                    "mc": "1.17.1",
+                    "file": "DC01_6bit_decoder.litematic",
+                    "description": "Litematic of decoder.",
+                    "sha256": "3b0c023db197148a1e6337619c0552430ffde2769a97a9f64cab576957c1ea6f"
+                }
+            ]
+        },
+        {
+            "path": [
+                "decoders",
+                "DC02 2 Digit Decimal Decoder"
+            ],
+            "identifier": "DC02",
+            "title": "2 Digit Decimal Decoder",
+            "authors": [
+                "Andrews54757"
+            ],
+            "tags": [
+                "decoders",
+                "decimal"
+            ],
+            "date": "October 2022",
+            "revision": "1",
+            "description": "The DC02 decoder takes two decimal digits and outputs a pulse at one of 100 slices corresponding to the code.",
+            "image": "decoderfront.png",
+            "tex": "DC02_2_Digit_Decimal_Decoder.tex",
+            "pdf": "DC02_2_Digit_Decimal_Decoder.pdf",
+            "features": [
+                "Constant time decoding. 30gt latency.",
+                "Slim profile. 4 blocks wide.",
+                "Hopperspeed throughput.",
+                "QC based logic with state auto-fix line."
+            ],
+            "applications": [
+                "Decoding decimal signals for use in external bulk systems"
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "8"
+                },
+                "Latency": {
+                    "unit": "gt",
+                    "conditions": "Input to Output",
+                    "min": "30"
+                },
+                "Active Lag": {
+                    "unit": "ms",
+                    "conditions": "At Hopperspeed. Ryzen 5 3600, 2GB RAM. MC 1.18.1 with Lithium.",
+                    "min": "+2.0",
+                    "max": "+4.1"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.2",
+                    "min": "1.16",
+                    "typ": "1.17.1"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "105 x 11 x 4"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "DC02",
+                    "mc": "1.17.1",
+                    "file": "DC02_2Digit_Decimal_Decoder.litematic",
+                    "description": "Litematic of decoder. Includes subregions for testing.",
+                    "sha256": "b23fb063982792213dd6140afa94fdd475455b4b945f9c3e37bc96d0854e5294"
+                }
+            ]
+        },
+        {
+            "path": [
+                "decoders",
+                "DC03 10BPS 2 Digit Decimal Decoder"
+            ],
+            "identifier": "DC03",
+            "title": "10BPS 2 Digit Decimal Decoder",
+            "authors": [
+                "Andrews54757"
+            ],
+            "tags": [
+                "decoders",
+                "decimal",
+                "linear time"
+            ],
+            "date": "October 2022",
+            "revision": "1",
+            "description": "The DC03 decoder takes two decimal digits and outputs a pulse at one of 100 slices corresponding to the code. The signal travels 10 blocks per second giving the device an O(n) time complexity.",
+            "image": "bps.png",
+            "tex": "DC03_10BPS_2_Digit_Decimal_Decoder.tex",
+            "pdf": "DC03_10BPS_2_Digit_Decimal_Decoder.pdf",
+            "features": [
+                "O(n) linear time decoding, 2 gt/block. Signal travels 10 blocks per second.",
+                "Slim profile. 4 blocks wide.",
+                "Hopperspeed throughput.",
+                "QC based logic with state auto-fix line."
+            ],
+            "applications": [
+                "Decoding decimal signals for use in encoded chest halls"
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "8"
+                },
+                "Latency": {
+                    "unit": "gt",
+                    "conditions": "Input to Output.",
+                    "min": "26",
+                    "max": "224"
+                },
+                "Active Lag": {
+                    "unit": "ms",
+                    "conditions": "At Hopperspeed. Ryzen 5 3600, 2GB RAM. MC 1.18.1 with Lithium.",
+                    "min": "+0.2",
+                    "max": "+1.6"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.2",
+                    "min": "1.13",
+                    "typ": "1.18.2"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "104 x 8 x 4"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "DC03",
+                    "mc": "1.18.2",
+                    "file": "DC03_10BPS_decimal_decoder_1.18.2.litematic",
+                    "description": "Litematic of decoder. Includes subregions for testing. Does not include inventories.",
+                    "sha256": "3978ec7c190a9f50aebe9a07c8d4f5a197cbbee5fb57861b947a78a0d15551eb"
+                }
+            ]
+        },
+        {
+            "path": [
+                "display-halls",
+                "DH01 Quad Display Slice With Reliable Collection"
+            ],
+            "identifier": "DH01",
+            "title": "Quad Display Slice With Reliable Collection",
+            "authors": [
+                "Andrews54757"
+            ],
+            "tags": [
+                "display-halls",
+                "quad-display",
+                "slice",
+                "reliable-collection"
+            ],
+            "date": "December 2022",
+            "revision": "1",
+            "description": "The DH01 quad display slice has 4 box displays with reliable collection. It uses powdered snow in the displays for 100% reliable collection. It has a fully hopperlocked layout with no visible comparators or pistons. The bottom displays are bufferless with global first box placement. All toggle states are self resetting. For full hopperlocking, the top displays require a gap every 32 blocks.",
+            "image": "slice2.png",
+            "tex": "DH01_Quad_Display_Slice_With_Reliable_Collection.tex",
+            "pdf": "DH01_Quad_Display_Slice_With_Reliable_Collection.pdf",
+            "features": [
+                "100% reliable collection",
+                "Bufferless and spam-proof bottom displays",
+                "24 blocks wide. 29 blocks tall.",
+                "Fully hopperlocked."
+            ],
+            "applications": [
+                "Display layout for a quad-display hall"
+            ],
+            "specifications": {
+                "Item Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "8"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.3",
+                    "min": "1.18.2",
+                    "typ": "1.18.2"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "1 x 29 x 24"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "DH01",
+                    "mc": "1.18.2",
+                    "file": "DH01_quad_display_slice.litematic",
+                    "description": "Litematic of slice.",
+                    "sha256": "48257f3cb5b26a47054e9736600f6d2050d2c43f0c1a3a66add33f68e2a48a2b"
+                }
+            ]
+        },
+        {
+            "path": [
+                "display-halls",
+                "DH02 Quad Display Slice With Passive Read"
+            ],
+            "identifier": "DH02",
+            "title": "Quad Display Slice With Passive Read",
+            "authors": [
+                "Obi",
+                "51 mayday",
+                "hampter"
+            ],
+            "tags": [
+                "display-halls",
+                "quad-display",
+                "slice",
+                "passive-read"
+            ],
+            "date": "December 2022",
+            "revision": "1",
+            "description": "The DH02 quad display slice has 4 box displays with passive read ability. It has a fully hopperlocked layout with no visible pistons. The bottom displays has one buffer box with global first box placement. For full hopperlocking, the top displays require a gap every 32 blocks. Box collection is not fully reliable. Top display will break if used aggressively.",
+            "image": "slice.png",
+            "tex": "DH02_Quad_Display_Slice_With_Passive_Read.tex",
+            "pdf": "DH02_Quad_Display_Slice_With_Passive_Read.pdf",
+            "features": [
+                "4 box displays & chests per slice.",
+                "Minimum hoppers & chests for this layout. Fully hopper locked.",
+                "In slice lists for which chests need to be restocked from empty.",
+                "Easily reachable & visible inventories.",
+                "Control logic can be relatively simple."
+            ],
+            "applications": [
+                "Encoded quad-display hall"
+            ],
+            "specifications": {
+                "Item Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "8"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.3",
+                    "min": "1.16",
+                    "typ": "1.17.1"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "23 x 28 x 2"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "DH02",
+                    "mc": "1.17.1",
+                    "file": "DH02_quadbulk_slice_2w_dev1.litematic",
+                    "description": "Litematic of slice.",
+                    "sha256": "1236913f2445e19d90aaa82fd3b0b4edd9583cbc49ae24c25e4dfe43a4d71dee"
+                }
+            ]
+        },
+        {
+            "path": [
+                "display-halls",
+                "DH03 Parallelized Quad Display Slice With Passive Read"
+            ],
+            "identifier": "DH03",
+            "title": "Parallelized Quad Display Slice With Passive Read",
+            "authors": [
+                "51 mayday",
+                "Obi",
+                "hampter"
+            ],
+            "tags": [
+                "display-halls",
+                "quad-display",
+                "slice",
+                "passive-read",
+                "parallelized"
+            ],
+            "date": "December 2022",
+            "revision": "1",
+            "description": "The DH03 quad display slice has 4 box displays with passive read ability and parallelized control logic. It has a fully hopperlocked layout with no visible pistons. The bottom displays has one buffer box with global first box placement. For full hopperlocking, the top displays require a gap every 32 blocks. Box collection is not fully reliable. Top display will break if used aggressively.",
+            "image": "QuadBulk_V5_3.png",
+            "tex": "DH03_Parallelized_Quad_Display_Slice_With_Passive_Read.tex",
+            "pdf": "DH03_Parallelized_Quad_Display_Slice_With_Passive_Read.pdf",
+            "features": [
+                "Minimum hoppers & chests for this layout",
+                "Fully hopper locked",
+                "In-slice lists for which chests need to be restocked from empty",
+                "Each quarter-slice can restock and call in parallel",
+                "All inventories easily reachable/visible",
+                "Control logic somewhat simple"
+            ],
+            "applications": [
+                "Encoded quad-display hall"
+            ],
+            "specifications": {
+                "Item Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "8"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.3",
+                    "min": "1.16",
+                    "typ": "1.17.1"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "1 x 33 x 22"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "DH03",
+                    "mc": "1.17.1",
+                    "file": "DH03_QuadBulk_V5_3.litematic",
+                    "description": "Litematic of slice.",
+                    "sha256": "5d7c31461b0888ce0a2d7f428586789abe5de97d5176d05cf2a206298b8e7147"
+                }
+            ]
+        },
+        {
+            "path": [
+                "encoded-systems",
+                "ES01 Palla Encoded V3.100"
+            ],
+            "identifier": "ES01",
+            "title": "Palla Encoded V3.100",
+            "authors": [
+                "PallaPalla"
+            ],
+            "tags": [
+                "encoded-systems",
+                "palla"
+            ],
+            "date": "December 2022",
+            "revision": "1",
+            "description": "TODO",
+            "image": "palla3.1.png",
+            "tex": "ES01_Palla_Encoded_V3.100.tex",
+            "pdf": "ES01_Palla_Encoded_V3.100.pdf",
+            "features": [
+                "Incomplete."
+            ],
+            "applications": [
+                "Learning about encoded systems"
+            ],
+            "specifications": {
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.3",
+                    "min": "1.12",
+                    "typ": "1.12.2",
+                    "max": "1.12.2"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "ES01",
+                    "mc": "1.12.2",
+                    "file": "ES01_V3.100.schematic",
+                    "description": "Schematic of system.",
+                    "sha256": "0b019239bba6a9878e899b9726b425eed49ee56416fbbe55df75a534868b64db"
+                }
+            ]
+        },
+        {
+            "path": [
+                "encoders",
+                "EC01 Hopperspeed Encoder V2"
+            ],
+            "identifier": "EC01",
+            "title": "Hopperspeed Encoder V2",
+            "authors": [
+                "Andrews54757"
+            ],
+            "tags": [
+                "encoders",
+                "hopperspeed"
+            ],
+            "date": "December 2022",
+            "revision": "1",
+            "description": "The EC01 encoder uses multiple hoppercarts to allow for hopperspeed item to code encoding. The design shown is a 54 double-chest design which allows for up to 1000 item types with a decimal encoding scheme.",
+            "image": "encoder.png",
+            "tex": "EC01_Hopperspeed_Encoder_V2.tex",
+            "pdf": "EC01_Hopperspeed_Encoder_V2.pdf",
+            "features": [
+                "Hopperspeed (9000 items/hr) encoding.",
+                "Adjustable and expandable to work with any base.",
+                "Requires 4 items per item type per chest.",
+                "Uses 30 carts and floating rail."
+            ],
+            "applications": [
+                "Encoding items"
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "8"
+                },
+                "Active Lag": {
+                    "unit": "ms",
+                    "conditions": "At Hopperspeed. Ryzen 5 3600, 2GB RAM. MC 1.18.1 with Lithium.",
+                    "min": "+2",
+                    "typ": "+2.5",
+                    "max": "+3"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.3",
+                    "min": "1.16",
+                    "typ": "1.16.5"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "70 x 19 x 19"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "EC01",
+                    "mc": "1.16.5",
+                    "file": "EC01_Hopperspeed_Encoder_V2-r1.zip",
+                    "description": "World download of encoder",
+                    "sha256": "e155977b3e8abb93a0bc24d3ba991a1c1644c95c4f293305fcf6dab5ed314ee1"
+                }
+            ]
+        },
+        {
+            "path": [
+                "encoders",
+                "EC02 Small Decimal Encoder"
+            ],
+            "identifier": "EC02",
+            "title": "Small Decimal Encoder",
+            "authors": [
+                "Andrews54757"
+            ],
+            "tags": [
+                "encoders",
+                "decimal"
+            ],
+            "date": "December 2022",
+            "revision": "1",
+            "description": "The EC02 small item to decimal encoder uses demibolts and a simple layered design. It can handle up to 1000 item types.",
+            "image": "small.png",
+            "tex": "EC02_Small_Decimal_Encoder.tex",
+            "pdf": "EC02_Small_Decimal_Encoder.pdf",
+            "features": [
+                "Small and simple stacked design with demibolts.",
+                "Encodes up to 1000 item types.",
+                "Uses up to four carts for 1 code/56 gt throughput"
+            ],
+            "applications": [
+                "Encoding items"
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "56"
+                },
+                "Active Lag": {
+                    "unit": "ms",
+                    "conditions": "At fullspeed. Ryzen 5 3600, 2GB RAM. MC 1.18.1 with Lithium.",
+                    "min": "+0.5",
+                    "typ": "+1",
+                    "max": "+2"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.3",
+                    "min": "1.16",
+                    "typ": "1.17.1"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "28 x 13 x 17"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "EC01",
+                    "mc": "1.17.1",
+                    "file": "EC02_small_decimal_encoder.litematic",
+                    "description": "Schematic of encoder.",
+                    "sha256": "d295d52c4ed82e0ac3da00896992296099a91dec669794c2af2bbae55c03d4a1"
+                }
+            ]
+        },
+        {
+            "path": [
+                "encoders",
+                "EC03 16gt Item Encoder"
+            ],
+            "identifier": "EC03",
+            "title": "16gt Item Encoder",
+            "authors": [
+                "Andrews54757"
+            ],
+            "tags": [
+                "encoders",
+                "half-speed"
+            ],
+            "date": "December 2022",
+            "revision": "1",
+            "description": "The EC03 16gt encoder has a 16gt throughput encoder core which only requires one item per type in a chest. It uses 9 carts but can be easily modified with cart yeeting in 1.19+ (carts in storage are all empty). It is dustupdateless, honeyless, and MTE compatible.",
+            "image": "coder.png",
+            "tex": "EC03_16gt_Item_Encoder.tex",
+            "pdf": "EC03_16gt_Item_Encoder.pdf",
+            "features": [
+                "Uses 9 carts for half-hopperspeed (16gt) throughput",
+                "Requires only 1 item per type per chest.",
+                "MTE compatible.",
+                "Self resettable toggle states."
+            ],
+            "applications": [
+                "Encoding items"
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "16"
+                },
+                "Active Lag": {
+                    "unit": "ms",
+                    "conditions": "At half-hopperspeed. Ryzen 5 3600, 2GB RAM. MC 1.18.1 with Lithium.",
+                    "min": "+1",
+                    "typ": "+1.4",
+                    "max": "+2"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.3",
+                    "min": "1.13",
+                    "typ": "1.18.2"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "38 x 15 x 11"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "EC03",
+                    "mc": "1.18.2",
+                    "file": "EC03_16gt_encoder_core_p1.litematic",
+                    "description": "Schematic of encoder.",
+                    "sha256": "1a7a95ca957624724af88fd1bf53dc9e40a7ed153d265eff1c2bd2f1374ec291"
+                }
+            ]
+        },
+        {
+            "path": [
+                "everything-bagel",
+                "MX01 Morning Flower Alarm Loop"
+            ],
+            "identifier": "MX01",
+            "title": "Morning Flower Alarm Loop",
+            "authors": [
+                "Andrews54757"
+            ],
+            "tags": [
+                "everything-bagel",
+                "music"
+            ],
+            "date": "December 2022",
+            "revision": "1",
+            "description": "The MX01 Morning Flower Alarm loop generates music to the tune of the \\href{https://www.youtube.com/watch?v=vTVWGoQcn9Q}{Morning Flower} alarm music on galaxy phones.",
+            "image": "morning_loop.png",
+            "tex": "MX01_Morning_Flower_Alarm_Loop.tex",
+            "pdf": "MX01_Morning_Flower_Alarm_Loop.pdf",
+            "features": [
+                "Repeatedly outputs music."
+            ],
+            "applications": [
+                "Fun and joy."
+            ],
+            "specifications": {
+                "Music Length": {
+                    "unit": "gt",
+                    "conditions": "Time between loops.",
+                    "min": "258"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.3",
+                    "min": "1.13",
+                    "typ": "1.16"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "19 x 7 x 7"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "MX01",
+                    "mc": "1.18.2",
+                    "file": "MX01_morning_flower_alarm_loop.litematic",
+                    "description": "Schematic of device.",
+                    "sha256": "beb7905640eb22ee7c489bbc7a14f1b6b90765d54e287185a64525bdc6259531"
+                }
+            ]
+        },
+        {
+            "path": [
+                "item-memory",
+                "IM01 100 Item RAM"
+            ],
+            "identifier": "IM01",
+            "title": "100 Item RAM",
+            "authors": [
+                "Andrews54757"
+            ],
+            "tags": [
+                "item-memory",
+                "random-access"
+            ],
+            "date": "December 2022",
+            "revision": "1",
+            "description": "The IM01 is able to store and retrieve items with a specific decimal code. This may be useful as a temp storage in an encoded dynamic sorting system.",
+            "image": "itemram.png",
+            "tex": "IM01_100_Item_RAM.tex",
+            "pdf": "IM01_100_Item_RAM.pdf",
+            "features": [
+                "Has 100 different codes/item types. a dropper of storage per code.",
+                "Random access. Can insert and retrieve items in constant time in any order.",
+                "Half hopperspeed order throughput. Can execute insertions and retrievals every 16 game ticks (exclusive, can't do both at same time).",
+                "Hopperlocked. Can be fully hopperlocked.",
+                "Togglestateless. No piston toggle states."
+            ],
+            "applications": [
+                "Temp storage for merging.",
+                "Dynamic bulk mapping storage."
+            ],
+            "specifications": {
+                "Order Execution Interval": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "16"
+                },
+                "Hopper Count": {
+                    "unit": "Hoppers",
+                    "conditions": "",
+                    "typ": "110"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.3",
+                    "min": "1.13",
+                    "typ": "1.17.1"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "27 x 9 x 23"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "IM01",
+                    "mc": "1.17.1",
+                    "file": "IM01_100_item_memory_1.17.1.litematic",
+                    "description": "Litematic of item RAM device.",
+                    "sha256": "24ae02fe85023bb4509ccf9c224438a2a4c5bbd143277a2ba30e230c254b4628"
+                }
+            ]
+        },
+        {
+            "path": [
+                "item-memory",
+                "IM02 1000 Item RAM"
+            ],
+            "identifier": "IM02",
+            "title": "1000 Item RAM",
+            "authors": [
+                "Andrews54757"
+            ],
+            "tags": [
+                "item-memory",
+                "random-access"
+            ],
+            "date": "December 2022",
+            "revision": "1",
+            "description": "The IM02 is able to store and retrieve items with a specific decimal code. This may be useful as a temp storage in an encoded dynamic sorting system.",
+            "image": "ram2.png",
+            "tex": "IM02_1000_Item_RAM.tex",
+            "pdf": "IM02_1000_Item_RAM.pdf",
+            "features": [
+                "Has 1000 different codes/item types. a dropper of storage per code.",
+                "Random access. Can insert and retrieve items in constant time in any order.",
+                "Half hopperspeed order throughput. Can execute insertions and retrievals every 16 game ticks (exclusive, can't do both at same time).",
+                "Hopperlocked. Is fully hopperlocked.",
+                "Togglestateless. No piston toggle states."
+            ],
+            "applications": [
+                "Temp storage for merging.",
+                "Dynamic bulk mapping storage."
+            ],
+            "specifications": {
+                "Order Execution Interval": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "16"
+                },
+                "Hopper Count": {
+                    "unit": "Hoppers",
+                    "conditions": "",
+                    "typ": "1111"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.3",
+                    "min": "1.13",
+                    "typ": "1.17.1"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "53 x 55 x 28"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "IM02",
+                    "mc": "1.17.1",
+                    "file": "IM02_1000_item_RAM_p2.litematic",
+                    "description": "Litematic of item RAM device.",
+                    "sha256": "98d264ac5f9ac5f3410d7e20efcc5eb6e6d01f1613cb393d7962303eec618faf"
+                }
+            ]
+        }
+    ]
+}
