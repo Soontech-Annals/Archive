@@ -15,9 +15,9 @@ The EC01 encoder uses multiple hoppercarts to allow for hopperspeed item to code
 - Uses 30 carts and floating rail.
 
 #### Download Info:
-|Identifier   | MC       | File                                                                                                               | Description                 | SHA256                                                              |
-|------------ |:-------- |:------------------------------------------------------------------------------------------------------------------ |:--------------------------- |:--------------------------------------------------------------------|
-|EC01         | 1.16.5   | [EC01_Hopperspeed_Encoder_V2-r1.zip](EC01%20Hopperspeed%20Encoder%20V2/EC01_Hopperspeed_Encoder_V2-r1.zip?raw=1)   | World download of encoder   | `e155977b3e8abb93a0bc24d3ba991a1c1644c95c4f293305fcf6dab5ed314ee1`  |
+|Identifier   | MC       | File                                                                                                               | Description                |
+|------------ |:-------- |:------------------------------------------------------------------------------------------------------------------ |:---------------------------|
+|EC01         | 1.16.5   | [EC01_Hopperspeed_Encoder_V2-r1.zip](EC01%20Hopperspeed%20Encoder%20V2/EC01_Hopperspeed_Encoder_V2-r1.zip?raw=1)   | World download of encoder  |
 
 
 
@@ -34,9 +34,9 @@ The EC02 small item to decimal encoder uses demibolts and a simple layered desig
 - Uses up to four carts for 1 code/56 gt throughput
 
 #### Download Info:
-|Identifier   | MC       | File                                                                                                                  | Description             | SHA256                                                              |
-|------------ |:-------- |:--------------------------------------------------------------------------------------------------------------------- |:----------------------- |:--------------------------------------------------------------------|
-|EC01         | 1.17.1   | [EC02_small_decimal_encoder.litematic](EC02%20Small%20Decimal%20Encoder/EC02_small_decimal_encoder.litematic?raw=1)   | Schematic of encoder.   | `d295d52c4ed82e0ac3da00896992296099a91dec669794c2af2bbae55c03d4a1`  |
+|Identifier   | MC       | File                                                                                                                  | Description            |
+|------------ |:-------- |:--------------------------------------------------------------------------------------------------------------------- |:-----------------------|
+|EC01         | 1.17.1   | [EC02_small_decimal_encoder.litematic](EC02%20Small%20Decimal%20Encoder/EC02_small_decimal_encoder.litematic?raw=1)   | Schematic of encoder.  |
 
 
 
@@ -54,6 +54,6 @@ The EC03 16gt encoder has a 16gt throughput encoder core which only requires one
 - Self resettable toggle states.
 
 #### Download Info:
-|Identifier   | MC       | File                                                                                                            | Description             | SHA256                                                              |
-|------------ |:-------- |:--------------------------------------------------------------------------------------------------------------- |:----------------------- |:--------------------------------------------------------------------|
-|EC03         | 1.18.2   | [EC03_16gt_encoder_core_p1.litematic](EC03%2016gt%20Item%20Encoder/EC03_16gt_encoder_core_p1.litematic?raw=1)   | Schematic of encoder.   | `1a7a95ca957624724af88fd1bf53dc9e40a7ed153d265eff1c2bd2f1374ec291`  |
+|Identifier   | MC       | File                                                                                                            | Description            |
+|------------ |:-------- |:--------------------------------------------------------------------------------------------------------------- |:-----------------------|
+|EC03         | 1.18.2   | [EC03_16gt_encoder_core_p1.litematic](EC03%2016gt%20Item%20Encoder/EC03_16gt_encoder_core_p1.litematic?raw=1)   | Schematic of encoder.  |

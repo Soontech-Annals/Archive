@@ -43,8 +43,8 @@ data.categories.forEach((category) => {
                 }
             ]
         */
-        let whitespaces = [0, 0, 0, 0, 0];
-        let header = ["Identifier", "MC", "File", "Description", "SHA256"];
+        let whitespaces = [0, 0, 0, 0];
+        let header = ["Identifier", "MC", "File", "Description"];
         header.forEach((item, i) => {
             whitespaces[i] = Math.max(item.length, whitespaces[i]);
         });
@@ -52,12 +52,10 @@ data.categories.forEach((category) => {
    
         entry.downloadInfo.forEach((download, i) => {
             download.file = `[${download.file}](${encodeURI(entry.path[1] + "/" + download.file) + "?raw=1"})`
-            download.sha256 = "`" + download.sha256 + "`";
             whitespaces[0] = Math.max(download.identifier.length, whitespaces[0]);
             whitespaces[1] = Math.max(download.mc.length, whitespaces[1]);
             whitespaces[2] = Math.max(download.file.length, whitespaces[2]);
             whitespaces[3] = Math.max(download.description.length, whitespaces[3]);
-            whitespaces[4] = Math.max(download.sha256.length, whitespaces[4]);
         });
 
         whitespaces.forEach((item, i) => {
@@ -73,7 +71,7 @@ data.categories.forEach((category) => {
         }).join(" |:") + "|";
             
         const downloadInfoTable = entry.downloadInfo.map((download, i) => {
-            return "|" + [download.identifier, download.mc, download.file, download.description, download.sha256].map((item, i) => {
+            return "|" + [download.identifier, download.mc, download.file, download.description].map((item, i) => {
                 return item.padEnd(whitespaces[i]);
             }).join(" | ") + "|";
         }).join("\n");

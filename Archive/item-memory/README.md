@@ -16,9 +16,9 @@ The IM01 is able to store and retrieve items with a specific decimal code. This 
 - Togglestateless. No piston toggle states.
 
 #### Download Info:
-|Identifier   | MC       | File                                                                                                           | Description                     | SHA256                                                              |
-|------------ |:-------- |:-------------------------------------------------------------------------------------------------------------- |:------------------------------- |:--------------------------------------------------------------------|
-|IM01         | 1.17.1   | [IM01_100_item_memory_1.17.1.litematic](IM01%20100%20Item%20RAM/IM01_100_item_memory_1.17.1.litematic?raw=1)   | Litematic of item RAM device.   | `24ae02fe85023bb4509ccf9c224438a2a4c5bbd143277a2ba30e230c254b4628`  |
+|Identifier   | MC       | File                                                                                                           | Description                    |
+|------------ |:-------- |:-------------------------------------------------------------------------------------------------------------- |:-------------------------------|
+|IM01         | 1.17.1   | [IM01_100_item_memory_1.17.1.litematic](IM01%20100%20Item%20RAM/IM01_100_item_memory_1.17.1.litematic?raw=1)   | Litematic of item RAM device.  |
 
 
 
@@ -37,6 +37,6 @@ The IM02 is able to store and retrieve items with a specific decimal code. This 
 - Togglestateless. No piston toggle states.
 
 #### Download Info:
-|Identifier   | MC       | File                                                                                                | Description                     | SHA256                                                              |
-|------------ |:-------- |:--------------------------------------------------------------------------------------------------- |:------------------------------- |:--------------------------------------------------------------------|
-|IM02         | 1.17.1   | [IM02_1000_item_RAM_p2.litematic](IM02%201000%20Item%20RAM/IM02_1000_item_RAM_p2.litematic?raw=1)   | Litematic of item RAM device.   | `98d264ac5f9ac5f3410d7e20efcc5eb6e6d01f1613cb393d7962303eec618faf`  |
+|Identifier   | MC       | File                                                                                                | Description                    |
+|------------ |:-------- |:--------------------------------------------------------------------------------------------------- |:-------------------------------|
+|IM02         | 1.17.1   | [IM02_1000_item_RAM_p2.litematic](IM02%201000%20Item%20RAM/IM02_1000_item_RAM_p2.litematic?raw=1)   | Litematic of item RAM device.  |

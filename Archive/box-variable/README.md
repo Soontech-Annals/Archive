@@ -16,6 +16,6 @@ Has 9 svar slices with two double chests of buffer for each type. Easily expanda
 - 132 buffer slots per slice
 
 #### Download Info:
-|Identifier   | MC       | File                                                                                                                         | Description                   | SHA256                                                              |
-|------------ |:-------- |:---------------------------------------------------------------------------------------------------------------------------- |:----------------------------- |:--------------------------------------------------------------------|
-|BV01         | 1.17.1   | [BV01_hopperspeed_grouper_p1.litematic](BV01%20Simple%20Hopperspeed%20Grouper/BV01_hopperspeed_grouper_p1.litematic?raw=1)   | Litematic of grouper device   | `286c51558f89ea7fd86f764922eef816fa99ac889e1d93c38940c12bf0e51630`  |
+|Identifier   | MC       | File                                                                                                                         | Description                  |
+|------------ |:-------- |:---------------------------------------------------------------------------------------------------------------------------- |:-----------------------------|
+|BV01         | 1.17.1   | [BV01_hopperspeed_grouper_p1.litematic](BV01%20Simple%20Hopperspeed%20Grouper/BV01_hopperspeed_grouper_p1.litematic?raw=1)   | Litematic of grouper device  |

@@ -23,6 +23,6 @@ All toggle states are self-repairable. The repair process is initiated by a puls
 - Low active lag, +1 ms at 1x HS, +6 ms at 20x HS
 
 #### Download Info:
-|Identifier   | MC       | File                                                                                                                                | Description                                 | SHA256                                                              |
-|------------ |:-------- |:----------------------------------------------------------------------------------------------------------------------------------- |:------------------------------------------- |:--------------------------------------------------------------------|
-|CH01         | 1.18.2   | [CH01_encoded_chest_hall_p30.litematic](CH01%20Parallelized%20Encoded%20Chest%20Hall/CH01_encoded_chest_hall_p30.litematic?raw=1)   | Litematic of chest hall with inventories.   | `70f0ae9110df998b62cd06ee2cee12fcd096514b88a048e71ddac1451b5b8310`  |
+|Identifier   | MC       | File                                                                                                                                | Description                                |
+|------------ |:-------- |:----------------------------------------------------------------------------------------------------------------------------------- |:-------------------------------------------|
+|CH01         | 1.18.2   | [CH01_encoded_chest_hall_p30.litematic](CH01%20Parallelized%20Encoded%20Chest%20Hall/CH01_encoded_chest_hall_p30.litematic?raw=1)   | Litematic of chest hall with inventories.  |

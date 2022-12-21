@@ -15,9 +15,9 @@ The DC01 decoder takes six bits and outputs a pulse at one of 64 slices correspo
 - QC based logic.
 
 #### Download Info:
-|Identifier   | MC       | File                                                                                                 | Description             | SHA256                                                              |
-|------------ |:-------- |:---------------------------------------------------------------------------------------------------- |:----------------------- |:--------------------------------------------------------------------|
-|DC01         | 1.17.1   | [DC01_6bit_decoder.litematic](DC01%206%20Bit%20Binary%20Decoder/DC01_6bit_decoder.litematic?raw=1)   | Litematic of decoder.   | `3b0c023db197148a1e6337619c0552430ffde2769a97a9f64cab576957c1ea6f`  |
+|Identifier   | MC       | File                                                                                                 | Description            |
+|------------ |:-------- |:---------------------------------------------------------------------------------------------------- |:-----------------------|
+|DC01         | 1.17.1   | [DC01_6bit_decoder.litematic](DC01%206%20Bit%20Binary%20Decoder/DC01_6bit_decoder.litematic?raw=1)   | Litematic of decoder.  |
 
 
 
@@ -35,9 +35,9 @@ The DC02 decoder takes two decimal digits and outputs a pulse at one of 100 slic
 - QC based logic with state auto-fix line.
 
 #### Download Info:
-|Identifier   | MC       | File                                                                                                                        | Description                                              | SHA256                                                              |
-|------------ |:-------- |:--------------------------------------------------------------------------------------------------------------------------- |:-------------------------------------------------------- |:--------------------------------------------------------------------|
-|DC02         | 1.17.1   | [DC02_2Digit_Decimal_Decoder.litematic](DC02%202%20Digit%20Decimal%20Decoder/DC02_2Digit_Decimal_Decoder.litematic?raw=1)   | Litematic of decoder. Includes subregions for testing.   | `b23fb063982792213dd6140afa94fdd475455b4b945f9c3e37bc96d0854e5294`  |
+|Identifier   | MC       | File                                                                                                                        | Description                                             |
+|------------ |:-------- |:--------------------------------------------------------------------------------------------------------------------------- |:--------------------------------------------------------|
+|DC02         | 1.17.1   | [DC02_2Digit_Decimal_Decoder.litematic](DC02%202%20Digit%20Decimal%20Decoder/DC02_2Digit_Decimal_Decoder.litematic?raw=1)   | Litematic of decoder. Includes subregions for testing.  |
 
 
 
@@ -55,6 +55,6 @@ The DC03 decoder takes two decimal digits and outputs a pulse at one of 100 slic
 - QC based logic with state auto-fix line.
 
 #### Download Info:
-|Identifier   | MC       | File                                                                                                                                            | Description                                                                            | SHA256                                                              |
-|------------ |:-------- |:----------------------------------------------------------------------------------------------------------------------------------------------- |:-------------------------------------------------------------------------------------- |:--------------------------------------------------------------------|
-|DC03         | 1.18.2   | [DC03_10BPS_decimal_decoder_1.18.2.litematic](DC03%2010BPS%202%20Digit%20Decimal%20Decoder/DC03_10BPS_decimal_decoder_1.18.2.litematic?raw=1)   | Litematic of decoder. Includes subregions for testing. Does not include inventories.   | `3978ec7c190a9f50aebe9a07c8d4f5a197cbbee5fb57861b947a78a0d15551eb`  |
+|Identifier   | MC       | File                                                                                                                                            | Description                                                                           |
+|------------ |:-------- |:----------------------------------------------------------------------------------------------------------------------------------------------- |:--------------------------------------------------------------------------------------|
+|DC03         | 1.18.2   | [DC03_10BPS_decimal_decoder_1.18.2.litematic](DC03%2010BPS%202%20Digit%20Decimal%20Decoder/DC03_10BPS_decimal_decoder_1.18.2.litematic?raw=1)   | Litematic of decoder. Includes subregions for testing. Does not include inventories.  |

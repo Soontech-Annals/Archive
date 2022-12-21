@@ -15,9 +15,9 @@ The DH01 quad display slice has 4 box displays with reliable collection. It uses
 - Fully hopperlocked.
 
 #### Download Info:
-|Identifier   | MC       | File                                                                                                                                        | Description           | SHA256                                                              |
-|------------ |:-------- |:------------------------------------------------------------------------------------------------------------------------------------------- |:--------------------- |:--------------------------------------------------------------------|
-|DH01         | 1.18.2   | [DH01_quad_display_slice.litematic](DH01%20Quad%20Display%20Slice%20With%20Reliable%20Collection/DH01_quad_display_slice.litematic?raw=1)   | Litematic of slice.   | `48257f3cb5b26a47054e9736600f6d2050d2c43f0c1a3a66add33f68e2a48a2b`  |
+|Identifier   | MC       | File                                                                                                                                        | Description          |
+|------------ |:-------- |:------------------------------------------------------------------------------------------------------------------------------------------- |:---------------------|
+|DH01         | 1.18.2   | [DH01_quad_display_slice.litematic](DH01%20Quad%20Display%20Slice%20With%20Reliable%20Collection/DH01_quad_display_slice.litematic?raw=1)   | Litematic of slice.  |
 
 
 
@@ -36,9 +36,9 @@ The DH02 quad display slice has 4 box displays with passive read ability. It has
 - Control logic can be relatively simple.
 
 #### Download Info:
-|Identifier   | MC       | File                                                                                                                                         | Description           | SHA256                                                              |
-|------------ |:-------- |:-------------------------------------------------------------------------------------------------------------------------------------------- |:--------------------- |:--------------------------------------------------------------------|
-|DH02         | 1.17.1   | [DH02_quadbulk_slice_2w_dev1.litematic](DH02%20Quad%20Display%20Slice%20With%20Passive%20Read/DH02_quadbulk_slice_2w_dev1.litematic?raw=1)   | Litematic of slice.   | `1236913f2445e19d90aaa82fd3b0b4edd9583cbc49ae24c25e4dfe43a4d71dee`  |
+|Identifier   | MC       | File                                                                                                                                         | Description          |
+|------------ |:-------- |:-------------------------------------------------------------------------------------------------------------------------------------------- |:---------------------|
+|DH02         | 1.17.1   | [DH02_quadbulk_slice_2w_dev1.litematic](DH02%20Quad%20Display%20Slice%20With%20Passive%20Read/DH02_quadbulk_slice_2w_dev1.litematic?raw=1)   | Litematic of slice.  |
 
 
 
@@ -58,6 +58,6 @@ The DH03 quad display slice has 4 box displays with passive read ability and par
 - Control logic somewhat simple
 
 #### Download Info:
-|Identifier   | MC       | File                                                                                                                                      | Description           | SHA256                                                              |
-|------------ |:-------- |:----------------------------------------------------------------------------------------------------------------------------------------- |:--------------------- |:--------------------------------------------------------------------|
-|DH03         | 1.17.1   | [DH03_QuadBulk_V5_3.litematic](DH03%20Parallelized%20Quad%20Display%20Slice%20With%20Passive%20Read/DH03_QuadBulk_V5_3.litematic?raw=1)   | Litematic of slice.   | `5d7c31461b0888ce0a2d7f428586789abe5de97d5176d05cf2a206298b8e7147`  |
+|Identifier   | MC       | File                                                                                                                                      | Description          |
+|------------ |:-------- |:----------------------------------------------------------------------------------------------------------------------------------------- |:---------------------|
+|DH03         | 1.17.1   | [DH03_QuadBulk_V5_3.litematic](DH03%20Parallelized%20Quad%20Display%20Slice%20With%20Passive%20Read/DH03_QuadBulk_V5_3.litematic?raw=1)   | Litematic of slice.  |
