@@ -13,9 +13,9 @@
 | [external-bulk](external-bulk)                 |       0 |
 | [item-memory](item-memory)                     |       2 |
 | [item-variable](item-variable)                 |       0 |
-| [logic-and-computation](logic-and-computation) |       0 |
+| [logic-and-computation](logic-and-computation) |       6 |
 | [merging](merging)                             |       0 |
 | [resources](resources)                         |       0 |
-| [splitting](splitting)                         |       0 |
-| [transport](transport)                         |       0 |
-| [wiring](wiring)                               |       0 |
+| [splitting](splitting)                         |       2 |
+| [transport](transport)                         |       2 |
+| [wiring](wiring)                               |       2 |

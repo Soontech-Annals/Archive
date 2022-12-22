@@ -6,7 +6,7 @@
 
 The DC01 decoder takes six bits and outputs a pulse at one of 64 slices corresponding to the code.
 
-<img src="DC01%206%20Bit%20Binary%20Decoder/6bit.png?raw=1" height="300px">
+<img src="DC01%206%20Bit%20Binary%20Decoder/6bit.png?raw=1" style="max-height: 300px">
 
 #### Features:
 - Constant time decoding. 14gt latency.
@@ -26,7 +26,7 @@ The DC01 decoder takes six bits and outputs a pulse at one of 64 slices correspo
 
 The DC02 decoder takes two decimal digits and outputs a pulse at one of 100 slices corresponding to the code.
 
-<img src="DC02%202%20Digit%20Decimal%20Decoder/decoderfront.png?raw=1" height="300px">
+<img src="DC02%202%20Digit%20Decimal%20Decoder/decoderfront.png?raw=1" style="max-height: 300px">
 
 #### Features:
 - Constant time decoding. 30gt latency.
@@ -46,7 +46,7 @@ The DC02 decoder takes two decimal digits and outputs a pulse at one of 100 slic
 
 The DC03 decoder takes two decimal digits and outputs a pulse at one of 100 slices corresponding to the code. The signal travels 10 blocks per second giving the device an O(n) time complexity.
 
-<img src="DC03%2010BPS%202%20Digit%20Decimal%20Decoder/bps.png?raw=1" height="300px">
+<img src="DC03%2010BPS%202%20Digit%20Decimal%20Decoder/bps.png?raw=1" style="max-height: 300px">
 
 #### Features:
 - O(n) linear time decoding, 2 gt/block. Signal travels 10 blocks per second.

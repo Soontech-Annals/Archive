@@ -6,7 +6,7 @@
 
 The IM01 is able to store and retrieve items with a specific decimal code. This may be useful as a temp storage in an encoded dynamic sorting system.
 
-<img src="IM01%20100%20Item%20RAM/itemram.png?raw=1" height="300px">
+<img src="IM01%20100%20Item%20RAM/itemram.png?raw=1" style="max-height: 300px">
 
 #### Features:
 - Has 100 different codes/item types. a dropper of storage per code.
@@ -27,7 +27,7 @@ The IM01 is able to store and retrieve items with a specific decimal code. This 
 
 The IM02 is able to store and retrieve items with a specific decimal code. This may be useful as a temp storage in an encoded dynamic sorting system.
 
-<img src="IM02%201000%20Item%20RAM/ram2.png?raw=1" height="300px">
+<img src="IM02%201000%20Item%20RAM/ram2.png?raw=1" style="max-height: 300px">
 
 #### Features:
 - Has 1000 different codes/item types. a dropper of storage per code.

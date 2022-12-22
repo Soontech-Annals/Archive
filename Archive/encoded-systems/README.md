@@ -6,7 +6,7 @@
 
 TODO
 
-<img src="ES01%20Palla%20Encoded%20V3.100/palla3.1.png?raw=1" height="300px">
+<img src="ES01%20Palla%20Encoded%20V3.100/palla3.1.png?raw=1" style="max-height: 300px">
 
 #### Features:
 - Incomplete.

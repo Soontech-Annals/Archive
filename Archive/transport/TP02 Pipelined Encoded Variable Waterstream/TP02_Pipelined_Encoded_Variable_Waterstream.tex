@@ -1,0 +1,97 @@
+% Options here are passed to the article class.
+% Most common options: 10pt, 11pt, 12pt
+\documentclass[10pt]{datasheet}
+
+% Input encoding and typographical rules for English language
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[english]{isodate}
+
+% tikz is used to draw images in this example, but you can
+% also use \includegraphics{}.
+\usepackage{graphicx}
+
+% These define global texts that are used in headers and titles.
+\title{TP02: Pipelined Encoded Variable Waterstream}
+\author{Andrews54757}
+\tags{transport, binary-encoded}
+\date{21 December 2022}
+\revision{Revision 1}
+\begin{document}
+\maketitle
+
+\section{Features}
+
+\begin{itemize}
+\item{O(n) insertion time with 10BPS waterstream.}
+\item{16gt throughput}
+\item{Pipelined for parallelization.}
+\end{itemize}
+
+\section{Applications}
+
+\begin{itemize}
+\item{Item transport for halls.}
+\end{itemize}
+
+\section{General Description}
+Takes a 6 bit binary code and deposits items in the decoded slice in linear time O(n). Pipeline-able for massively parallelized chest halls. Uses overstacked comparators with a 10bps waterstream to keep item entity and code in sync. Can execute an operation every 16gt.
+
+\vfill\break
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.48\textwidth]{pipe.png}
+    \caption{\centering Pipelined Encoded Variable Waterstream}
+\end{figure}
+
+% For wide tables, a single column layout is better. It can be switched
+% page-by-page.
+\onecolumn
+
+\section{Device Specifications}
+
+\begin{table}[h]
+    \caption{Device Specifications}
+    \begin{tabularx}{\textwidth}{l | c c c | c | X}
+        \thickhline
+        \textbf{Parameter} & \textbf{Min.} & \textbf{Typ.} & \textbf{Max.} &
+        \textbf{Unit} & \textbf{Conditions} \\
+        \hline
+        Throughput  & 16 & - & - & gt & Normal Usage \\
+        \hline
+        MC Version & 1.16 & 1.17.1 & - & MCV & Latest version at time of writing: 1.19.3\\
+        \hline
+        Dimensions & & 6 x 15 x 76 & & Blocks & \\
+        \thickhline
+\end{tabularx}
+\end{table}
+
+\section{Testing Data}
+
+\begin{table}[h]
+\caption{Executed Tests}
+\begin{tabularx}{\textwidth}{l | X}
+    \thickhline
+    \textbf{Test} & \textbf{Result} \\
+    \hline
+    Throughput test & Device was able to function with 16gt clocked input. \\
+    \thickhline
+\end{tabularx}
+\end{table}
+
+\section{Download Information}
+\begin{table}[h]
+    \caption{Download Information}
+    \begin{tabularx}{\textwidth}{l | l | l | X}
+        \thickhline
+        \textbf{Identifier} & \textbf{MC} & \textbf{File} & \textbf{Description} \\
+        \hline
+        TP02 & 1.17.1 & TP02\_Pipelined\_Encoded\_Variable\_Waterstream.litematic & Schematic of device. \\
+        \hline
+        \thickhline
+    \end{tabularx}
+\end{table}
+
+\end{document}
+

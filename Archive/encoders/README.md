@@ -6,7 +6,7 @@
 
 The EC01 encoder uses multiple hoppercarts to allow for hopperspeed item to code encoding. The design shown is a 54 double-chest design which allows for up to 1000 item types with a decimal encoding scheme.
 
-<img src="EC01%20Hopperspeed%20Encoder%20V2/encoder.png?raw=1" height="300px">
+<img src="EC01%20Hopperspeed%20Encoder%20V2/encoder.png?raw=1" style="max-height: 300px">
 
 #### Features:
 - Hopperspeed (9000 items/hr) encoding.
@@ -26,7 +26,7 @@ The EC01 encoder uses multiple hoppercarts to allow for hopperspeed item to code
 
 The EC02 small item to decimal encoder uses demibolts and a simple layered design. It can handle up to 1000 item types.
 
-<img src="EC02%20Small%20Decimal%20Encoder/small.png?raw=1" height="300px">
+<img src="EC02%20Small%20Decimal%20Encoder/small.png?raw=1" style="max-height: 300px">
 
 #### Features:
 - Small and simple stacked design with demibolts.
@@ -45,7 +45,7 @@ The EC02 small item to decimal encoder uses demibolts and a simple layered desig
 
 The EC03 16gt encoder has a 16gt throughput encoder core which only requires one item per type in a chest. It uses 9 carts but can be easily modified with cart yeeting in 1.19+ (carts in storage are all empty). It is dustupdateless, honeyless, and MTE compatible.
 
-<img src="EC03%2016gt%20Item%20Encoder/coder.png?raw=1" height="300px">
+<img src="EC03%2016gt%20Item%20Encoder/coder.png?raw=1" style="max-height: 300px">
 
 #### Features:
 - Uses 9 carts for half-hopperspeed (16gt) throughput

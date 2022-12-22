@@ -85,6 +85,12 @@
                     "description": "Litematic of grouper device",
                     "sha256": "286c51558f89ea7fd86f764922eef816fa99ac889e1d93c38940c12bf0e51630"
                 }
+            ],
+            "testData": [
+                {
+                    "test": "Input/output test",
+                    "result": "Device successfully grouped boxes of 12 different item types and sequentlially outputted them in hopperspeed"
+                }
             ]
         },
         {
@@ -177,8 +183,30 @@
             ],
             "relatedComponents": [
                 {
-                    "identifier": "DDL01",
+                    "identifier": "DC02",
                     "description": "10BPS 2 Digit Decimal Decoder"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Item Stackability and Max Slots",
+                    "result": "Unstackable, 16 stackable, and 64 stackable items were successfully input into the system with varying maxinum slot counts without overflowing."
+                },
+                {
+                    "test": "All Chests",
+                    "result": "Two boxes of items were successfully unloaded and inserted into every chest with no loss."
+                },
+                {
+                    "test": "Box Mode",
+                    "result": "Boxes were successfully inserted into multiple chests with no loss."
+                },
+                {
+                    "test": "Unloader Component",
+                    "result": "Hundreds of thousands of items were passed through unloader modules without loss. All empty boxes were collected. Varying box fill levels and premature abort was tested successfully."
+                },
+                {
+                    "test": "Auto-Fix Toggles",
+                    "result": "The storage was purposefully broken at various toggles and a repair was attempted with the auto-fix sequence. The system was always successfully repaired with multiple invokations of the auto-fix sequence."
                 }
             ]
         },
@@ -266,6 +294,16 @@
                     "description": "Litematic of RAM with 600 bits. Wired slightly better. 36x32x36 blocks. Inventories not included.",
                     "sha256": "e1afd8c91b2a562c37dc2deb0bc30eb1c603d44ae151b476f46025feffe0a521"
                 }
+            ],
+            "testData": [
+                {
+                    "test": "Write test",
+                    "result": "Device was able to write to all bits successfully."
+                },
+                {
+                    "test": "Stream test",
+                    "result": "Device was able to stream all bits successfully."
+                }
             ]
         },
         {
@@ -336,6 +374,16 @@
                     "description": "Litematic of decoder.",
                     "sha256": "3b0c023db197148a1e6337619c0552430ffde2769a97a9f64cab576957c1ea6f"
                 }
+            ],
+            "testData": [
+                {
+                    "test": "Code test",
+                    "result": "Device was able to decode all possible codes successfully."
+                },
+                {
+                    "test": "Throughput test",
+                    "result": "Device was able to decode at 6gt-8gt throughput."
+                }
             ]
         },
         {
@@ -403,6 +451,20 @@
                     "file": "DC02_2Digit_Decimal_Decoder.litematic",
                     "description": "Litematic of decoder. Includes subregions for testing.",
                     "sha256": "b23fb063982792213dd6140afa94fdd475455b4b945f9c3e37bc96d0854e5294"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Code test",
+                    "result": "Device was able to decode all possible codes successfully."
+                },
+                {
+                    "test": "Auto-fix test",
+                    "result": "Device was able to reset faulty dropper states successfully."
+                },
+                {
+                    "test": "Throughput test",
+                    "result": "Device was able to decode at 8gt throughput."
                 }
             ]
         },
@@ -474,6 +536,20 @@
                     "description": "Litematic of decoder. Includes subregions for testing. Does not include inventories.",
                     "sha256": "3978ec7c190a9f50aebe9a07c8d4f5a197cbbee5fb57861b947a78a0d15551eb"
                 }
+            ],
+            "testData": [
+                {
+                    "test": "Code test",
+                    "result": "Device was able to decode all possible codes successfully."
+                },
+                {
+                    "test": "Auto-fix test",
+                    "result": "Device was able to reset faulty dropper states successfully."
+                },
+                {
+                    "test": "Throughput test",
+                    "result": "Device was able to decode at 8gt throughput."
+                }
             ]
         },
         {
@@ -532,6 +608,16 @@
                     "file": "DH01_quad_display_slice.litematic",
                     "description": "Litematic of slice.",
                     "sha256": "48257f3cb5b26a47054e9736600f6d2050d2c43f0c1a3a66add33f68e2a48a2b"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Display operation",
+                    "result": "Box displays were able to replace boxes when emptied."
+                },
+                {
+                    "test": "Display spam",
+                    "result": "Box displays did not break with items being taken in and out of box rapidly."
                 }
             ]
         },
@@ -594,6 +680,12 @@
                     "file": "DH02_quadbulk_slice_2w_dev1.litematic",
                     "description": "Litematic of slice.",
                     "sha256": "1236913f2445e19d90aaa82fd3b0b4edd9583cbc49ae24c25e4dfe43a4d71dee"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Display operation",
+                    "result": "Box displays were able to replace boxes when emptied."
                 }
             ]
         },
@@ -658,6 +750,12 @@
                     "file": "DH03_QuadBulk_V5_3.litematic",
                     "description": "Litematic of slice.",
                     "sha256": "5d7c31461b0888ce0a2d7f428586789abe5de97d5176d05cf2a206298b8e7147"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Display operation",
+                    "result": "Box displays were able to replace boxes when emptied."
                 }
             ]
         },
@@ -768,6 +866,16 @@
                     "description": "World download of encoder",
                     "sha256": "e155977b3e8abb93a0bc24d3ba991a1c1644c95c4f293305fcf6dab5ed314ee1"
                 }
+            ],
+            "testData": [
+                {
+                    "test": "Box encoding test",
+                    "result": "Device was able to encode with box input"
+                },
+                {
+                    "test": "Throughput test",
+                    "result": "Device was able to encode at 8gt throughput with randomized input."
+                }
             ]
         },
         {
@@ -830,6 +938,16 @@
                     "file": "EC02_small_decimal_encoder.litematic",
                     "description": "Schematic of encoder.",
                     "sha256": "d295d52c4ed82e0ac3da00896992296099a91dec669794c2af2bbae55c03d4a1"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Item encoding test",
+                    "result": "Device was able to encode with item input"
+                },
+                {
+                    "test": "Throughput test",
+                    "result": "Device was able to encode at 8gt throughput with randomized input."
                 }
             ]
         },
@@ -895,6 +1013,16 @@
                     "description": "Schematic of encoder.",
                     "sha256": "1a7a95ca957624724af88fd1bf53dc9e40a7ed153d265eff1c2bd2f1374ec291"
                 }
+            ],
+            "testData": [
+                {
+                    "test": "Item encoding test",
+                    "result": "Device was able to encode with item input"
+                },
+                {
+                    "test": "Throughput test",
+                    "result": "Device was able to encode at 16gt throughput with randomized input."
+                }
             ]
         },
         {
@@ -948,6 +1076,12 @@
                     "file": "MX01_morning_flower_alarm_loop.litematic",
                     "description": "Schematic of device.",
                     "sha256": "beb7905640eb22ee7c489bbc7a14f1b6b90765d54e287185a64525bdc6259531"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Music test",
+                    "result": "Device was able to produce the desired music."
                 }
             ]
         },
@@ -1013,6 +1147,16 @@
                     "description": "Litematic of item RAM device.",
                     "sha256": "24ae02fe85023bb4509ccf9c224438a2a4c5bbd143277a2ba30e230c254b4628"
                 }
+            ],
+            "testData": [
+                {
+                    "test": "Insertion",
+                    "result": "Items were successfully inserted in all positions."
+                },
+                {
+                    "test": "Retrieval",
+                    "result": "Items were successfully retrieved from all positions."
+                }
             ]
         },
         {
@@ -1076,6 +1220,750 @@
                     "file": "IM02_1000_item_RAM_p2.litematic",
                     "description": "Litematic of item RAM device.",
                     "sha256": "98d264ac5f9ac5f3410d7e20efcc5eb6e6d01f1613cb393d7962303eec618faf"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Insertion",
+                    "result": "Items were successfully inserted in all positions."
+                },
+                {
+                    "test": "Retrieval",
+                    "result": "Items were successfully retrieved from all positions."
+                }
+            ]
+        },
+        {
+            "path": [
+                "logic-and-computation",
+                "LC01 1 Wide Redcoder"
+            ],
+            "identifier": "LC01",
+            "title": "1 Wide Redcoder",
+            "authors": [
+                "Andrews54757"
+            ],
+            "tags": [
+                "logic-and-computation",
+                "redcoder"
+            ],
+            "date": "December 2022",
+            "revision": "1",
+            "description": "The LC01 1 wide redcoder takes a pulsed analog signal and outputs a pulse at one of 15 slices corresponding to the code.",
+            "image": "redcoder.png",
+            "tex": "LC01_1_Wide_Redcoder.tex",
+            "pdf": "LC01_1_Wide_Redcoder.pdf",
+            "features": [
+                "1 Wide",
+                "Stateless, uses quasi-based logic"
+            ],
+            "applications": [
+                "Decoding analog signals"
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "10"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.3",
+                    "min": "1.13",
+                    "typ": "1.17.1"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "1 x 6 x 18"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "LC01",
+                    "mc": "1.17.1",
+                    "file": "LC01_1w_redcoder.litematic",
+                    "description": "Schematic of device.",
+                    "sha256": "9618d59aada73fea71e7971ee5037950b395c756b0ffe704e769e3618569a590"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Decoding test",
+                    "result": "Device was able to decode analog signals successfully at 10gt throughput."
+                }
+            ]
+        },
+        {
+            "path": [
+                "logic-and-computation",
+                "LC02 Hopperspeed Hex to Binary"
+            ],
+            "identifier": "LC02",
+            "title": "Hopperspeed Hex to Binary",
+            "authors": [
+                "Andrews54757"
+            ],
+            "tags": [
+                "logic-and-computation",
+                "converter"
+            ],
+            "date": "December 2022",
+            "revision": "1",
+            "description": "The LC02 Hopperspeed Hex to Binary takes a hex coded signal and outputs a binary coded signal. It is hopperspeed, meaning it can be used to convert a hex coded signal to a binary coded signal every 8 game ticks.",
+            "image": "hextobin.png",
+            "tex": "LC02_Hopperspeed_Hex_to_Binary.tex",
+            "pdf": "LC02_Hopperspeed_Hex_to_Binary.pdf",
+            "features": [
+                "Hopperspeed throughput",
+                "Stateless, uses quasi-based logic",
+                "14gt Latency"
+            ],
+            "applications": [
+                "Converting hex coded signals to binary"
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "8"
+                },
+                "Latency": {
+                    "unit": "gt",
+                    "conditions": "From input to output",
+                    "min": "14"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.3",
+                    "min": "1.13",
+                    "typ": "1.17.1"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "19 x 9 x 4"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "LC02",
+                    "mc": "1.17.1",
+                    "file": "LC02_hopperspeed_hex_to_bin.litematic",
+                    "description": "Schematic of device.",
+                    "sha256": "2982da7cdcd9143f83ec2ef4e4eb526443d7b87276245557cbeaeeb6cb931c93"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Conversion test",
+                    "result": "Device was able to convert signals successfully at 10gt throughput."
+                }
+            ]
+        },
+        {
+            "path": [
+                "logic-and-computation",
+                "LC03 Await Latch"
+            ],
+            "identifier": "LC03",
+            "title": "Await Latch",
+            "authors": [
+                "Andrews54757"
+            ],
+            "tags": [
+                "logic-and-computation"
+            ],
+            "date": "December 2022",
+            "revision": "1",
+            "description": "The LC03 Await Latch takes one pulse input and one boolean input. Pulse only goes through when boolean input is on. If it is off, it will wait until boolean input turns on and then send pulse. Won't break with random inputs.",
+            "image": "awaitlatch.png",
+            "tex": "LC03_Await_Latch.tex",
+            "pdf": "LC03_Await_Latch.pdf",
+            "features": [
+                "2 Wide and 2 High",
+                "\"Unbreakable\""
+            ],
+            "applications": [
+                "Queueing tasks"
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "12"
+                },
+                "Latency": {
+                    "unit": "gt",
+                    "conditions": "From input to output",
+                    "min": "4"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.3",
+                    "min": "1.13",
+                    "typ": "1.17.1"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "2 x 2 x 7"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "LC03",
+                    "mc": "1.17.1",
+                    "file": "LC03_await_latch.litematic",
+                    "description": "Schematic of device.",
+                    "sha256": "961e642181549f1037c45cba952beab068d8898d124b43e5c030a75f2ec7da56"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Spam test",
+                    "result": "Device didn't break with spammed inputs."
+                },
+                {
+                    "test": "Throughput test",
+                    "result": "Device was able to pulse signals successfully at 12gt throughput."
+                }
+            ]
+        },
+        {
+            "path": [
+                "logic-and-computation",
+                "LC04 2gt Binary Stream Splitter"
+            ],
+            "identifier": "LC04",
+            "title": "2gt Binary Stream Splitter",
+            "authors": [
+                "Andrews54757"
+            ],
+            "tags": [
+                "logic-and-computation",
+                "converter"
+            ],
+            "date": "December 2022",
+            "revision": "1",
+            "description": "The LC04 binary stream splitter takes a 2gt repeater stream and splits it into two 4gt observer signal lines.",
+            "image": "stream_split.png",
+            "tex": "LC04_2gt_Binary_Stream_Splitter.tex",
+            "pdf": "LC04_2gt_Binary_Stream_Splitter.pdf",
+            "features": [
+                "Stateless, uses quasi-based logic"
+            ],
+            "applications": [
+                "Rapid data transmission"
+            ],
+            "specifications": {
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.3",
+                    "min": "1.13",
+                    "typ": "1.17.1"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "3 x 4 x 8"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "LC04",
+                    "mc": "1.17.1",
+                    "file": "LC04_2gt_binary_stream_splitter_p1.litematic",
+                    "description": "Schematic of device.",
+                    "sha256": "7eb769b1949ca7f0ba7377d2ab09a42ce9aafb730aabe1509003a13d4e0c09e1"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Conversion test",
+                    "result": "Device was able to split 2gt binary stream into 2 4gt streams correctly."
+                }
+            ]
+        },
+        {
+            "path": [
+                "logic-and-computation",
+                "LC05 Stateless Group Dispenser"
+            ],
+            "identifier": "LC05",
+            "title": "Stateless Group Dispenser",
+            "authors": [
+                "Andrews54757"
+            ],
+            "tags": [
+                "logic-and-computation"
+            ],
+            "date": "December 2022",
+            "revision": "1",
+            "description": "The LC05 group dispenser outputs items from first filled dropper in line with each pulse. With an 8gt clock this will have an additional 8gt transition delay between groups. Items can be inserted during operation and the thing won't output multiple groups at same time by accident.",
+            "image": "dispense.png",
+            "tex": "LC05_Stateless_Group_Dispenser.tex",
+            "pdf": "LC05_Stateless_Group_Dispenser.pdf",
+            "features": [
+                "Stateless, uses quasi-based logic",
+                "Will not output more than one group at a time"
+            ],
+            "applications": [
+                "Box groupers"
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "8"
+                },
+                "Latency": {
+                    "unit": "gt",
+                    "conditions": "From input to dropper activation.",
+                    "min": "6"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.3",
+                    "min": "1.13",
+                    "typ": "1.17.1"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "3 x 4 x 8"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "LC05",
+                    "mc": "1.17.1",
+                    "file": "LC05_stateless_group_dispenser.litematic",
+                    "description": "Schematic of device.",
+                    "sha256": "c48bf2ed2945249ce63610c08ab9c86a5416cf925e186fc596827b5427516b94"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Throughput test",
+                    "result": "Device was able to function with 8gt clocked input."
+                }
+            ]
+        },
+        {
+            "path": [
+                "logic-and-computation",
+                "LC06 Stateless 10 Bit Double Dabble"
+            ],
+            "identifier": "LC06",
+            "title": "Stateless 10 Bit Double Dabble",
+            "authors": [
+                "Andrews54757"
+            ],
+            "tags": [
+                "logic-and-computation",
+                "converter"
+            ],
+            "date": "December 2022",
+            "revision": "1",
+            "description": "The LC06 device converts binary to binary coded decimal (binary -> decimal) using the combinational double dabble algorithm. 17 gt per level. Input can be clocked 8gt.",
+            "image": "doubledabble.png",
+            "tex": "LC06_Stateless_10_Bit_Double_Dabble.tex",
+            "pdf": "LC06_Stateless_10_Bit_Double_Dabble.pdf",
+            "features": [
+                "Stateless, uses quasi-based logic",
+                "Hopperspeed throughput"
+            ],
+            "applications": [
+                "Converting binary codes to decimal"
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "8"
+                },
+                "Latency": {
+                    "unit": "gt",
+                    "conditions": "From input to dropper activation.",
+                    "min": "119"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.3",
+                    "min": "1.16",
+                    "typ": "1.17.1"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "11 x 60 x 19"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "LC06",
+                    "mc": "1.17.1",
+                    "file": "LC06_stateless_10bit_double_dabble.litematic",
+                    "description": "Schematic of device.",
+                    "sha256": "5305acbae644456a9f34ee434f72eacd8b0f5494cbcb970b2a7e412659b79fa5"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Throughput test",
+                    "result": "Device was able to function with 8gt clocked input."
+                }
+            ]
+        },
+        {
+            "path": [
+                "splitting",
+                "SG01 Shulker Box Splitter Array"
+            ],
+            "identifier": "SG01",
+            "title": "Shulker Box Splitter Array",
+            "authors": [
+                "Quacon Group"
+            ],
+            "tags": [
+                "splitting"
+            ],
+            "date": "21 December 2022",
+            "revision": "1",
+            "description": "Splits mixed boxes into smaller boxes of the same type. This design uses the hopper dueling mechanism for a \"filter itemless\" setup. Video explanation \\href{https://www.youtube.com/watch?v=zRO1QfmYa6o}{here}.",
+            "image": "splitarray.png",
+            "tex": "SG01_Shulker_Box_Splitter_Array.tex",
+            "pdf": "SG01_Shulker_Box_Splitter_Array.pdf",
+            "features": [
+                "No \"filter items\"",
+                "2 wide tileable design"
+            ],
+            "applications": [
+                "Dynamic sorting systems"
+            ],
+            "specifications": {
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.3",
+                    "min": "1.16.5",
+                    "typ": "1.16.5"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "14 x 19 x 9"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "SG01",
+                    "mc": "1.17.1",
+                    "file": "SG01_Shulker_Box_Splitter_Array.zip",
+                    "description": "World download of device.",
+                    "sha256": "b08eccb6e3ea3d8be8ffb1fcd576fd6a41e5518864f8d514449c1aadc659ac85"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Splitting test",
+                    "result": "Device was able to split mixed boxes correctly."
+                }
+            ]
+        },
+        {
+            "path": [
+                "splitting",
+                "SG02 Shulker Box Splitter"
+            ],
+            "identifier": "SG02",
+            "title": "Shulker Box Splitter",
+            "authors": [
+                "Obi"
+            ],
+            "tags": [
+                "splitting"
+            ],
+            "date": "21 December 2022",
+            "revision": "1",
+            "description": "Splits mixed boxes into smaller boxes of the same type. This design uses the hopper dueling mechanism for a \"filter itemless\" setup. It uses a global clock to allow for it to be paused during operation. Control wiring is comparatively tricky to do because of the global clock. Can lose empty boxes (although will not break) if they are input with no items. So don't do that.",
+            "image": "globalclocksplitter1.png",
+            "tex": "SG02_Shulker_Box_Splitter.tex",
+            "pdf": "SG02_Shulker_Box_Splitter.pdf",
+            "features": [
+                "2wABt, fully hopper locked",
+                "Globally clocked, allowing the array to be paused in operation",
+                "Status outputs for activity, inactivity, & empty box supply"
+            ],
+            "applications": [
+                "Dynamic sorting systems."
+            ],
+            "specifications": {
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.3",
+                    "min": "1.11"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "11 x 18 x 16"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "SG02",
+                    "mc": "1.17.1",
+                    "file": "SG02_Shulker_Box_Splitter.litematic",
+                    "description": "Schematic of device.",
+                    "sha256": "62a2afea7e0fb037c684e3a1edb7f1abcae34d9e50f979d200ab97731f5724ab"
+                }
+            ]
+        },
+        {
+            "path": [
+                "transport",
+                "TP01 Decimal Encoded Variable Instant Dropperline"
+            ],
+            "identifier": "TP01",
+            "title": "Decimal Encoded Variable Instant Dropperline",
+            "authors": [
+                "Andrews54757"
+            ],
+            "tags": [
+                "transport",
+                "decimal-encoded"
+            ],
+            "date": "21 December 2022",
+            "revision": "1",
+            "description": "Takes two comparator inputs (one decimal, one half-decimal) and deposits items in the decoded slice in constant time. The dropperline is fired twice per insertion to clear any potential overflow items. 10gt-able.",
+            "image": "vardrop2.png",
+            "tex": "TP01_Decimal_Encoded_Variable_Instant_Dropperline.tex",
+            "pdf": "TP01_Decimal_Encoded_Variable_Instant_Dropperline.pdf",
+            "features": [
+                "Constant time insertion",
+                "10gt throughput",
+                "Fired twice for overflow handling"
+            ],
+            "applications": [
+                "Item transportation for halls."
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "10"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.3",
+                    "min": "1.16",
+                    "typ": "1.17.1"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "67 x 11 x 10"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "TP01",
+                    "mc": "1.17.1",
+                    "file": "TP01_Decimal_Encoded_Variable_Instant_Dropperline.litematic",
+                    "description": "Schematic of device.",
+                    "sha256": "02587019e77a90213983605a69679e73be5979fc35a2cae9f867efb65bbee101"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Decoding test",
+                    "result": "Device was able to decode with 10gt clocked input."
+                }
+            ]
+        },
+        {
+            "path": [
+                "transport",
+                "TP02 Pipelined Encoded Variable Waterstream"
+            ],
+            "identifier": "TP02",
+            "title": "Pipelined Encoded Variable Waterstream",
+            "authors": [
+                "Andrews54757"
+            ],
+            "tags": [
+                "transport",
+                "binary-encoded"
+            ],
+            "date": "21 December 2022",
+            "revision": "1",
+            "description": "Takes a 6 bit binary code and deposits items in the decoded slice in linear time O(n). Pipeline-able for massively parallelized chest halls. Uses overstacked comparators with a 10bps waterstream to keep item entity and code in sync. Can execute an operation every 16gt.",
+            "image": "pipe.png",
+            "tex": "TP02_Pipelined_Encoded_Variable_Waterstream.tex",
+            "pdf": "TP02_Pipelined_Encoded_Variable_Waterstream.pdf",
+            "features": [
+                "O(n) insertion time with 10BPS waterstream.",
+                "16gt throughput",
+                "Pipelined for parallelization."
+            ],
+            "applications": [
+                "Item transport for halls."
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "16"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.3",
+                    "min": "1.16",
+                    "typ": "1.17.1"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "6 x 15 x 76"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "TP02",
+                    "mc": "1.17.1",
+                    "file": "TP02_Pipelined_Encoded_Variable_Waterstream.litematic",
+                    "description": "Schematic of device.",
+                    "sha256": "3be07cd233b6aec9526343337ebae0de9db04833f58c6f30264ad37bb03b3fb5"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Throughput test",
+                    "result": "Device was able to function with 16gt clocked input."
+                }
+            ]
+        },
+        {
+            "path": [
+                "wiring",
+                "WI01 6gt-able Instant Comparator Wire"
+            ],
+            "identifier": "WI01",
+            "title": "6gt-able Instant Comparator Wire",
+            "authors": [
+                "RedCMD"
+            ],
+            "tags": [
+                "wiring",
+                "instant-comparator"
+            ],
+            "date": "21 December 2022",
+            "revision": "1",
+            "description": "This instant comparator wire has constant time on/off for all signal strengths.",
+            "image": "redcmd.png",
+            "tex": "WI01_6gt-able_Instant_Comparator_Wire.tex",
+            "pdf": "WI01_6gt-able_Instant_Comparator_Wire.pdf",
+            "features": [
+                "Constant time on/off for all signal strengths",
+                "6gt throughput"
+            ],
+            "applications": [
+                "Analog signal transport."
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "6"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.3",
+                    "min": "1.12",
+                    "typ": "1.17.1"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "8 x 5 x 29"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "WI01",
+                    "mc": "1.17.1",
+                    "file": "WI01_6gt-able_Instant_Comparator_Wire.litematic",
+                    "description": "Schematic of device.",
+                    "sha256": "77657730d3f1ddb13c1291e10888e7d59dc94fd125ad25096034011f5f1b71d4"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Throughput test",
+                    "result": "Device was able to function with 6gt clocked input."
+                }
+            ]
+        },
+        {
+            "path": [
+                "wiring",
+                "WI02 Instant Upwards Comparator Wire"
+            ],
+            "identifier": "WI02",
+            "title": "Instant Upwards Comparator Wire",
+            "authors": [
+                "Andrews54757"
+            ],
+            "tags": [
+                "wiring",
+                "instant-comparator"
+            ],
+            "date": "21 December 2022",
+            "revision": "1",
+            "description": "Transports signals upwards in constant time. Horizontal area of 10x3. Can input from multiple places as shown in schem.",
+            "image": "area_render_3_copy.png",
+            "tex": "WI02_Instant_Upwards_Comparator_Wire.tex",
+            "pdf": "WI02_Instant_Upwards_Comparator_Wire.pdf",
+            "features": [
+                "Constant time on/off for all signal strengths < 15",
+                "8gt throughput",
+                "Can input from multiple places"
+            ],
+            "applications": [
+                "Vertical signal transport."
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "8"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.3",
+                    "min": "1.16",
+                    "typ": "1.17.1"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "10 x 86 x 24"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "WI02",
+                    "mc": "1.17.1",
+                    "file": "WI02_Instant_Upwards_Comparator_Wire.litematic",
+                    "description": "Schematic of device.",
+                    "sha256": "0851ceecbc13e1678eefae313e757cd26850a3296b40cd214d1acce65a7fd822"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Throughput test",
+                    "result": "Device was able to function with 8gt clocked input."
                 }
             ]
         }

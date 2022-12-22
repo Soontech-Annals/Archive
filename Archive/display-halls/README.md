@@ -6,7 +6,7 @@
 
 The DH01 quad display slice has 4 box displays with reliable collection. It uses powdered snow in the displays for 100% reliable collection. It has a fully hopperlocked layout with no visible comparators or pistons. The bottom displays are bufferless with global first box placement. All toggle states are self resetting. For full hopperlocking, the top displays require a gap every 32 blocks.
 
-<img src="DH01%20Quad%20Display%20Slice%20With%20Reliable%20Collection/slice2.png?raw=1" height="300px">
+<img src="DH01%20Quad%20Display%20Slice%20With%20Reliable%20Collection/slice2.png?raw=1" style="max-height: 300px">
 
 #### Features:
 - 100% reliable collection
@@ -26,7 +26,7 @@ The DH01 quad display slice has 4 box displays with reliable collection. It uses
 
 The DH02 quad display slice has 4 box displays with passive read ability. It has a fully hopperlocked layout with no visible pistons. The bottom displays has one buffer box with global first box placement. For full hopperlocking, the top displays require a gap every 32 blocks. Box collection is not fully reliable. Top display will break if used aggressively.
 
-<img src="DH02%20Quad%20Display%20Slice%20With%20Passive%20Read/slice.png?raw=1" height="300px">
+<img src="DH02%20Quad%20Display%20Slice%20With%20Passive%20Read/slice.png?raw=1" style="max-height: 300px">
 
 #### Features:
 - 4 box displays & chests per slice.
@@ -47,7 +47,7 @@ The DH02 quad display slice has 4 box displays with passive read ability. It has
 
 The DH03 quad display slice has 4 box displays with passive read ability and parallelized control logic. It has a fully hopperlocked layout with no visible pistons. The bottom displays has one buffer box with global first box placement. For full hopperlocking, the top displays require a gap every 32 blocks. Box collection is not fully reliable. Top display will break if used aggressively.
 
-<img src="DH03%20Parallelized%20Quad%20Display%20Slice%20With%20Passive%20Read/QuadBulk_V5_3.png?raw=1" height="300px">
+<img src="DH03%20Parallelized%20Quad%20Display%20Slice%20With%20Passive%20Read/QuadBulk_V5_3.png?raw=1" style="max-height: 300px">
 
 #### Features:
 - Minimum hoppers & chests for this layout
