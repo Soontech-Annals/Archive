@@ -1009,16 +1009,16 @@
                 {
                     "identifier": "EC03",
                     "mc": "1.18.2",
-                    "file": "EC03_16gt_encoder_core_p3.litematic",
+                    "file": "EC03_16gt_encoder_core_p2.litematic",
                     "description": "Schematic of encoder.",
-                    "sha256": "f14363499d276b1b881cb62e1c51ca8ae3854addd8a2431611a053ce5244f0de"
+                    "sha256": "e599f19630b13adba967904cbd22f603aded9dcea9a9f1f003eee77ab3036dc6"
                 },
                 {
                     "identifier": "EC03B",
                     "mc": "1.19",
-                    "file": "EC03B_16gt_encoder_1.19_dispenser.litematic",
+                    "file": "EC03_16gt_encoder_core_dispenser_1.19_p2.litematic",
                     "description": "Schematic of encoder with 1.19+ cart dispenser.",
-                    "sha256": "a5be70f11f121efa62e758ea205a08779dedd05a354482c19138603af054f5be"
+                    "sha256": "67ba6d9ca8269cd7de8433bb57168e44a92601289c4e3fb4182e3722bf2d8f6b"
                 }
             ],
             "testData": [
