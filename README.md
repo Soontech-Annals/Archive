@@ -2,7 +2,7 @@
 
 [Join the Discord](https://discord.gg/rJ4W8RHrhe) or [View the Archive](/Archive/)
 
-This is a record of minecraft encoded storage technologies.
+This is a record of minecraft encoded storage technologies. 
 
 ## Naming convention
 

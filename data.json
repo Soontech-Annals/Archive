@@ -1009,9 +1009,9 @@
                 {
                     "identifier": "EC03",
                     "mc": "1.18.2",
-                    "file": "EC03_16gt_encoder_core_p1.litematic",
+                    "file": "EC03_16gt_encoder_core_p3.litematic",
                     "description": "Schematic of encoder.",
-                    "sha256": "1a7a95ca957624724af88fd1bf53dc9e40a7ed153d265eff1c2bd2f1374ec291"
+                    "sha256": "f14363499d276b1b881cb62e1c51ca8ae3854addd8a2431611a053ce5244f0de"
                 }
             ],
             "testData": [
