@@ -34,7 +34,7 @@ module.exports = function generateReadmes() {
             let imgDir = Path.join(__dirname, "Archive", entry.path[0], entry.path[1], entry.image);
             const dims = sizeOf(imgDir);
 
-            const image = `<img src="${encodeURI(entry.path[1] + "/" + entry.image)}?raw=1"${dims > 300 ? " height=\"300px\"" : ""}>`
+            const image = `<img src="${encodeURI(entry.path[1] + "/" + entry.image)}?raw=1"${dims.height > 300 ? " height=\"300px\"" : ""}>`
 
             /*
             "downloadInfo": [

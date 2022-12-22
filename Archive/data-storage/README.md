@@ -6,7 +6,7 @@
 
 The DS01 is a RAM module that stores 1600 bits of data in locked repeaters. Each bit is addressable through three 4-bit inputs. It is able to stream all of its stored data such that one bit is outputted per level every 4gt-8gt.
 
-<img src="DS01%20Streamable%20Bit%20RAM/sram.png?raw=1">
+<img src="DS01%20Streamable%20Bit%20RAM/sram.png?raw=1" height="300px">
 
 #### Features:
 - Constant time writes to individually addressible bits.

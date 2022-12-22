@@ -6,7 +6,7 @@
 
 Splits mixed boxes into smaller boxes of the same type. This design uses the hopper dueling mechanism for a "filter itemless" setup. Video explanation [here](https://www.youtube.com/watch?v=zRO1QfmYa6o).
 
-<img src="SG01%20Shulker%20Box%20Splitter%20Array/splitarray.png?raw=1">
+<img src="SG01%20Shulker%20Box%20Splitter%20Array/splitarray.png?raw=1" height="300px">
 
 #### Features:
 - No "filter items"
@@ -24,7 +24,7 @@ Splits mixed boxes into smaller boxes of the same type. This design uses the hop
 
 Splits mixed boxes into smaller boxes of the same type. This design uses the hopper dueling mechanism for a "filter itemless" setup. It uses a global clock to allow for it to be paused during operation. Control wiring is comparatively tricky to do because of the global clock. Can lose empty boxes (although will not break) if they are input with no items. So don't do that.
 
-<img src="SG02%20Shulker%20Box%20Splitter/globalclocksplitter1.png?raw=1">
+<img src="SG02%20Shulker%20Box%20Splitter/globalclocksplitter1.png?raw=1" height="300px">
 
 #### Features:
 - 2wABt, fully hopper locked

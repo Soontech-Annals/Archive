@@ -8,7 +8,7 @@ A simple hopper speed box grouper using svars. Given an input of varying boxes, 
 
 Has 9 svar slices with two double chests of buffer for each type. Easily expandable. Hopperlocking not included.
 
-<img src="BV01%20Simple%20Hopperspeed%20Grouper/grouper.png?raw=1">
+<img src="BV01%20Simple%20Hopperspeed%20Grouper/grouper.png?raw=1" height="300px">
 
 #### Features:
 - Hopperspeed with 16gt output type switching delay
