@@ -6,7 +6,7 @@
 
 The LC01 1 wide redcoder takes a pulsed analog signal and outputs a pulse at one of 15 slices corresponding to the code.
 
-<img src="LC01%201%20Wide%20Redcoder/redcoder.png?raw=1" style="max-height: 300px">
+<img src="LC01%201%20Wide%20Redcoder/redcoder.png?raw=1">
 
 #### Features:
 - 1 Wide
@@ -24,7 +24,7 @@ The LC01 1 wide redcoder takes a pulsed analog signal and outputs a pulse at one
 
 The LC02 Hopperspeed Hex to Binary takes a hex coded signal and outputs a binary coded signal. It is hopperspeed, meaning it can be used to convert a hex coded signal to a binary coded signal every 8 game ticks.
 
-<img src="LC02%20Hopperspeed%20Hex%20to%20Binary/hextobin.png?raw=1" style="max-height: 300px">
+<img src="LC02%20Hopperspeed%20Hex%20to%20Binary/hextobin.png?raw=1">
 
 #### Features:
 - Hopperspeed throughput
@@ -43,7 +43,7 @@ The LC02 Hopperspeed Hex to Binary takes a hex coded signal and outputs a binary
 
 The LC03 Await Latch takes one pulse input and one boolean input. Pulse only goes through when boolean input is on. If it is off, it will wait until boolean input turns on and then send pulse. Won't break with random inputs.
 
-<img src="LC03%20Await%20Latch/awaitlatch.png?raw=1" style="max-height: 300px">
+<img src="LC03%20Await%20Latch/awaitlatch.png?raw=1">
 
 #### Features:
 - 2 Wide and 2 High
@@ -61,7 +61,7 @@ The LC03 Await Latch takes one pulse input and one boolean input. Pulse only goe
 
 The LC04 binary stream splitter takes a 2gt repeater stream and splits it into two 4gt observer signal lines.
 
-<img src="LC04%202gt%20Binary%20Stream%20Splitter/stream_split.png?raw=1" style="max-height: 300px">
+<img src="LC04%202gt%20Binary%20Stream%20Splitter/stream_split.png?raw=1">
 
 #### Features:
 - Stateless, uses quasi-based logic
@@ -78,7 +78,7 @@ The LC04 binary stream splitter takes a 2gt repeater stream and splits it into t
 
 The LC05 group dispenser outputs items from first filled dropper in line with each pulse. With an 8gt clock this will have an additional 8gt transition delay between groups. Items can be inserted during operation and the thing won't output multiple groups at same time by accident.
 
-<img src="LC05%20Stateless%20Group%20Dispenser/dispense.png?raw=1" style="max-height: 300px">
+<img src="LC05%20Stateless%20Group%20Dispenser/dispense.png?raw=1">
 
 #### Features:
 - Stateless, uses quasi-based logic
@@ -96,7 +96,7 @@ The LC05 group dispenser outputs items from first filled dropper in line with ea
 
 The LC06 device converts binary to binary coded decimal (binary -> decimal) using the combinational double dabble algorithm. 17 gt per level. Input can be clocked 8gt.
 
-<img src="LC06%20Stateless%2010%20Bit%20Double%20Dabble/doubledabble.png?raw=1" style="max-height: 300px">
+<img src="LC06%20Stateless%2010%20Bit%20Double%20Dabble/doubledabble.png?raw=1">
 
 #### Features:
 - Stateless, uses quasi-based logic

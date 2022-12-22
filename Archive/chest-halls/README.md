@@ -12,7 +12,7 @@ Comparator readouts are streamed from the chests at 10 codes / 8 gt. This is ini
 
 All toggle states are self-repairable. The repair process is initiated by a pulsed signal.
 
-<img src="CH01%20Parallelized%20Encoded%20Chest%20Hall/chesthall.png?raw=1" style="max-height: 300px">
+<img src="CH01%20Parallelized%20Encoded%20Chest%20Hall/chesthall.png?raw=1">
 
 #### Features:
 - 800 chests, 10 chests per slice with 24 blocks of width

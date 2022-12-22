@@ -6,7 +6,7 @@
 
 Takes two comparator inputs (one decimal, one half-decimal) and deposits items in the decoded slice in constant time. The dropperline is fired twice per insertion to clear any potential overflow items. 10gt-able.
 
-<img src="TP01%20Decimal%20Encoded%20Variable%20Instant%20Dropperline/vardrop2.png?raw=1" style="max-height: 300px">
+<img src="TP01%20Decimal%20Encoded%20Variable%20Instant%20Dropperline/vardrop2.png?raw=1">
 
 #### Features:
 - Constant time insertion
@@ -25,7 +25,7 @@ Takes two comparator inputs (one decimal, one half-decimal) and deposits items i
 
 Takes a 6 bit binary code and deposits items in the decoded slice in linear time O(n). Pipeline-able for massively parallelized chest halls. Uses overstacked comparators with a 10bps waterstream to keep item entity and code in sync. Can execute an operation every 16gt.
 
-<img src="TP02%20Pipelined%20Encoded%20Variable%20Waterstream/pipe.png?raw=1" style="max-height: 300px">
+<img src="TP02%20Pipelined%20Encoded%20Variable%20Waterstream/pipe.png?raw=1">
 
 #### Features:
 - O(n) insertion time with 10BPS waterstream.

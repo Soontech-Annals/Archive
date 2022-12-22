@@ -5,6 +5,7 @@ module.exports = function generateReadmes() {
     const data = JSON.parse(fs.readFileSync(Path.join(__dirname, "data.json"), "utf8"));
     const entries = data.entries;
 
+    const sizeOf = require("image-size")
     data.categories.forEach((category) => {
 
         const entriesInCategory = getEntriesInCategory(category);
@@ -30,7 +31,10 @@ module.exports = function generateReadmes() {
                 return "- " + latexHrefToMarkdown(feature);
             }).join("\n");
 
-            const image = `<img src="${encodeURI(entry.path[1] + "/" + entry.image)}?raw=1" style="max-height: 300px">`
+            let imgDir = Path.join(__dirname, "Archive", entry.path[0], entry.path[1], entry.image);
+            const dims = sizeOf(imgDir);
+
+            const image = `<img src="${encodeURI(entry.path[1] + "/" + entry.image)}?raw=1"${dims > 300 ? " height=\"300px\"" : ""}>`
 
             /*
             "downloadInfo": [

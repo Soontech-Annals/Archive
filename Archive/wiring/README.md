@@ -6,7 +6,7 @@
 
 This instant comparator wire has constant time on/off for all signal strengths.
 
-<img src="WI01%206gt-able%20Instant%20Comparator%20Wire/redcmd.png?raw=1" style="max-height: 300px">
+<img src="WI01%206gt-able%20Instant%20Comparator%20Wire/redcmd.png?raw=1">
 
 #### Features:
 - Constant time on/off for all signal strengths
@@ -24,7 +24,7 @@ This instant comparator wire has constant time on/off for all signal strengths.
 
 Transports signals upwards in constant time. Horizontal area of 10x3. Can input from multiple places as shown in schem.
 
-<img src="WI02%20Instant%20Upwards%20Comparator%20Wire/area_render_3_copy.png?raw=1" style="max-height: 300px">
+<img src="WI02%20Instant%20Upwards%20Comparator%20Wire/area_render_3_copy.png?raw=1">
 
 #### Features:
 - Constant time on/off for all signal strengths < 15

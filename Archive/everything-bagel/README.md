@@ -6,7 +6,7 @@
 
 The MX01 Morning Flower Alarm loop generates music to the tune of the [Morning Flower](https://www.youtube.com/watch?v=vTVWGoQcn9Q) alarm music on galaxy phones.
 
-<img src="MX01%20Morning%20Flower%20Alarm%20Loop/morning_loop.png?raw=1" style="max-height: 300px">
+<img src="MX01%20Morning%20Flower%20Alarm%20Loop/morning_loop.png?raw=1">
 
 #### Features:
 - Repeatedly outputs music.
