@@ -1012,6 +1012,13 @@
                     "file": "EC03_16gt_encoder_core_p3.litematic",
                     "description": "Schematic of encoder.",
                     "sha256": "f14363499d276b1b881cb62e1c51ca8ae3854addd8a2431611a053ce5244f0de"
+                },
+                {
+                    "identifier": "EC03B",
+                    "mc": "1.19",
+                    "file": "EC03B_16gt_encoder_1.19_dispenser.litematic",
+                    "description": "Schematic of encoder with 1.19+ cart dispenser.",
+                    "sha256": "a5be70f11f121efa62e758ea205a08779dedd05a354482c19138603af054f5be"
                 }
             ],
             "testData": [

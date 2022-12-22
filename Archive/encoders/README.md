@@ -54,6 +54,7 @@ The EC03 16gt encoder has a 16gt throughput encoder core which only requires one
 - Self resettable toggle states.
 
 #### Download Info:
-|Identifier   | MC       | File                                                                                                            | Description            |
-|------------ |:-------- |:--------------------------------------------------------------------------------------------------------------- |:-----------------------|
-|EC03         | 1.18.2   | [EC03_16gt_encoder_core_p3.litematic](EC03%2016gt%20Item%20Encoder/EC03_16gt_encoder_core_p3.litematic?raw=1)   | Schematic of encoder.  |
+|Identifier   | MC       | File                                                                                                                            | Description                                      |
+|------------ |:-------- |:------------------------------------------------------------------------------------------------------------------------------- |:-------------------------------------------------|
+|EC03         | 1.18.2   | [EC03_16gt_encoder_core_p3.litematic](EC03%2016gt%20Item%20Encoder/EC03_16gt_encoder_core_p3.litematic?raw=1)                   | Schematic of encoder.                            |
+|EC03B        | 1.19     | [EC03B_16gt_encoder_1.19_dispenser.litematic](EC03%2016gt%20Item%20Encoder/EC03B_16gt_encoder_1.19_dispenser.litematic?raw=1)   | Schematic of encoder with 1.19+ cart dispenser.  |
