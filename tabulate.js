@@ -1,9 +1,12 @@
 const crypto = require('crypto');
 const fs = require('fs');
 const Path = require('path');
+const Utils = require('./latexUtils.js');
 
 const rootDirectory = Path.resolve(__dirname, "Archive")
-module.exports = function tabulate() {
+module.exports = async function tabulate() {
+
+
     const categories = fs.readdirSync(rootDirectory).filter((name) => {
         return fs.lstatSync(Path.join(rootDirectory, name)).isDirectory()
     })
@@ -17,63 +20,21 @@ module.exports = function tabulate() {
         entries.forEach((entry) => {
             const entryPath = Path.join(categoryPath, entry);
             const contents = fs.readdirSync(entryPath);
-            const texDocument = getExtension(contents, ".tex")[0];
+            const texDocument = Utils.getExtension(contents, ".tex")[0];
             if (!texDocument) {
-                console.log(`${category}/${entry}: Missing tex document. I will create one for you.`);
-                let exampleDatasheet = fs.readFileSync(Path.join(__dirname, "exampleDatasheet.tex"), "utf8");
-
-                const split = entry.split(" ");
-                const identifier = split[0];
-                const idtitle = split.splice(1).join(" ");
-                let schematicFile = getExtension(contents, ".litematic")[0] || getExtension(contents, ".schematic")[0] || getExtension(contents, ".zip")[0];
-                const imageFile = getExtension(contents, ".png")[0];
-
-             
-                const date = new Date();
-                const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-                const datestr = date.getDate() + ' ' + months[date.getMonth()] + ' ' +  date.getFullYear();
-
-                if (!schematicFile) {
-                    throw new Error(`${category}/${entry}: Missing schematic file`);
-                }
-
-                if (schematicFile.substring(0, identifier.length) !== identifier) {
-                    console.log("Moving download file to correct name")
-                    const file = fs.readFileSync(Path.join(entryPath, schematicFile));
-                    let original = schematicFile;
-                    schematicFile = `${identifier}_${idtitle.replaceAll(" ", "_")}` + schematicFile.substring(schematicFile.lastIndexOf("."));
-                    fs.writeFileSync(Path.join(entryPath, schematicFile), file);
-                    fs.unlinkSync(Path.join(entryPath, original));
-
-                }
-
-                if (!imageFile) {
-                    throw new Error(`${category}/${entry}: Missing image file`);
-                }
-
-                exampleDatasheet = exampleDatasheet.replaceAll("_Identifier", identifier);
-                exampleDatasheet = exampleDatasheet.replaceAll("_Title", idtitle);
-                exampleDatasheet = exampleDatasheet.replaceAll("_SchematicFile", schematicFile.replaceAll("_", "\\_"));
-                exampleDatasheet = exampleDatasheet.replaceAll("_ImageCaption", idtitle);
-                exampleDatasheet = exampleDatasheet.replaceAll("_Image", imageFile);
-                exampleDatasheet = exampleDatasheet.replaceAll("_Date", datestr);
-                exampleDatasheet = exampleDatasheet.replaceAll("_CategoryTag", category);
-
-
-                fs.writeFileSync(Path.join(entryPath, `${entry.replaceAll(" ","_")}.tex`), exampleDatasheet);
-                return;
+                throw new Error(`${category}/${entry}: Missing tex document`);
             }
 
-            const pdfDocument = getExtension(contents, ".pdf")[0];
+            const pdfDocument = Utils.getExtension(contents, ".pdf")[0];
             if (!pdfDocument) {
                 throw new Error(`${category}/${entry}: Missing pdf document`);
             }
 
             const texDocumentContents = fs.readFileSync(Path.join(entryPath, texDocument), "utf-8").replaceAll(/(?<!\\)\%.*/g, "");
-            const titleString = getMacro(texDocumentContents, "title").split(":").map((a) => a.trim());
+            const titleString = Utils.getMacro(texDocumentContents, "title").split(":").map((a) => a.trim());
             const identifier = titleString[0];
             const title = titleString.splice(1).join(":").trim();
-            const authorlist = getMacro(texDocumentContents, "author").split(",");
+            const authorlist = Utils.getMacro(texDocumentContents, "author").split(",");
             const authors = authorlist.map((a, i) => {
                 a = a.trim()
                 if (authorlist.length > 1 && i === authorlist.length - 1) {
@@ -85,9 +46,9 @@ module.exports = function tabulate() {
                 }
                 return a;
             });
-            const tags = getMacro(texDocumentContents, "tags").split(",").map((a) => a.trim());
-            const date = getMacro(texDocumentContents, "date").trim();
-            const revision = getMacro(texDocumentContents, "revision").trim().replace("Revision ", "");
+            const tags = Utils.getMacro(texDocumentContents, "tags").split(",").map((a) => a.trim());
+            const date = Utils.getMacro(texDocumentContents, "date").trim();
+            const revision = Utils.getMacro(texDocumentContents, "revision").trim().replace("Revision ", "");
             const description = texDocumentContents.match(/\\section{General Description}([\W\w]*?)\\vfill\\break/m)?.[1]?.trim();
             const featureList = texDocumentContents.match(/\\section{Features}\W*\\begin{itemize}([\W\w]*?)\\end{itemize}/im)?.[1]?.trim();
             const image = texDocumentContents.match(/\\includegraphics\[.*?\]{(.*?)}/)?.[1]?.trim();
@@ -131,14 +92,14 @@ module.exports = function tabulate() {
 
             const entryJson = {
                 path: [category, entry],
-                identifier: latexDeescape(identifier),
-                title: latexDeescape(title),
-                authors: authors.map((a) => latexDeescape(a)),
-                tags: tags.map((a) => latexDeescape(a)),
-                date: latexDeescape(date),
-                revision: latexDeescape(revision),
-                description: latexDeescape(description),
-                image: latexDeescape(image),
+                identifier: Utils.latexDeescape(identifier),
+                title: Utils.latexDeescape(title),
+                authors: authors.map((a) => Utils.latexDeescape(a)),
+                tags: tags.map((a) => Utils.latexDeescape(a)),
+                date: Utils.latexDeescape(date),
+                revision: Utils.latexDeescape(revision),
+                description: Utils.latexDeescape(description),
+                image: Utils.latexDeescape(image),
                 tex: texDocument,
                 pdf: pdfDocument
             }
@@ -146,24 +107,24 @@ module.exports = function tabulate() {
             if (!featureList) {
                 console.warn(`${category}/${entry}: Missing feature list`);
             } else {
-                const features = getMacros(featureList, "item");
+                const features = Utils.getMacros(featureList, "item");
                 if (features.length === 0) {
                     console.warn(`${category}/${entry}: Missing features`);
                 }
-                entryJson.features = features.map((a) => latexDeescape(a));
+                entryJson.features = features.map((a) => Utils.latexDeescape(a));
             }
 
             if (!applicationList) {
                 console.warn(`${category}/${entry}: Missing application list`);
             } else {
-                const applications = getMacros(applicationList, "item");
+                const applications = Utils.getMacros(applicationList, "item");
                 if (applications.length === 0) {
                     console.warn(`${category}/${entry}: Missing applications`);
                 }
-                entryJson.applications = applications.map((a) => latexDeescape(a));
+                entryJson.applications = applications.map((a) => Utils.latexDeescape(a));
             }
 
-            let Specifications = extractLatexTable(texDocumentContents, "Device Specifications");
+            let Specifications = Utils.extractLatexTable(texDocumentContents, "Device Specifications");
 
             if (!Specifications) {
                 throw new Error(`${category}/${entry}: Missing specifications table`);
@@ -213,7 +174,7 @@ module.exports = function tabulate() {
 
             entryJson.specifications = SpecsDict;
 
-            let DownloadInfo = extractLatexTable(texDocumentContents, "Download Information");
+            let DownloadInfo = Utils.extractLatexTable(texDocumentContents, "Download Information");
             if (!DownloadInfo) {
                 throw new Error(`${category}/${entry}: Missing download information table`);
             }
@@ -226,7 +187,8 @@ module.exports = function tabulate() {
                 return {
                     identifier: row[0],
                     mc: row[1],
-                    file: row[2],
+                    file: Utils.latexGetTextOrLinkText(row[2]),
+                    link: Utils.latexGetHref(row[2])?.url,
                     description: row[3]
                 }
             });
@@ -243,7 +205,7 @@ module.exports = function tabulate() {
                 item.sha256 = hasher.digest('hex');
             })
 
-            let RelatedComponents = extractLatexTable(texDocumentContents, "Related Components");
+            let RelatedComponents = Utils.extractLatexTable(texDocumentContents, "Related Components");
 
             if (RelatedComponents) {
                 if (RelatedComponents.header.join(",") !== "Identifier,Description") {
@@ -258,7 +220,7 @@ module.exports = function tabulate() {
                 });
             }
 
-            let TestData = extractLatexTable(texDocumentContents, "Executed Tests");
+            let TestData = Utils.extractLatexTable(texDocumentContents, "Executed Tests");
 
             if (TestData) {
                 if (TestData.header.join(",") !== "Test,Result") {
@@ -299,119 +261,4 @@ module.exports = function tabulate() {
         entries: entriesResults
     }, null, 4));
 }
-
-
-function extractLatexTable(tex, caption) {
-    let matches = tex.match(new RegExp(`\\\\caption{${caption}}\\W*\\\\begin{tabularx}{\\\\textwidth}{(.*?)}([\\W\\w]*?)\\\\end{tabularx}`, "im"));
-    if (!matches) {
-        return null;
-    }
-    let columns = matches[1].split("").filter((a) => {
-        return a !== " " && a !== "|";
-    });
-
-    let rows = matches[2].replaceAll("\\thickhline", "").replaceAll("\\hline", "").split("\\\\").filter((a) => {
-        return a.trim() !== ""
-    });
-    let table = [];
-    for (let i = 0; i < rows.length; i++) {
-        let row = rows[i].trim();
-
-        let cells = row.split(/(?<!\\)\&/);
-        let tableRow = cells.map((a) => {
-            return a.trim();
-        });
-        table.push(tableRow);
-    }
-
-    let obj = {
-        columns,
-        header: table[0],
-        rows: table.slice(1)
-    }
-
-    obj.header = obj.header.map((a) => {
-        return a.replaceAll(/\\textbf\{(.*?)\}/g, "$1");
-    });
-
-    for (let i = 0; i < obj.rows.length; i++) {
-        for (let j = 0; j < obj.rows[i].length; j++) {
-            let cell = obj.rows[i][j];
-
-            let multirow = cell.match(/\\multirow\{(.*?)\}\{(.*?)\}\{(.*?)\}/);
-            if (multirow) {
-                let rowspan = parseInt(multirow[1]);
-                let content = multirow[3];
-
-                for (let k = 0; k < rowspan; k++) {
-                    obj.rows[i + k][j] = content;
-                }
-            }
-        }
-    }
-
-    for (let i = 0; i < obj.rows.length; i++) {
-        for (let j = 0; j < obj.rows[i].length; j++) {
-            obj.rows[i][j] = latexDeescape(obj.rows[i][j].replaceAll("\\", ""));
-        }
-    }
-    return obj;
-}
-
-function getMacro(tex, name, searchStart) {
-    searchStart = searchStart || 0;
-    let startIndex = tex.indexOf(`\\${name}{`, searchStart);
-    if (startIndex === -1) {
-        return "";
-    }
-    startIndex += 2 + name.length;
-
-    let braces = 1;
-    let i = startIndex;
-    for (; i < tex.length; i++) {
-        if (tex[i] === "\\") {
-            i++;
-        } else
-            if (tex[i] === "{") {
-                braces++;
-            } else if (tex[i] === "}") {
-                braces--;
-                if (braces < 0) {
-                    throw new Error("Mismatched braces");
-                } else
-                    if (braces === 0) {
-                        break;
-                    }
-            }
-    }
-    if (braces !== 0) {
-        throw new Error("Mismatched braces");
-    }
-    return tex.substring(startIndex, i)
-}
-
-function getMacros(tex, name, searchStart) {
-    let currentPosition = searchStart || 0;
-    let macros = [];
-    while (true) {
-        let macro = getMacro(tex, name, currentPosition);
-        if (!macro) {
-            break;
-        }
-        macros.push(macro);
-        currentPosition += macro.length + 3 + name.length;
-    }
-    return macros;
-}
-
-function getExtension(list, extension) {
-    return list.filter((item) => {
-        return item.substring(item.length - extension.length) === extension;
-    })
-}
-
-function latexDeescape(string) {
-    return string.replaceAll("\\&", "&").replaceAll("\\%", "%").replaceAll("\\$", "$").replaceAll("\\#", "#").replaceAll("\\_", "_").replaceAll("\\{", "{").replaceAll("\\}", "}").replaceAll("\\~", "~").replaceAll("\\^", "^").replaceAll("\\\\", "\\");
-}
-
 

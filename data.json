@@ -82,6 +82,7 @@
                     "identifier": "BV01",
                     "mc": "1.17.1",
                     "file": "BV01_hopperspeed_grouper_p1.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/box-variable/BV01%20Simple%20Hopperspeed%20Grouper/BV01_hopperspeed_grouper_p1.litematic?raw=1",
                     "description": "Litematic of grouper device",
                     "sha256": "286c51558f89ea7fd86f764922eef816fa99ac889e1d93c38940c12bf0e51630"
                 }
@@ -177,6 +178,7 @@
                     "identifier": "CH01",
                     "mc": "1.18.2",
                     "file": "CH01_encoded_chest_hall_p30.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/chest-halls/CH01%20Parallelized%20Encoded%20Chest%20Hall/CH01_encoded_chest_hall_p30.litematic?raw=1",
                     "description": "Litematic of chest hall with inventories.",
                     "sha256": "70f0ae9110df998b62cd06ee2cee12fcd096514b88a048e71ddac1451b5b8310"
                 }
@@ -284,6 +286,7 @@
                     "identifier": "DS011600",
                     "mc": "1.17.1",
                     "file": "DS011600_1600_bit_RAM_p1.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/data-storage/DS01%20Streamable%20Bit%20RAM/DS011600_1600_bit_RAM_p1.litematic?raw=1",
                     "description": "Litematic of RAM with 1600 bits. Inventories not included.",
                     "sha256": "ee8f81873c022cc98e9fd9518b306471588b0995a7a9e9378618fb7129d18e47"
                 },
@@ -291,6 +294,7 @@
                     "identifier": "DS01600",
                     "mc": "1.18.2",
                     "file": "DS01600_600_bit_ram.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/data-storage/DS01%20Streamable%20Bit%20RAM/DS01600_600_bit_ram.litematic?raw=1",
                     "description": "Litematic of RAM with 600 bits. Wired slightly better. 36x32x36 blocks. Inventories not included.",
                     "sha256": "e1afd8c91b2a562c37dc2deb0bc30eb1c603d44ae151b476f46025feffe0a521"
                 }
@@ -371,6 +375,7 @@
                     "identifier": "DC01",
                     "mc": "1.17.1",
                     "file": "DC01_6bit_decoder.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/decoders/DC01%206%20Bit%20Binary%20Decoder/DC01_6bit_decoder.litematic?raw=1",
                     "description": "Litematic of decoder.",
                     "sha256": "3b0c023db197148a1e6337619c0552430ffde2769a97a9f64cab576957c1ea6f"
                 }
@@ -449,6 +454,7 @@
                     "identifier": "DC02",
                     "mc": "1.17.1",
                     "file": "DC02_2Digit_Decimal_Decoder.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/decoders/DC02%202%20Digit%20Decimal%20Decoder/DC02_2Digit_Decimal_Decoder.litematic?raw=1",
                     "description": "Litematic of decoder. Includes subregions for testing.",
                     "sha256": "b23fb063982792213dd6140afa94fdd475455b4b945f9c3e37bc96d0854e5294"
                 }
@@ -533,6 +539,7 @@
                     "identifier": "DC03",
                     "mc": "1.18.2",
                     "file": "DC03_10BPS_decimal_decoder_1.18.2.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/decoders/DC03%2010BPS%202%20Digit%20Decimal%20Decoder/DC03_10BPS_decimal_decoder_1.18.2.litematic?raw=1",
                     "description": "Litematic of decoder. Includes subregions for testing. Does not include inventories.",
                     "sha256": "3978ec7c190a9f50aebe9a07c8d4f5a197cbbee5fb57861b947a78a0d15551eb"
                 }
@@ -606,6 +613,7 @@
                     "identifier": "DH01",
                     "mc": "1.18.2",
                     "file": "DH01_quad_display_slice.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/display-halls/DH01%20Quad%20Display%20Slice%20With%20Reliable%20Collection/DH01_quad_display_slice.litematic?raw=1",
                     "description": "Litematic of slice.",
                     "sha256": "48257f3cb5b26a47054e9736600f6d2050d2c43f0c1a3a66add33f68e2a48a2b"
                 }
@@ -678,6 +686,7 @@
                     "identifier": "DH02",
                     "mc": "1.17.1",
                     "file": "DH02_quadbulk_slice_2w_dev1.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/display-halls/DH02%20Quad%20Display%20Slice%20With%20Passive%20Read/DH02_quadbulk_slice_2w_dev1.litematic?raw=1",
                     "description": "Litematic of slice.",
                     "sha256": "1236913f2445e19d90aaa82fd3b0b4edd9583cbc49ae24c25e4dfe43a4d71dee"
                 }
@@ -748,6 +757,7 @@
                     "identifier": "DH03",
                     "mc": "1.17.1",
                     "file": "DH03_QuadBulk_V5_3.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/display-halls/DH03%20Parallelized%20Quad%20Display%20Slice%20With%20Passive%20Read/DH03_QuadBulk_V5_3.litematic?raw=1",
                     "description": "Litematic of slice.",
                     "sha256": "5d7c31461b0888ce0a2d7f428586789abe5de97d5176d05cf2a206298b8e7147"
                 }
@@ -799,6 +809,7 @@
                     "identifier": "ES01",
                     "mc": "1.12.2",
                     "file": "ES01_V3.100.schematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/encoded-systems/ES01%20Palla%20Encoded%20V3.100/ES01_V3.100.schematic?raw=1",
                     "description": "Schematic of system.",
                     "sha256": "0b019239bba6a9878e899b9726b425eed49ee56416fbbe55df75a534868b64db"
                 }
@@ -863,6 +874,7 @@
                     "identifier": "EC01",
                     "mc": "1.16.5",
                     "file": "EC01_Hopperspeed_Encoder_V2-r1.zip",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/encoders/EC01%20Hopperspeed%20Encoder%20V2/EC01_Hopperspeed_Encoder_V2-r1.zip?raw=1",
                     "description": "World download of encoder",
                     "sha256": "e155977b3e8abb93a0bc24d3ba991a1c1644c95c4f293305fcf6dab5ed314ee1"
                 }
@@ -936,6 +948,7 @@
                     "identifier": "EC01",
                     "mc": "1.17.1",
                     "file": "EC02_small_decimal_encoder.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/encoders/EC02%20Small%20Decimal%20Encoder/EC02_small_decimal_encoder.litematic?raw=1",
                     "description": "Schematic of encoder.",
                     "sha256": "d295d52c4ed82e0ac3da00896992296099a91dec669794c2af2bbae55c03d4a1"
                 }
@@ -1010,6 +1023,7 @@
                     "identifier": "EC03",
                     "mc": "1.18.2",
                     "file": "EC03_16gt_encoder_core_p2.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/encoders/EC03%2016gt%20Item%20Encoder/EC03_16gt_encoder_core_p2.litematic?raw=1",
                     "description": "Schematic of encoder.",
                     "sha256": "e599f19630b13adba967904cbd22f603aded9dcea9a9f1f003eee77ab3036dc6"
                 },
@@ -1017,6 +1031,7 @@
                     "identifier": "EC03B",
                     "mc": "1.19",
                     "file": "EC03_16gt_encoder_core_dispenser_1.19_p2.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/encoders/EC03%2016gt%20Item%20Encoder/EC03_16gt_encoder_core_dispenser_1.19_p2.litematic?raw=1",
                     "description": "Schematic of encoder with 1.19+ cart dispenser.",
                     "sha256": "67ba6d9ca8269cd7de8433bb57168e44a92601289c4e3fb4182e3722bf2d8f6b"
                 }
@@ -1081,6 +1096,7 @@
                     "identifier": "MX01",
                     "mc": "1.18.2",
                     "file": "MX01_morning_flower_alarm_loop.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/everything-bagel/MX01%20Morning%20Flower%20Alarm%20Loop/MX01_morning_flower_alarm_loop.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "beb7905640eb22ee7c489bbc7a14f1b6b90765d54e287185a64525bdc6259531"
                 }
@@ -1151,6 +1167,7 @@
                     "identifier": "IM01",
                     "mc": "1.17.1",
                     "file": "IM01_100_item_memory_1.17.1.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/item-memory/IM01%20100%20Item%20RAM/IM01_100_item_memory_1.17.1.litematic?raw=1",
                     "description": "Litematic of item RAM device.",
                     "sha256": "24ae02fe85023bb4509ccf9c224438a2a4c5bbd143277a2ba30e230c254b4628"
                 }
@@ -1225,6 +1242,7 @@
                     "identifier": "IM02",
                     "mc": "1.17.1",
                     "file": "IM02_1000_item_RAM_p2.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/item-memory/IM02%201000%20Item%20RAM/IM02_1000_item_RAM_p2.litematic?raw=1",
                     "description": "Litematic of item RAM device.",
                     "sha256": "98d264ac5f9ac5f3410d7e20efcc5eb6e6d01f1613cb393d7962303eec618faf"
                 }
@@ -1290,6 +1308,7 @@
                     "identifier": "LC01",
                     "mc": "1.17.1",
                     "file": "LC01_1w_redcoder.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/logic-and-computation/LC01%201%20Wide%20Redcoder/LC01_1w_redcoder.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "9618d59aada73fea71e7971ee5037950b395c756b0ffe704e769e3618569a590"
                 }
@@ -1357,6 +1376,7 @@
                     "identifier": "LC02",
                     "mc": "1.17.1",
                     "file": "LC02_hopperspeed_hex_to_bin.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/logic-and-computation/LC02%20Hopperspeed%20Hex%20to%20Binary/LC02_hopperspeed_hex_to_bin.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "2982da7cdcd9143f83ec2ef4e4eb526443d7b87276245557cbeaeeb6cb931c93"
                 }
@@ -1422,6 +1442,7 @@
                     "identifier": "LC03",
                     "mc": "1.17.1",
                     "file": "LC03_await_latch.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/logic-and-computation/LC03%20Await%20Latch/LC03_await_latch.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "961e642181549f1037c45cba952beab068d8898d124b43e5c030a75f2ec7da56"
                 }
@@ -1481,6 +1502,7 @@
                     "identifier": "LC04",
                     "mc": "1.17.1",
                     "file": "LC04_2gt_binary_stream_splitter_p1.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/logic-and-computation/LC04%202gt%20Binary%20Stream%20Splitter/LC04_2gt_binary_stream_splitter_p1.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "7eb769b1949ca7f0ba7377d2ab09a42ce9aafb730aabe1509003a13d4e0c09e1"
                 }
@@ -1546,6 +1568,7 @@
                     "identifier": "LC05",
                     "mc": "1.17.1",
                     "file": "LC05_stateless_group_dispenser.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/logic-and-computation/LC05%20Stateless%20Group%20Dispenser/LC05_stateless_group_dispenser.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "c48bf2ed2945249ce63610c08ab9c86a5416cf925e186fc596827b5427516b94"
                 }
@@ -1612,6 +1635,7 @@
                     "identifier": "LC06",
                     "mc": "1.17.1",
                     "file": "LC06_stateless_10bit_double_dabble.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/logic-and-computation/LC06%20Stateless%2010%20Bit%20Double%20Dabble/LC06_stateless_10bit_double_dabble.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "5305acbae644456a9f34ee434f72eacd8b0f5494cbcb970b2a7e412659b79fa5"
                 }
@@ -1667,6 +1691,7 @@
                     "identifier": "SG01",
                     "mc": "1.17.1",
                     "file": "SG01_Shulker_Box_Splitter_Array.zip",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/splitting/SG01%20Shulker%20Box%20Splitter%20Array/SG01_Shulker_Box_Splitter_Array.zip?raw=1",
                     "description": "World download of device.",
                     "sha256": "b08eccb6e3ea3d8be8ffb1fcd576fd6a41e5518864f8d514449c1aadc659ac85"
                 }
@@ -1722,6 +1747,7 @@
                     "identifier": "SG02",
                     "mc": "1.17.1",
                     "file": "SG02_Shulker_Box_Splitter.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/splitting/SG02%20Shulker%20Box%20Splitter/SG02_Shulker_Box_Splitter.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "62a2afea7e0fb037c684e3a1edb7f1abcae34d9e50f979d200ab97731f5724ab"
                 }
@@ -1778,6 +1804,7 @@
                     "identifier": "TP01",
                     "mc": "1.17.1",
                     "file": "TP01_Decimal_Encoded_Variable_Instant_Dropperline.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/transport/TP01%20Decimal%20Encoded%20Variable%20Instant%20Dropperline/TP01_Decimal_Encoded_Variable_Instant_Dropperline.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "02587019e77a90213983605a69679e73be5979fc35a2cae9f867efb65bbee101"
                 }
@@ -1840,6 +1867,7 @@
                     "identifier": "TP02",
                     "mc": "1.17.1",
                     "file": "TP02_Pipelined_Encoded_Variable_Waterstream.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/transport/TP02%20Pipelined%20Encoded%20Variable%20Waterstream/TP02_Pipelined_Encoded_Variable_Waterstream.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "3be07cd233b6aec9526343337ebae0de9db04833f58c6f30264ad37bb03b3fb5"
                 }
@@ -1901,6 +1929,7 @@
                     "identifier": "WI01",
                     "mc": "1.17.1",
                     "file": "WI01_6gt-able_Instant_Comparator_Wire.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/wiring/WI01%206gt-able%20Instant%20Comparator%20Wire/WI01_6gt-able_Instant_Comparator_Wire.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "77657730d3f1ddb13c1291e10888e7d59dc94fd125ad25096034011f5f1b71d4"
                 }
@@ -1963,6 +1992,7 @@
                     "identifier": "WI02",
                     "mc": "1.17.1",
                     "file": "WI02_Instant_Upwards_Comparator_Wire.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/wiring/WI02%20Instant%20Upwards%20Comparator%20Wire/WI02_Instant_Upwards_Comparator_Wire.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "0851ceecbc13e1678eefae313e757cd26850a3296b40cd214d1acce65a7fd822"
                 }

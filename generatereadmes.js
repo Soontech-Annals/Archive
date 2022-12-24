@@ -1,5 +1,6 @@
 const fs = require('fs');
 const Path = require('path');
+const Utils = require('./latexUtils.js');
 
 module.exports = function generateReadmes() {
     const data = JSON.parse(fs.readFileSync(Path.join(__dirname, "data.json"), "utf8"));
@@ -20,15 +21,15 @@ module.exports = function generateReadmes() {
             const versionString = `[${minVersion}; ${typVersion}; ${maxVersion}]`;
             const authors = entry.authors.map((author, i) => {
                 if (i !== 0 && i === entry.authors.length - 1) {
-                    return "& " + latexHrefToMarkdown(author);
+                    return "& " + Utils.latexHrefToMarkdown(author);
                 }
-                return latexHrefToMarkdown(author);
+                return Utils.latexHrefToMarkdown(author);
             }).join(", ");
             const identifier = entry.identifier;
             const title = entry.title;
 
             const features = entry.features.map((feature) => {
-                return "- " + latexHrefToMarkdown(feature);
+                return "- " + Utils.latexHrefToMarkdown(feature);
             }).join("\n");
 
             let imgDir = Path.join(__dirname, "Archive", entry.path[0], entry.path[1], entry.image);
@@ -86,7 +87,7 @@ ${headerString}
 ${divider}
 ${downloadInfoTable}
 `;
-            return `# ${versionString} [${identifier}](${encodeURI(entry.path[1])}): [${title}](${encodeURI(entry.path[1] + "/" + entry.pdf)})\n### *By ${authors}*\n\n${latexHrefToMarkdown(entry.description)}\n\n${image}\n\n#### Features:\n${features}\n${downloadInfo}`
+            return `# ${versionString} [${identifier}](${encodeURI(entry.path[1])}): [${title}](${encodeURI(entry.path[1] + "/" + entry.pdf)})\n### *By ${authors}*\n\n${Utils.latexHrefToMarkdown(entry.description)}\n\n${image}\n\n#### Features:\n${features}\n${downloadInfo}`
         }).join("\n\n\n");
 
         fs.writeFileSync(Path.join(__dirname, "Archive", category, "README.md"), readme, "utf8");
@@ -119,8 +120,4 @@ ${downloadInfoTable}
     const categoryTableString = `# Categories\n\n| Category${" ".repeat(maxCategoryLength - 8)} | Entries |\n|${"-".repeat(maxCategoryLength + 2)}|${"-".repeat(maxEntryLength + 2)}|\n${categoryTable}`;
 
     fs.writeFileSync(Path.join(__dirname, "Archive", "README.md"), categoryTableString, "utf8");
-}
-
-function latexHrefToMarkdown(string) {
-    return string.replace(/\\href\{(.*)\}\{(.*)\}/g, "[$2]($1)");
 }
