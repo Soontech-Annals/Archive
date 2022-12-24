@@ -58,3 +58,7 @@ The `runTasks` script is responsible for:
 3. Generating the READMEs within the archives.
 
 To use, you must have NodeJS. First install dependencies (`npm install`), then run via `node runTasks.js`.
+
+### IMPORTANT!
+
+Run the script AFTER you commit any changes to world downloads/schematics files. The script will use the latest commit ID to generate permenent download URLs used in the pdfs.
