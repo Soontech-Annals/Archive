@@ -1517,10 +1517,10 @@
         {
             "path": [
                 "logic-and-computation",
-                "LC05 Stateless Group Dispenser"
+                "LC05 Stateless Find Nearest"
             ],
             "identifier": "LC05",
-            "title": "Stateless Group Dispenser",
+            "title": "Stateless Find Nearest",
             "authors": [
                 "Andrews54757"
             ],
@@ -1529,13 +1529,13 @@
             ],
             "date": "December 2022",
             "revision": "1",
-            "description": "The LC05 group dispenser outputs items from first filled dropper in line with each pulse. With an 8gt clock this will have an additional 8gt transition delay between groups. Items can be inserted during operation and the thing won't output multiple groups at same time by accident.",
+            "description": "The LC05 find nearest dispenser outputs items from first filled dropper in line with each pulse. With an 8gt clock this will have an additional 8gt transition delay between groups. Items can be inserted during operation and the thing won't output multiple groups at same time by accident.",
             "image": "dispense.png",
-            "tex": "LC05_Stateless_Group_Dispenser.tex",
-            "pdf": "LC05_Stateless_Group_Dispenser.pdf",
+            "tex": "LC05_Stateless_Find_Nearest.tex",
+            "pdf": "LC05_Stateless_Find_Nearest.pdf",
             "features": [
                 "Stateless, uses quasi-based logic",
-                "Will not output more than one group at a time"
+                "Will not output more than one group at a time, even with random slice activation/deactivation timings"
             ],
             "applications": [
                 "Box groupers"
@@ -1567,8 +1567,8 @@
                 {
                     "identifier": "LC05",
                     "mc": "1.17.1",
-                    "file": "LC05_stateless_group_dispenser.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/logic-and-computation/LC05%20Stateless%20Group%20Dispenser/LC05_stateless_group_dispenser.litematic?raw=1",
+                    "file": "LC05_stateless_find_nearest.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/5523ae5cc654e4a5ac0b187df2fc60842c8476f2/Archive/logic-and-computation/LC05%20Stateless%20Find%20Nearest/LC05_stateless_find_nearest.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "c48bf2ed2945249ce63610c08ab9c86a5416cf925e186fc596827b5427516b94"
                 }

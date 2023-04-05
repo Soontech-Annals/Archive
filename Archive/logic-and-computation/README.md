@@ -73,21 +73,21 @@ The LC04 binary stream splitter takes a 2gt repeater stream and splits it into t
 
 
 
-# [1.13; 1.17.1; -] [LC05](LC05%20Stateless%20Group%20Dispenser): [Stateless Group Dispenser](LC05%20Stateless%20Group%20Dispenser/LC05_Stateless_Group_Dispenser.pdf)
+# [1.13; 1.17.1; -] [LC05](LC05%20Stateless%20Find%20Nearest): [Stateless Find Nearest](LC05%20Stateless%20Find%20Nearest/LC05_Stateless_Find_Nearest.pdf)
 ### *By Andrews54757*
 
-The LC05 group dispenser outputs items from first filled dropper in line with each pulse. With an 8gt clock this will have an additional 8gt transition delay between groups. Items can be inserted during operation and the thing won't output multiple groups at same time by accident.
+The LC05 find nearest dispenser outputs items from first filled dropper in line with each pulse. With an 8gt clock this will have an additional 8gt transition delay between groups. Items can be inserted during operation and the thing won't output multiple groups at same time by accident.
 
-<img src="LC05%20Stateless%20Group%20Dispenser/dispense.png?raw=1" height="300px">
+<img src="LC05%20Stateless%20Find%20Nearest/dispense.png?raw=1" height="300px">
 
 #### Features:
 - Stateless, uses quasi-based logic
-- Will not output more than one group at a time
+- Will not output more than one group at a time, even with random slice activation/deactivation timings
 
 #### Download Info:
-|Identifier   | MC       | File                                                                                                                              | Description           |
-|------------ |:-------- |:--------------------------------------------------------------------------------------------------------------------------------- |:----------------------|
-|LC05         | 1.17.1   | [LC05_stateless_group_dispenser.litematic](LC05%20Stateless%20Group%20Dispenser/LC05_stateless_group_dispenser.litematic?raw=1)   | Schematic of device.  |
+|Identifier   | MC       | File                                                                                                                     | Description           |
+|------------ |:-------- |:------------------------------------------------------------------------------------------------------------------------ |:----------------------|
+|LC05         | 1.17.1   | [LC05_stateless_find_nearest.litematic](LC05%20Stateless%20Find%20Nearest/LC05_stateless_find_nearest.litematic?raw=1)   | Schematic of device.  |
 
 
 
