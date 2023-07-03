@@ -16,7 +16,7 @@ First two letters indicate category. Next two numbers indicate index (incrementi
 | [decoders](Archive/decoders/)                           | DC   |
 | [display-halls](Archive/display-halls/)                 | DH   |
 | [encoded-systems](Archive/encoded-systems/)             | ES   |
-| [encoders](Archive/encoded-systems/)                    | EC   |
+| [encoders](Archive/encoders/)                           | EC   |
 | [everything-bagel](Archive/everything-bagel/)           | MX   |
 | [external-bulk](Archive/external-bulk/)                 | EB   |
 | [item-memory](Archive/item-memory/)                     | IM   |
