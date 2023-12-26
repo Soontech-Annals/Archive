@@ -22,7 +22,7 @@ First two letters indicate category. Next two numbers indicate index (incrementi
 | [item-memory](Archive/item-memory/)                     | IM   |
 | [item-variable](Archive/item-variable/)                 | IV   |
 | [logic-and-computation](Archive/logic-and-computation/) | LC   |
-| [merging](Archive/logic-and-computation/)               | MG   |
+| [merging](Archive/merging/)                             | MG   |
 | [splitting](Archive/splitting/)                         | SG   |
 | [transport](Archive/transport/)                         | TP   |
 | [wiring](Archive/wiring/)                               | WI   |

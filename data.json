@@ -561,6 +561,89 @@
         },
         {
             "path": [
+                "decoders",
+                "DC04 Dual Sided 6 Bit Binary Decoder"
+            ],
+            "identifier": "DC04",
+            "title": "Dual Sided 6 Bit Binary Decoder",
+            "authors": [
+                "FloppyDonkey"
+            ],
+            "tags": [
+                "decoders",
+                "binary",
+                "dual-sided"
+            ],
+            "date": "December 2023",
+            "revision": "1",
+            "description": "The DC04 decoder takes six bits and outputs a pulse at one of 64 slices corresponding to the code. The device is dual sided, meaning it can output a signal to one of two different sides. This effectively adds another bit to the decoder, allowing for 128 different outputs.",
+            "image": "dualdecoder.png",
+            "tex": "DC04_Dual_Sided_6_Bit_Binary_Decoder.tex",
+            "pdf": "DC04_Dual_Sided_6_Bit_Binary_Decoder.pdf",
+            "features": [
+                "Dual sided outputs.",
+                "Signal travels 100 blocks per second.",
+                "No 1gt offset needed. This is achieved through a combination of TTP to get the proper update order, and some rail diodes.",
+                "Minimal flashing rails. QC based logic with BUDed rails.",
+                "Hopperspeed throughput."
+            ],
+            "applications": [
+                "Decoding decimal signals for use in remote bulk storage systems.",
+                "Decoding decimal signals for use in encoded chest halls."
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "8"
+                },
+                "Latency": {
+                    "unit": "gt",
+                    "conditions": "Input to Output.",
+                    "min": "12"
+                },
+                "Active Lag": {
+                    "unit": "ms",
+                    "conditions": "At Hopperspeed. Ryzen 5 3600, 2GB RAM. MC 1.19.3 with Lithium.",
+                    "min": "+3.4",
+                    "typ": "+3.5",
+                    "max": "+3.6"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.20.4",
+                    "min": "1.11",
+                    "typ": "1.19.3"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "68 x 8 x 13"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "DC04",
+                    "mc": "1.17",
+                    "file": "DC04_Dual_Sided_6_Bit_Binary_Decoder_1.17.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/63c9ea8c34519ca4eb58649773e0c37e7e462fdd/Archive/decoders/DC04%20Dual%20Sided%206%20Bit%20Binary%20Decoder/DC04_Dual_Sided_6_Bit_Binary_Decoder_1.17.litematic?raw=1",
+                    "description": "Litematic of decoder.",
+                    "sha256": "5fadf9588a3d178e74b649ee13b989ed71bec79356eaed7c0c3b574c9b285f3e"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Code test",
+                    "result": "Device was able to decode all possible codes successfully."
+                },
+                {
+                    "test": "Throughput test",
+                    "result": "Device was able to decode at 8gt throughput."
+                }
+            ]
+        },
+        {
+            "path": [
                 "display-halls",
                 "DH01 Quad Display Slice With Reliable Collection"
             ],
@@ -760,6 +843,72 @@
                     "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/display-halls/DH03%20Parallelized%20Quad%20Display%20Slice%20With%20Passive%20Read/DH03_QuadBulk_V5_3.litematic?raw=1",
                     "description": "Litematic of slice.",
                     "sha256": "5d7c31461b0888ce0a2d7f428586789abe5de97d5176d05cf2a206298b8e7147"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Display operation",
+                    "result": "Box displays were able to replace boxes when emptied."
+                }
+            ]
+        },
+        {
+            "path": [
+                "display-halls",
+                "DH04 Quad Display Slice With Slider Top Display"
+            ],
+            "identifier": "DH04",
+            "title": "Quad Display Slice With Slider Top Display",
+            "authors": [
+                "JayRoi"
+            ],
+            "tags": [
+                "display-halls",
+                "quad-display",
+                "slice",
+                "passive-read"
+            ],
+            "date": "23 December 2023",
+            "revision": "1",
+            "description": "The DH04 quad display slice has 4 box displays with passive read ability. It has a fully hopperlocked layout with no visible pistons. The bottom displays has one buffer box with global first box placement. Box collection is not fully reliable. Top display will break if used aggressively by activating with adjacent slices. Two alternative layouts are available.",
+            "image": "slice2.png",
+            "tex": "DH04_Quad_Display_Slice_With_Slider_Top_Display.tex",
+            "pdf": "DH04_Quad_Display_Slice_With_Slider_Top_Display.pdf",
+            "features": [
+                "Fully hopperlocked with local top display locking",
+                "Waterstream inputs",
+                "Passive read restock system with in-slice lists",
+                "Global first box placement"
+            ],
+            "applications": [
+                "Encoded quad-display hall"
+            ],
+            "specifications": {
+                "Item Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "8"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.20.4",
+                    "min": "1.13",
+                    "typ": "1.19"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "2 x 25 x 23"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "DH04",
+                    "mc": "1.19",
+                    "file": "DH04_Quad_Display_Slice_With_Slider_Top_Display.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/63c9ea8c34519ca4eb58649773e0c37e7e462fdd/Archive/display-halls/DH04%20Quad%20Display%20Slice%20With%20Slider%20Top%20Display/DH04_Quad_Display_Slice_With_Slider_Top_Display.litematic?raw=1",
+                    "description": "Schematic of device. Side with rails in waterstream incompatible with MCV \\textless 1.17",
+                    "sha256": "127b3f4a00c5594d8547ed9bfe15295d0f5d87b2a66606fba1e219153c583195"
                 }
             ],
             "testData": [
@@ -1049,6 +1198,233 @@
         },
         {
             "path": [
+                "encoders",
+                "EC04 16gt Item Encoder With Slime And Honey"
+            ],
+            "identifier": "EC04",
+            "title": "16gt Item Encoder With Slime And Honey",
+            "authors": [
+                "acacia-chan"
+            ],
+            "tags": [
+                "encoders",
+                "half-speed",
+                "slime-honey"
+            ],
+            "date": "25 December 2023",
+            "revision": "1",
+            "description": "The EC04 16gt encoder has a 16gt throughput encoder core which only requires one item per type in a chest. It uses slime and honey in its wiring. Head not included.",
+            "image": "area_render.png",
+            "tex": "EC04_16gt_Item_Encoder_With_Slime_And_Honey.tex",
+            "pdf": "EC04_16gt_Item_Encoder_With_Slime_And_Honey.pdf",
+            "features": [
+                "Half-hopperspeed (16gt) throughput",
+                "Requires only 1 item per type per chest.",
+                "No piston toggle states."
+            ],
+            "applications": [
+                "Encoding items"
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "16"
+                },
+                "Active Lag": {
+                    "unit": "ms",
+                    "conditions": "At half-hopperspeed. Ryzen 5 3600, 2GB RAM. MC 1.19.3 with Lithium.",
+                    "min": "+2",
+                    "typ": "+3",
+                    "max": "+4"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.20.4",
+                    "min": "1.16",
+                    "typ": "1.19.3"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "13 x 8 x 24"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "EC04",
+                    "mc": "1.19.3",
+                    "file": "EC04_16gt_Item_Encoder_With_Slime_And_Honey.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/63c9ea8c34519ca4eb58649773e0c37e7e462fdd/Archive/encoders/EC04%2016gt%20Item%20Encoder%20With%20Slime%20And%20Honey/EC04_16gt_Item_Encoder_With_Slime_And_Honey.litematic?raw=1",
+                    "description": "Schematic of device.",
+                    "sha256": "eab688faab4644985424dded5f29dd8224861eb54af159766b1f29563f1b47f2"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Item encoding test",
+                    "result": "Device was able to encode with item input"
+                },
+                {
+                    "test": "Throughput test",
+                    "result": "Device was able to encode at 16gt throughput with randomized input."
+                }
+            ]
+        },
+        {
+            "path": [
+                "encoders",
+                "EC05 Hopperspeed Encoder With Minimal Code Items"
+            ],
+            "identifier": "EC05",
+            "title": "Hopperspeed Encoder With Minimal Code Items",
+            "authors": [
+                "willymc"
+            ],
+            "tags": [
+                "encoders",
+                "hopperspeed"
+            ],
+            "date": "25 December 2023",
+            "revision": "1",
+            "description": "The EC05 encoder uses multiple hoppercarts to allow for hopperspeed item to code encoding. Unlike other hopperspeed encoders, this design only requires 2 items per item type per chest, the minimum amount possible.",
+            "image": "pic.png",
+            "tex": "EC05_Hopperspeed_Encoder_With_Minimal_Code_Items.tex",
+            "pdf": "EC05_Hopperspeed_Encoder_With_Minimal_Code_Items.pdf",
+            "features": [
+                "Hopperspeed (9000 items/hr) encoding.",
+                "Adjustable and expandable to work with any base.",
+                "Requires only 2 items per item type per chest.",
+                "Cart yeeter based cart recycler and storage."
+            ],
+            "applications": [
+                "Encoding items"
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "8"
+                },
+                "Active Lag": {
+                    "unit": "ms",
+                    "conditions": "At Hopperspeed. Ryzen 5 3600, 2GB RAM. MC 1.19.3 with Lithium.",
+                    "min": "+4",
+                    "typ": "+8",
+                    "max": "+10"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.20.4",
+                    "min": "1.19",
+                    "typ": "1.19.3"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "11 x 13 x 84"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "EC05",
+                    "mc": "1.19.3",
+                    "file": "EC05_Hopperspeed_Encoder_With_Minimal_Code_Items.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/63c9ea8c34519ca4eb58649773e0c37e7e462fdd/Archive/encoders/EC05%20Hopperspeed%20Encoder%20With%20Minimal%20Code%20Items/EC05_Hopperspeed_Encoder_With_Minimal_Code_Items.litematic?raw=1",
+                    "description": "Schematic of device.",
+                    "sha256": "4af47aabd3adb05045c5318f23f5ef4cbf8a84ad406548f012ddb2b2bfbdac7d"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Box encoding test",
+                    "result": "Device was able to encode with box input"
+                },
+                {
+                    "test": "Throughput test",
+                    "result": "Device was able to encode at 8gt throughput with randomized input. Four different codes were set with items in consecutive chests."
+                }
+            ]
+        },
+        {
+            "path": [
+                "encoders",
+                "EC06 Item to Binary Encoder With Safety Features"
+            ],
+            "identifier": "EC06",
+            "title": "Item to Binary Encoder With Safety Features",
+            "authors": [
+                "Obi"
+            ],
+            "tags": [
+                "encoders",
+                "safety-features"
+            ],
+            "date": "25 December 2023",
+            "revision": "1",
+            "description": "The EC06 Item to Binary Encoder With Safety Features is a 10 bit encoder with up to 1024 codes. It has safety features to prevent errors, namely dry fire protection and detection. It uses bit grouping to reduce the amount of chests needed for encoding. \\href{https://www.youtube.com/watch?v=1jVHZONWJmg}{Youtube video}",
+            "image": "coderpic.png",
+            "tex": "EC06_Item_to_Binary_Encoder_With_Safety_Features.tex",
+            "pdf": "EC06_Item_to_Binary_Encoder_With_Safety_Features.pdf",
+            "features": [
+                "10 bit encoding with up to 1024 codes",
+                "Easily accessible coding chests",
+                "Safety features to prevent errors",
+                "Dry fire protection and detection"
+            ],
+            "applications": [
+                "Encoding items"
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "175"
+                },
+                "Latency": {
+                    "unit": "gt",
+                    "conditions": "From input to code output.",
+                    "min": "119"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.20.4",
+                    "min": "1.16",
+                    "typ": "1.17.1"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "12 x 19 x 40"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "EC06",
+                    "mc": "1.17.1",
+                    "file": "EC06_Item_to_Binary_Encoder_With_Safety_Features.zip",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/63c9ea8c34519ca4eb58649773e0c37e7e462fdd/Archive/encoders/EC06%20Item%20to%20Binary%20Encoder%20With%20Safety%20Features/EC06_Item_to_Binary_Encoder_With_Safety_Features.zip?raw=1",
+                    "description": "WDL of device.",
+                    "sha256": "77e3a2b0258a7bea8b30575d2288b4cda183e6fed00b5a0147fdd7fb3ef9097f"
+                },
+                {
+                    "identifier": "EC06",
+                    "mc": "1.17.1",
+                    "file": "EC06_Item_to_Binary_Encoder_With_Safety_Features.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/63c9ea8c34519ca4eb58649773e0c37e7e462fdd/Archive/encoders/EC06%20Item%20to%20Binary%20Encoder%20With%20Safety%20Features/EC06_Item_to_Binary_Encoder_With_Safety_Features.litematic?raw=1",
+                    "description": "Schematic of device.",
+                    "sha256": "4b1bc143bb2cc029df8b3048e7255ef63355876858e6db8dc7659e1a39054737"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Encoding test",
+                    "result": "Device was able to encode properly with random input."
+                }
+            ]
+        },
+        {
+            "path": [
                 "everything-bagel",
                 "MX01 Morning Flower Alarm Loop"
             ],
@@ -1099,6 +1475,67 @@
                     "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/everything-bagel/MX01%20Morning%20Flower%20Alarm%20Loop/MX01_morning_flower_alarm_loop.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "beb7905640eb22ee7c489bbc7a14f1b6b90765d54e287185a64525bdc6259531"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Music test",
+                    "result": "Device was able to produce the desired music."
+                }
+            ]
+        },
+        {
+            "path": [
+                "everything-bagel",
+                "MX02 Jeopardy Theme Loop"
+            ],
+            "identifier": "MX02",
+            "title": "Jeopardy Theme Loop",
+            "authors": [
+                "Andrews54757"
+            ],
+            "tags": [
+                "everything-bagel",
+                "music"
+            ],
+            "date": "21 December 2023",
+            "revision": "1",
+            "description": "The MX02 Jeopardy Theme Loop generates music to the tune of the \\href{https://www.youtube.com/watch?v=vWuQVpBeqLs}{Jeopardy! Theme} song.",
+            "image": "jeopardy.png",
+            "tex": "MX02_Jeopardy_Theme_Loop.tex",
+            "pdf": "MX02_Jeopardy_Theme_Loop.pdf",
+            "features": [
+                "Repeatedly outputs the Jeopardy! theme song"
+            ],
+            "applications": [
+                "Fun and joy."
+            ],
+            "specifications": {
+                "Music Length": {
+                    "unit": "gt",
+                    "conditions": "Time between loops.",
+                    "min": "256"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.3",
+                    "min": "1.13",
+                    "typ": "1.16"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "10 x 8 x 17"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "MX02",
+                    "mc": "1.19.3",
+                    "file": "MX02_Jeopardy_Theme_Loop.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/63c9ea8c34519ca4eb58649773e0c37e7e462fdd/Archive/everything-bagel/MX02%20Jeopardy%20Theme%20Loop/MX02_Jeopardy_Theme_Loop.litematic?raw=1",
+                    "description": "Schematic of device.",
+                    "sha256": "795771ef3489660e20912a227687e90e13cfcff087b7245ba314dfe4b1b30e04"
                 }
             ],
             "testData": [
@@ -1255,6 +1692,91 @@
                 {
                     "test": "Retrieval",
                     "result": "Items were successfully retrieved from all positions."
+                }
+            ]
+        },
+        {
+            "path": [
+                "item-memory",
+                "IM03 Compact Disk Drive Temp Storage"
+            ],
+            "identifier": "IM03",
+            "title": "Compact Disk Drive Temp Storage",
+            "authors": [
+                "Obi",
+                "Crain",
+                "PallaPalla",
+                "xXOpticNerveXx",
+                "JayRoi"
+            ],
+            "tags": [
+                "item-memory",
+                "disk-drive",
+                "temp-storage"
+            ],
+            "date": "21 December 2023",
+            "revision": "1",
+            "description": "The IM03 Compact Disk Drive Temp Storage is a device that stores boxes in a temporary storage system. The device is designed to be used in a dynamic sorting system to merge partial boxes. To use, set an 8 bit address and input a box. The drive will iterate through the boxes in the right chest to find a box already stored in the system. If a box is found, both boxes are outputted. If no box is found, the input box is stored in the drive for later pairing. The drive can store up to 256 boxes (one per address) in 8 double chests. \\href{https://www.youtube.com/watch?v=_OpecWSo2yc}{Youtube video}",
+            "image": "diskdrive.png",
+            "tex": "IM03_Compact_Disk_Drive_Temp_Storage.tex",
+            "pdf": "IM03_Compact_Disk_Drive_Temp_Storage.pdf",
+            "features": [
+                "Stores 32 boxes in each double chest for high density",
+                "8 bit address, up to 256 boxes",
+                "Built in isBox check for easy pair detection",
+                "Safety feature checks if chest is reset properly",
+                "Safety feature checks if placeholder items are missing"
+            ],
+            "applications": [
+                "Dynamic sorting partial box merging loop"
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "281",
+                    "max": "790"
+                },
+                "Minimum Latency": {
+                    "unit": "gt",
+                    "conditions": "From input to pair output",
+                    "min": "143",
+                    "max": "391"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.20.4",
+                    "min": "1.16",
+                    "typ": "1.17.1"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "14 x 13 x 10"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "IM03",
+                    "mc": "1.17.1",
+                    "file": "IM03_Compact_Disk_Drive_Temp_Storage.zip",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/63c9ea8c34519ca4eb58649773e0c37e7e462fdd/Archive/item-memory/IM03%20Compact%20Disk%20Drive%20Temp%20Storage/IM03_Compact_Disk_Drive_Temp_Storage.zip?raw=1",
+                    "description": "World download of device.",
+                    "sha256": "159b0e1bd74c39b9c8f60f5c7455d39c668cefe69b2a1e16079412f22ad65af6"
+                },
+                {
+                    "identifier": "IM03",
+                    "mc": "1.17.1",
+                    "file": "IM03_Compact_Disk_Drive_Temp_Storage.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/63c9ea8c34519ca4eb58649773e0c37e7e462fdd/Archive/item-memory/IM03%20Compact%20Disk%20Drive%20Temp%20Storage/IM03_Compact_Disk_Drive_Temp_Storage.litematic?raw=1",
+                    "description": "Schematic of device. Inventories included.",
+                    "sha256": "53c9944e8f6a9cb2a8beeeb36ee8ca943ecb5174e5e84fb91bbd0c5d88b63f48"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Pair generation test",
+                    "result": "Device was able to produce pairs corresponding to the address."
                 }
             ]
         },
@@ -1649,6 +2171,218 @@
         },
         {
             "path": [
+                "logic-and-computation",
+                "LC07 Decimal Delay Generator"
+            ],
+            "identifier": "LC07",
+            "title": "Decimal Delay Generator",
+            "authors": [
+                "Andrews54757"
+            ],
+            "tags": [
+                "logic-and-computation",
+                "decimal",
+                "variable-delay"
+            ],
+            "date": "21 December 2023",
+            "revision": "1",
+            "description": "The LC07 Decimal Delay Generator takes a decimal input and outputs a pulse after a delay of 10 to 19 game ticks. The delay is equal to the input signal strength plus 5. The device can be used to generate precise extraction trigger signal for a 1 slot/gt iterator device.",
+            "image": "decimaldelay.png",
+            "tex": "LC07_Decimal_Delay_Generator.tex",
+            "pdf": "LC07_Decimal_Delay_Generator.pdf",
+            "features": [
+                "10gt to 19gt variable delay",
+                "SS5-14 input",
+                "Not random activation timings safe"
+            ],
+            "applications": [
+                "Slot iterator device for dynamic bulk code mappings storage."
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "22"
+                },
+                "Delay": {
+                    "unit": "gt",
+                    "conditions": "From input to dropper activation.",
+                    "min": "10",
+                    "max": "19"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.20.4",
+                    "min": "1.16",
+                    "typ": "1.19.3"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "4 x 5 x 2"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "LC07",
+                    "mc": "1.19.3",
+                    "file": "LC07_Decimal_Delay_Generator.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/63c9ea8c34519ca4eb58649773e0c37e7e462fdd/Archive/logic-and-computation/LC07%20Decimal%20Delay%20Generator/LC07_Decimal_Delay_Generator.litematic?raw=1",
+                    "description": "Schematic of device. Test input regions included.",
+                    "sha256": "463918433e3d9a74de338b62cf6eb91a019494feca79e1e9f193421fe0758fad"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Delay test",
+                    "result": "Device was able to produce all delays ranging from 10 to 19 gt as determined by the input signal strength."
+                },
+                {
+                    "test": "Failed random timings test",
+                    "result": "Device was unable to survive random activation timings. A slider became stuck in the wrong state."
+                }
+            ]
+        },
+        {
+            "path": [
+                "logic-and-computation",
+                "LC08 Precision Timings SIPO Register"
+            ],
+            "identifier": "LC08",
+            "title": "Precision Timings SIPO Register",
+            "authors": [
+                "Andrews54757"
+            ],
+            "tags": [
+                "logic-and-computation",
+                "register",
+                "sipo"
+            ],
+            "date": "21 December 2023",
+            "revision": "1",
+            "description": "The LC08 Precision Timings Serial Input Parallel Output (SIPO) Register seperates input signals by order of input. The device is capable of discriminating between signals sent in the same tick. The device is expandable, and can be used to decode crackpot encoding schemes.",
+            "image": "sipo.png",
+            "tex": "LC08_Precision_Timings_SIPO_Register.tex",
+            "pdf": "LC08_Precision_Timings_SIPO_Register.pdf",
+            "features": [
+                "Expandable, QC based \"stateless\" logic",
+                "High precision timings support. Can discriminate order of signals sent in the same tick."
+            ],
+            "applications": [
+                "Crackpot encoding mapping algorithm"
+            ],
+            "specifications": {
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.20.4",
+                    "min": "1.16",
+                    "typ": "1.19.3"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "16 x 22 x 14"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "LC08",
+                    "mc": "1.19.3",
+                    "file": "LC08_Precision_Timings_SIPO_Register.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/63c9ea8c34519ca4eb58649773e0c37e7e462fdd/Archive/logic-and-computation/LC08%20Precision%20Timings%20SIPO%20Register/LC08_Precision_Timings_SIPO_Register.litematic?raw=1",
+                    "description": "Schematic of device.",
+                    "sha256": "7bd9d1c88d650d119137c74511bf0d2f664215a8e7c5b25d2066606514cb68ce"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "SIPO test",
+                    "result": "Device was able to seperate signal order sent in same game tick."
+                }
+            ]
+        },
+        {
+            "path": [
+                "merging",
+                "MG01 Merging Pair Optimizer"
+            ],
+            "identifier": "MG01",
+            "title": "Merging Pair Optimizer",
+            "authors": [
+                "SergyD",
+                "Monica",
+                "Catniped"
+            ],
+            "tags": [
+                "merging",
+                "pairing",
+                "optimization"
+            ],
+            "date": "25 December 2023",
+            "revision": "1",
+            "description": "The MG01 Merging Pair Optimizer takes a list of boxes, categorized by fullness, and outputs pairs of boxes to be merged. The device is capable of optimizing the merging pairs to reduce the number of merging operations required. This is done by pairing the most full box with the least full box, the second most full box with the second least full box, and so on.",
+            "image": "area_render_56.png",
+            "tex": "MG01_Merging_Pair_Optimizer.tex",
+            "pdf": "MG01_Merging_Pair_Optimizer.pdf",
+            "features": [
+                "Most full box to least full box pairing",
+                "Automatic output clocking, 16gt per pair",
+                "Small size"
+            ],
+            "applications": [
+                "Optimizing merging pairs for a merging loop"
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "16"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.20.4",
+                    "min": "1.14",
+                    "typ": "1.19.3"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "6 x 6 x 19"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "MG01",
+                    "mc": "1.19.3",
+                    "file": "MG01_Merging_Pair_Optimizer.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/63c9ea8c34519ca4eb58649773e0c37e7e462fdd/Archive/merging/MG01%20Merging%20Pair%20Optimizer/MG01_Merging_Pair_Optimizer.litematic?raw=1",
+                    "description": "Schematic of device.",
+                    "sha256": "583f2726b5a60d2d9edf9a3b34298ae0f88b4430343ecab95413b8aa6a35d525"
+                },
+                {
+                    "identifier": "MG01",
+                    "mc": "1.19.3",
+                    "file": "MG01S_Merging_Pair_Optimizer_With_Sorter.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/63c9ea8c34519ca4eb58649773e0c37e7e462fdd/Archive/merging/MG01%20Merging%20Pair%20Optimizer/MG01S_Merging_Pair_Optimizer_With_Sorter.litematic?raw=1",
+                    "description": "Schematic of device with fill level sorter.",
+                    "sha256": "d8e7a9cb821a67b94f7778e3559e1b163be25e3752bf572c829c2fbf5bf6d23c"
+                }
+            ],
+            "relatedComponents": [
+                {
+                    "identifier": "LC05",
+                    "description": "Pairer based on stateless find nearest device."
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Pairing test",
+                    "result": "Device was able to pair according to most-least pairing algorithm with random box input."
+                }
+            ]
+        },
+        {
+            "path": [
                 "splitting",
                 "SG01 Shulker Box Splitter Array"
             ],
@@ -1661,7 +2395,7 @@
                 "splitting"
             ],
             "date": "21 December 2022",
-            "revision": "1",
+            "revision": "2",
             "description": "Splits mixed boxes into smaller boxes of the same type. This design uses the hopper dueling mechanism for a \"filter itemless\" setup. Video explanation \\href{https://www.youtube.com/watch?v=zRO1QfmYa6o}{here}.",
             "image": "splitarray.png",
             "tex": "SG01_Shulker_Box_Splitter_Array.tex",
@@ -1691,7 +2425,7 @@
                     "identifier": "SG01",
                     "mc": "1.17.1",
                     "file": "SG01_Shulker_Box_Splitter_Array.zip",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/splitting/SG01%20Shulker%20Box%20Splitter%20Array/SG01_Shulker_Box_Splitter_Array.zip?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/63c9ea8c34519ca4eb58649773e0c37e7e462fdd/Archive/splitting/SG01%20Shulker%20Box%20Splitter%20Array/SG01_Shulker_Box_Splitter_Array.zip?raw=1",
                     "description": "World download of device.",
                     "sha256": "b08eccb6e3ea3d8be8ffb1fcd576fd6a41e5518864f8d514449c1aadc659ac85"
                 }
@@ -1717,7 +2451,7 @@
                 "splitting"
             ],
             "date": "21 December 2022",
-            "revision": "1",
+            "revision": "2",
             "description": "Splits mixed boxes into smaller boxes of the same type. This design uses the hopper dueling mechanism for a \"filter itemless\" setup. It uses a global clock to allow for it to be paused during operation. Control wiring is comparatively tricky to do because of the global clock. Can lose empty boxes (although will not break) if they are input with no items. So don't do that.",
             "image": "globalclocksplitter1.png",
             "tex": "SG02_Shulker_Box_Splitter.tex",
@@ -1747,9 +2481,90 @@
                     "identifier": "SG02",
                     "mc": "1.17.1",
                     "file": "SG02_Shulker_Box_Splitter.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/splitting/SG02%20Shulker%20Box%20Splitter/SG02_Shulker_Box_Splitter.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/63c9ea8c34519ca4eb58649773e0c37e7e462fdd/Archive/splitting/SG02%20Shulker%20Box%20Splitter/SG02_Shulker_Box_Splitter.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "62a2afea7e0fb037c684e3a1edb7f1abcae34d9e50f979d200ab97731f5724ab"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Splitting test",
+                    "result": "Device was able to split mixed boxes correctly."
+                }
+            ]
+        },
+        {
+            "path": [
+                "splitting",
+                "SG03 High Speed Cart Based Ideal Splitter"
+            ],
+            "identifier": "SG03",
+            "title": "High Speed Cart Based Ideal Splitter",
+            "authors": [
+                "Andrews54757"
+            ],
+            "tags": [
+                "splitting",
+                "cart",
+                "ideal-splitting"
+            ],
+            "date": "21 December 2023",
+            "revision": "1",
+            "description": "The SG03 splitter takes boxes with items and splits them by item type. Items of the same type are loaded into boxes with ideal packing efficiency. Up to one partial box is output per item type. Unstackable items are split into a separate stream. The device utilizes hoppercarts to reach high speeds, with up to 31.5x hopperspeed throughput.",
+            "image": "asdadad.png",
+            "tex": "SG03_High_Speed_Cart_Based_Ideal_Splitter.tex",
+            "pdf": "SG03_High_Speed_Cart_Based_Ideal_Splitter.pdf",
+            "features": [
+                "Minimum amount of partial boxes output.",
+                "High speed. 31.5x hopperspeed throughput.",
+                "Unstackables are split into a separate stream.",
+                "Cart based box unloader compatible."
+            ],
+            "applications": [
+                "Splitting mixed boxes for dynamic sorting systems.",
+                "Merging boxes in a dynamic sorting system."
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "HS",
+                    "conditions": "Typical throughput includes item refresh downtime.",
+                    "min": "0.5",
+                    "typ": "20",
+                    "max": "31.5"
+                },
+                "Active Lag": {
+                    "unit": "ms",
+                    "conditions": "At max speed with 4k item entities. Ryzen 5 3600, 2GB RAM. MC 1.19.3 with Lithium.",
+                    "min": "+2",
+                    "typ": "+10",
+                    "max": "+16"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.20.4",
+                    "min": "1.19",
+                    "typ": "1.19.3"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "26 x 31 x 22"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "SG03",
+                    "mc": "1.19.3",
+                    "file": "SG03_High_Speed_Cart_Based_Ideal_Splitter.zip",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/63c9ea8c34519ca4eb58649773e0c37e7e462fdd/Archive/splitting/SG03%20High%20Speed%20Cart%20Based%20Ideal%20Splitter/SG03_High_Speed_Cart_Based_Ideal_Splitter.zip?raw=1",
+                    "description": "WDL of device. Cart unloader version included. Inventories included.",
+                    "sha256": "f2f14a76bcf2fa767988e63e78ef8d6405bf7c456b03563aaad2ada31708a726"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Ideal splitting test",
+                    "result": "Device was able to split HermitCraft boxes correctly with minimum partial boxes."
                 }
             ]
         },

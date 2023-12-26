@@ -1,5 +1,5 @@
 # display-halls
-3 Result(s)
+4 Result(s)
 
 # [1.18.2; 1.18.2; -] [DH01](DH01%20Quad%20Display%20Slice%20With%20Reliable%20Collection): [Quad Display Slice With Reliable Collection](DH01%20Quad%20Display%20Slice%20With%20Reliable%20Collection/DH01_Quad_Display_Slice_With_Reliable_Collection.pdf)
 ### *By Andrews54757*
@@ -61,3 +61,23 @@ The DH03 quad display slice has 4 box displays with passive read ability and par
 |Identifier   | MC       | File                                                                                                                                      | Description          |
 |------------ |:-------- |:----------------------------------------------------------------------------------------------------------------------------------------- |:---------------------|
 |DH03         | 1.17.1   | [DH03_QuadBulk_V5_3.litematic](DH03%20Parallelized%20Quad%20Display%20Slice%20With%20Passive%20Read/DH03_QuadBulk_V5_3.litematic?raw=1)   | Litematic of slice.  |
+
+
+
+# [1.13; 1.19; -] [DH04](DH04%20Quad%20Display%20Slice%20With%20Slider%20Top%20Display): [Quad Display Slice With Slider Top Display](DH04%20Quad%20Display%20Slice%20With%20Slider%20Top%20Display/DH04_Quad_Display_Slice_With_Slider_Top_Display.pdf)
+### *By JayRoi*
+
+The DH04 quad display slice has 4 box displays with passive read ability. It has a fully hopperlocked layout with no visible pistons. The bottom displays has one buffer box with global first box placement. Box collection is not fully reliable. Top display will break if used aggressively by activating with adjacent slices. Two alternative layouts are available.
+
+<img src="DH04%20Quad%20Display%20Slice%20With%20Slider%20Top%20Display/slice2.png?raw=1" height="300px">
+
+#### Features:
+- Fully hopperlocked with local top display locking
+- Waterstream inputs
+- Passive read restock system with in-slice lists
+- Global first box placement
+
+#### Download Info:
+|Identifier   | MC     | File                                                                                                                                                                                         | Description                                                                               |
+|------------ |:------ |:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:------------------------------------------------------------------------------------------|
+|DH04         | 1.19   | [DH04_Quad_Display_Slice_With_Slider_Top_Display.litematic](DH04%20Quad%20Display%20Slice%20With%20Slider%20Top%20Display/DH04_Quad_Display_Slice_With_Slider_Top_Display.litematic?raw=1)   | Schematic of device. Side with rails in waterstream incompatible with MCV \textless 1.17  |

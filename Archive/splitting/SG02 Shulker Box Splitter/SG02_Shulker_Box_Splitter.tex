@@ -16,7 +16,7 @@
 \author{Obi}
 \tags{splitting}
 \date{21 December 2022}
-\revision{Revision 1}
+\revision{Revision 2}
 \begin{document}
 \maketitle
 
@@ -57,7 +57,7 @@ Splits mixed boxes into smaller boxes of the same type. This design uses the hop
         \thickhline
         \textbf{Name} & \textbf{Range} & \textbf{Description} \\
         \hline
-        Clock signal & Pulse & Executes converion algorithm with each pulse. \\
+        Mixed boxes input & Box & Boxes to split. Boxes can contain any items. \\
         \thickhline
 \end{tabularx}
 \end{table}
@@ -68,7 +68,9 @@ Splits mixed boxes into smaller boxes of the same type. This design uses the hop
         \thickhline
         \textbf{Name} & \textbf{Range} & \textbf{Description} \\
         \hline
-        Output & Pulse & Outputs \\
+        Split boxes output & Box & Boxes with same item types only \\
+        \hline
+        Unstackables output & Item & Unstackable items \\
         \thickhline
 \end{tabularx}
 \end{table}
@@ -86,10 +88,19 @@ Splits mixed boxes into smaller boxes of the same type. This design uses the hop
         \thickhline
 \end{tabularx}
 \end{table}
+
 \newpage
 \section{Testing Data}
-
-TODO
+\begin{table}[h]
+    \caption{Executed Tests}
+    \begin{tabularx}{\textwidth}{l | X}
+        \thickhline
+        \textbf{Test} & \textbf{Result} \\
+        \hline
+        Splitting test & Device was able to split mixed boxes correctly. \\
+        \thickhline
+\end{tabularx}
+\end{table}
 
 \section{Download Information}
 \begin{table}[h]
@@ -98,7 +109,7 @@ TODO
         \thickhline
         \textbf{Identifier} & \textbf{MC} & \textbf{File} & \textbf{Description} \\
         \hline
-        SG02 & 1.17.1 & \href{https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/splitting/SG02\%20Shulker\%20Box\%20Splitter/SG02\_Shulker\_Box\_Splitter.litematic?raw=1}{SG02\_Shulker\_Box\_Splitter.litematic} & Schematic of device. \\
+        SG02 & 1.17.1 & \href{https://github.com/Soontech-Annals/Archive/blob/63c9ea8c34519ca4eb58649773e0c37e7e462fdd/Archive/splitting/SG02\%20Shulker\%20Box\%20Splitter/SG02\_Shulker\_Box\_Splitter.litematic?raw=1}{SG02\_Shulker\_Box\_Splitter.litematic} & Schematic of device. \\
         \hline
         \thickhline
     \end{tabularx}

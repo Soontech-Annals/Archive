@@ -1,5 +1,5 @@
 # splitting
-2 Result(s)
+3 Result(s)
 
 # [1.16.5; 1.16.5; -] [SG01](SG01%20Shulker%20Box%20Splitter%20Array): [Shulker Box Splitter Array](SG01%20Shulker%20Box%20Splitter%20Array/SG01_Shulker_Box_Splitter_Array.pdf)
 ### *By Quacon Group*
@@ -35,3 +35,23 @@ Splits mixed boxes into smaller boxes of the same type. This design uses the hop
 |Identifier   | MC       | File                                                                                                               | Description           |
 |------------ |:-------- |:------------------------------------------------------------------------------------------------------------------ |:----------------------|
 |SG02         | 1.17.1   | [SG02_Shulker_Box_Splitter.litematic](SG02%20Shulker%20Box%20Splitter/SG02_Shulker_Box_Splitter.litematic?raw=1)   | Schematic of device.  |
+
+
+
+# [1.19; 1.19.3; -] [SG03](SG03%20High%20Speed%20Cart%20Based%20Ideal%20Splitter): [High Speed Cart Based Ideal Splitter](SG03%20High%20Speed%20Cart%20Based%20Ideal%20Splitter/SG03_High_Speed_Cart_Based_Ideal_Splitter.pdf)
+### *By Andrews54757*
+
+The SG03 splitter takes boxes with items and splits them by item type. Items of the same type are loaded into boxes with ideal packing efficiency. Up to one partial box is output per item type. Unstackable items are split into a separate stream. The device utilizes hoppercarts to reach high speeds, with up to 31.5x hopperspeed throughput.
+
+<img src="SG03%20High%20Speed%20Cart%20Based%20Ideal%20Splitter/asdadad.png?raw=1" height="300px">
+
+#### Features:
+- Minimum amount of partial boxes output.
+- High speed. 31.5x hopperspeed throughput.
+- Unstackables are split into a separate stream.
+- Cart based box unloader compatible.
+
+#### Download Info:
+|Identifier   | MC       | File                                                                                                                                                         | Description                                                           |
+|------------ |:-------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------ |:----------------------------------------------------------------------|
+|SG03         | 1.19.3   | [SG03_High_Speed_Cart_Based_Ideal_Splitter.zip](SG03%20High%20Speed%20Cart%20Based%20Ideal%20Splitter/SG03_High_Speed_Cart_Based_Ideal_Splitter.zip?raw=1)   | WDL of device. Cart unloader version included. Inventories included.  |

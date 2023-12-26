@@ -1,5 +1,5 @@
 # decoders
-3 Result(s)
+4 Result(s)
 
 # [1.16; 1.17.1; -] [DC01](DC01%206%20Bit%20Binary%20Decoder): [6 Bit Binary Decoder](DC01%206%20Bit%20Binary%20Decoder/DC01_6_Bit_Decoder.pdf)
 ### *By Dzreams*
@@ -58,3 +58,24 @@ The DC03 decoder takes two decimal digits and outputs a pulse at one of 100 slic
 |Identifier   | MC       | File                                                                                                                                            | Description                                                                           |
 |------------ |:-------- |:----------------------------------------------------------------------------------------------------------------------------------------------- |:--------------------------------------------------------------------------------------|
 |DC03         | 1.18.2   | [DC03_10BPS_decimal_decoder_1.18.2.litematic](DC03%2010BPS%202%20Digit%20Decimal%20Decoder/DC03_10BPS_decimal_decoder_1.18.2.litematic?raw=1)   | Litematic of decoder. Includes subregions for testing. Does not include inventories.  |
+
+
+
+# [1.11; 1.19.3; -] [DC04](DC04%20Dual%20Sided%206%20Bit%20Binary%20Decoder): [Dual Sided 6 Bit Binary Decoder](DC04%20Dual%20Sided%206%20Bit%20Binary%20Decoder/DC04_Dual_Sided_6_Bit_Binary_Decoder.pdf)
+### *By FloppyDonkey*
+
+The DC04 decoder takes six bits and outputs a pulse at one of 64 slices corresponding to the code. The device is dual sided, meaning it can output a signal to one of two different sides. This effectively adds another bit to the decoder, allowing for 128 different outputs.
+
+<img src="DC04%20Dual%20Sided%206%20Bit%20Binary%20Decoder/dualdecoder.png?raw=1" height="300px">
+
+#### Features:
+- Dual sided outputs.
+- Signal travels 100 blocks per second.
+- No 1gt offset needed. This is achieved through a combination of TTP to get the proper update order, and some rail diodes.
+- Minimal flashing rails. QC based logic with BUDed rails.
+- Hopperspeed throughput.
+
+#### Download Info:
+|Identifier   | MC     | File                                                                                                                                                                | Description            |
+|------------ |:------ |:------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:-----------------------|
+|DC04         | 1.17   | [DC04_Dual_Sided_6_Bit_Binary_Decoder_1.17.litematic](DC04%20Dual%20Sided%206%20Bit%20Binary%20Decoder/DC04_Dual_Sided_6_Bit_Binary_Decoder_1.17.litematic?raw=1)   | Litematic of decoder.  |

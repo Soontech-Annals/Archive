@@ -16,7 +16,7 @@
 \author{Quacon Group}
 \tags{splitting}
 \date{21 December 2022}
-\revision{Revision 1}
+\revision{Revision 2}
 \begin{document}
 \maketitle
 
@@ -48,6 +48,30 @@ Splits mixed boxes into smaller boxes of the same type. This design uses the hop
 \onecolumn
 
 \section{Device Specifications}
+
+\begin{table}[h]
+    \caption{Inputs}
+    \begin{tabularx}{\textwidth}{l | c | X}
+        \thickhline
+        \textbf{Name} & \textbf{Range} & \textbf{Description} \\
+        \hline
+        Mixed boxes input & Box & Boxes to split. Boxes can contain any items. \\
+        \thickhline
+\end{tabularx}
+\end{table}
+
+\begin{table}[h]
+    \caption{Outputs}
+    \begin{tabularx}{\textwidth}{l | c | X}
+        \thickhline
+        \textbf{Name} & \textbf{Range} & \textbf{Description} \\
+        \hline
+        Split boxes output & Box & Boxes with same item types only \\
+        \hline
+        Unstackables output & Item & Unstackable items \\
+        \thickhline
+\end{tabularx}
+\end{table}
 
 \begin{table}[h]
     \caption{Device Specifications}
@@ -82,7 +106,7 @@ Splits mixed boxes into smaller boxes of the same type. This design uses the hop
         \thickhline
         \textbf{Identifier} & \textbf{MC} & \textbf{File} & \textbf{Description} \\
         \hline
-        SG01 & 1.17.1 & \href{https://github.com/Soontech-Annals/Archive/blob/92d3541e07ddc3ab90360e923907f040eca76834/Archive/splitting/SG01\%20Shulker\%20Box\%20Splitter\%20Array/SG01\_Shulker\_Box\_Splitter\_Array.zip?raw=1}{SG01\_Shulker\_Box\_Splitter\_Array.zip} & World download of device. \\
+        SG01 & 1.17.1 & \href{https://github.com/Soontech-Annals/Archive/blob/63c9ea8c34519ca4eb58649773e0c37e7e462fdd/Archive/splitting/SG01\%20Shulker\%20Box\%20Splitter\%20Array/SG01\_Shulker\_Box\_Splitter\_Array.zip?raw=1}{SG01\_Shulker\_Box\_Splitter\_Array.zip} & World download of device. \\
         \hline
         \thickhline
     \end{tabularx}

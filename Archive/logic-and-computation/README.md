@@ -1,5 +1,5 @@
 # logic-and-computation
-6 Result(s)
+8 Result(s)
 
 # [1.13; 1.17.1; -] [LC01](LC01%201%20Wide%20Redcoder): [1 Wide Redcoder](LC01%201%20Wide%20Redcoder/LC01_1_Wide_Redcoder.pdf)
 ### *By Andrews54757*
@@ -106,3 +106,40 @@ The LC06 device converts binary to binary coded decimal (binary -> decimal) usin
 |Identifier   | MC       | File                                                                                                                                               | Description           |
 |------------ |:-------- |:-------------------------------------------------------------------------------------------------------------------------------------------------- |:----------------------|
 |LC06         | 1.17.1   | [LC06_stateless_10bit_double_dabble.litematic](LC06%20Stateless%2010%20Bit%20Double%20Dabble/LC06_stateless_10bit_double_dabble.litematic?raw=1)   | Schematic of device.  |
+
+
+
+# [1.16; 1.19.3; -] [LC07](LC07%20Decimal%20Delay%20Generator): [Decimal Delay Generator](LC07%20Decimal%20Delay%20Generator/LC07_Decimal_Delay_Generator.pdf)
+### *By Andrews54757*
+
+The LC07 Decimal Delay Generator takes a decimal input and outputs a pulse after a delay of 10 to 19 game ticks. The delay is equal to the input signal strength plus 5. The device can be used to generate precise extraction trigger signal for a 1 slot/gt iterator device.
+
+<img src="LC07%20Decimal%20Delay%20Generator/decimaldelay.png?raw=1" height="300px">
+
+#### Features:
+- 10gt to 19gt variable delay
+- SS5-14 input
+- Not random activation timings safe
+
+#### Download Info:
+|Identifier   | MC       | File                                                                                                                        | Description                                        |
+|------------ |:-------- |:--------------------------------------------------------------------------------------------------------------------------- |:---------------------------------------------------|
+|LC07         | 1.19.3   | [LC07_Decimal_Delay_Generator.litematic](LC07%20Decimal%20Delay%20Generator/LC07_Decimal_Delay_Generator.litematic?raw=1)   | Schematic of device. Test input regions included.  |
+
+
+
+# [1.16; 1.19.3; -] [LC08](LC08%20Precision%20Timings%20SIPO%20Register): [Precision Timings SIPO Register](LC08%20Precision%20Timings%20SIPO%20Register/LC08_Precision_Timings_SIPO_Register.pdf)
+### *By Andrews54757*
+
+The LC08 Precision Timings Serial Input Parallel Output (SIPO) Register seperates input signals by order of input. The device is capable of discriminating between signals sent in the same tick. The device is expandable, and can be used to decode crackpot encoding schemes.
+
+<img src="LC08%20Precision%20Timings%20SIPO%20Register/sipo.png?raw=1" height="300px">
+
+#### Features:
+- Expandable, QC based "stateless" logic
+- High precision timings support. Can discriminate order of signals sent in the same tick.
+
+#### Download Info:
+|Identifier   | MC       | File                                                                                                                                                  | Description           |
+|------------ |:-------- |:----------------------------------------------------------------------------------------------------------------------------------------------------- |:----------------------|
+|LC08         | 1.19.3   | [LC08_Precision_Timings_SIPO_Register.litematic](LC08%20Precision%20Timings%20SIPO%20Register/LC08_Precision_Timings_SIPO_Register.litematic?raw=1)   | Schematic of device.  |
