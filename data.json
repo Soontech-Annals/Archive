@@ -966,6 +966,74 @@
         },
         {
             "path": [
+                "encoded-systems",
+                "ES02 Scicraft Hybrid Main Storage"
+            ],
+            "identifier": "ES02",
+            "title": "Scicraft Hybrid Main Storage",
+            "authors": [
+                "Jorvp",
+                "Obi",
+                "CommandLeo",
+                "et al."
+            ],
+            "tags": [
+                "encoded-systems",
+                "hybrid-encoded",
+                "complete"
+            ],
+            "date": "25 December 2023",
+            "revision": "1",
+            "description": "The ES02 Scicraft Hybrid Main Storage is a hybrid encoded storage system, which means it uses regular filters for loose items and encoded box sorting. This system is complete, and is in use in the Scicraft technical Minecraft survival server. \\href{https://www.youtube.com/watch?v=8VbCW-Fqjhw}{Youtube video}",
+            "image": "area_render_1_.png",
+            "tex": "ES02_Scicraft_Hybrid_Main_Storage.tex",
+            "pdf": "ES02_Scicraft_Hybrid_Main_Storage.pdf",
+            "features": [
+                "86.5% hopper locking. (15% of the unlocked hoppers are due to the mass crafter. You can get rid of it to achieve almost 99% hopperlocking.)",
+                "0.5mspt idle, 5mspt active (Ryzen 9 7950X with lithium 1.19.2).",
+                "3 Hybrid Halls, which means both items and boxes in the same hall, which makes for a very interesting item layout.",
+                "Up to 378 Bulk Items, 756 Loose items.",
+                "Fixed item encoded remote bulk.",
+                "CommandLeo's unstackable sorter.",
+                "Parallel unloader, (FITu) which allows for sorting items in parallel.",
+                "Complete item layout with encoder setup.",
+                "Multiple peripherals (furnace array, crafting station, Mass crafter, Box yeeter crafter, etc.)",
+                "Full system status output panel",
+                "Basic error checking, can pause the input if there is a problem",
+                "Not a single Togglestate, which means every latch can be reset, with multiple buttons to reset them if there's a server crash.",
+                "Chunkloaded, bulk chunkloaders only activate when needed."
+            ],
+            "applications": [
+                "Learning about encoded systems",
+                "Using it as a storage system"
+            ],
+            "specifications": {
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.20.4",
+                    "min": "1.17",
+                    "typ": "1.19.2"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "ES02",
+                    "mc": "1.19.2",
+                    "file": "ES02_Scicraft_Hybrid_Main_Storage.zip",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/9498f9531a37101085dfa0c025e126b4c94899e9/Archive/encoded-systems/ES02%20Scicraft%20Hybrid%20Main%20Storage/ES02_Scicraft_Hybrid_Main_Storage.zip?raw=1",
+                    "description": "WDL of storage system.",
+                    "sha256": "def04ec887eea7c9eac83801805e826616f674d96de3ff6cbcf63ffd133d77dd"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "SMP test",
+                    "result": "Tested in production over a year of SMP (Although not very active) without any issues."
+                }
+            ]
+        },
+        {
+            "path": [
                 "encoders",
                 "EC01 Hopperspeed Encoder V2"
             ],

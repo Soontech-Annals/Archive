@@ -7,7 +7,7 @@
 | [data-storage](data-storage)                   |       1 |
 | [decoders](decoders)                           |       4 |
 | [display-halls](display-halls)                 |       4 |
-| [encoded-systems](encoded-systems)             |       1 |
+| [encoded-systems](encoded-systems)             |       2 |
 | [encoders](encoders)                           |       6 |
 | [everything-bagel](everything-bagel)           |       2 |
 | [external-bulk](external-bulk)                 |       0 |
