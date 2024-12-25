@@ -1,0 +1,135 @@
+% Options here are passed to the article class.
+% Most common options: 10pt, 11pt, 12pt
+\documentclass[10pt]{datasheet}
+
+% Input encoding and typographical rules for English language
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[english]{isodate}
+
+% tikz is used to draw images in this example, but you can
+% also use \includegraphics{}.
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+
+% These define global texts that are used in headers and titles.
+\title{IM04: Compact 1000 Item RAM}
+\author{Andrews54757}
+\tags{item-memory, random-access}
+\date{25 December 2024}
+\revision{Revision 1}
+\begin{document}
+\maketitle
+
+\section{Features}
+
+\begin{itemize}
+\item{Has 1000 different codes/item types. a dropper of storage per code.}
+\item{Random access. Can insert and retrieve items in constant time in any order.}
+\item{Compact. Each address is packed into a 1x1 area.}
+\item{46gt latency from call request to item.}
+\item{Fully hopperlocked.}
+\end{itemize}
+
+\section{Applications}
+\begin{itemize}
+\item{Temp storage for merging.}
+\item{Dynamic bulk mapping storage.}
+\end{itemize}
+
+\section{General Description}
+The IM04 is able to store and retrieve items with a specific decimal code. This may be useful as a temp storage in an encoded dynamic sorting system.
+
+\vfill\break
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.48\textwidth]{imageassa.png}
+    \caption{\centering Compact 1000 Item RAM}
+\end{figure}
+
+% For wide tables, a single column layout is better. It can be switched
+% page-by-page.
+\onecolumn
+
+\section{Device Specifications}
+
+\begin{table}[H]
+    \caption{Inputs}
+    \begin{tabularx}{\textwidth}{l | c | X}
+        \thickhline
+        \textbf{Name} & \textbf{Range} & \textbf{Description} \\
+        \hline
+        Code Digit 1 & 1-10 & First digit indicating level and side. \\
+        Code Digit 2 & 1-10 & Second digit indicating row. \\
+        Code Digit 3 & 1-10 & Third digit indicating column. \\
+        \hline
+        Execute insertion & Pulse & Executes insertion with the given settings. \\
+        \hline
+        Execute retrieval & Pulse & Executes retrieval with the given settings. \\
+        \hline
+        Item Input & Item & Item to be inserted/retrieved. \\
+        \thickhline
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+    \caption{Outputs}
+    \begin{tabularx}{\textwidth}{l | c | X}
+        \thickhline
+        \textbf{Name} & \textbf{Range} & \textbf{Description} \\
+        \hline
+        Item Output & Item & Output for retrieval orders. \\
+        \thickhline
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+    \caption{Device Specifications}
+    \begin{tabularx}{\textwidth}{l | c c c | c | X}
+        \thickhline
+        \textbf{Parameter} & \textbf{Min.} & \textbf{Typ.} & \textbf{Max.} &
+        \textbf{Unit} & \textbf{Conditions} \\
+        \hline
+        Order Execution Interval & 32 & - & - & gt & Normal Usage\\
+        \hline
+        Hopper Count & & 1055 & & Hoppers & \\
+        \hline
+        MC Version & 1.13 & 1.19.3 & - & MCV & Latest version at time of writing: 1.21.4\\
+        \hline
+        Dimensions & & 17 x 41 x 33 & & Blocks & \\
+        \thickhline
+\end{tabularx}
+\end{table}
+
+\section{Testing Data}
+
+\begin{table}[H]
+\caption{Executed Tests}
+\begin{tabularx}{\textwidth}{l | X}
+    \thickhline
+    \textbf{Test} & \textbf{Result} \\
+    \hline
+    Insertion & Items were successfully inserted in all positions. \\
+    \hline
+    Retrieval & Items were successfully retrieved from all positions. \\
+    \thickhline
+\end{tabularx}
+\end{table}
+
+\section{Download Information}
+\begin{table}[H]
+    \caption{Download Information}
+    \begin{tabularx}{\textwidth}{l | l | l | X}
+        \thickhline
+        \textbf{Identifier} & \textbf{MC} & \textbf{File} & \textbf{Description} \\
+        \hline
+        IM04 & 1.19.3 & \href{https://github.com/Soontech-Annals/Archive/blob/2b73adfd252c5e2cf9d202454dbef78a586bc482/Archive/item-memory/IM04\%20Compact\%201000\%20Item\%20RAM/IM04\_Compact\_1000\_Item\_RAM.litematic?raw=1}{IM04\_Compact\_1000\_Item\_RAM.litematic} & Schematic of device. \\
+        \hline
+        \thickhline
+    \end{tabularx}
+\end{table}
+
+\end{document}
+
