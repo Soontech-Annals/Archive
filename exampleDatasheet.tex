@@ -10,6 +10,8 @@
 % tikz is used to draw images in this example, but you can
 % also use \includegraphics{}.
 \usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
 
 % These define global texts that are used in headers and titles.
 \title{_Identifier: _Title}
@@ -37,7 +39,7 @@ _Description
 
 \vfill\break
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.48\textwidth]{_Image}
     \caption{\centering _ImageCaption}
@@ -49,7 +51,7 @@ _Description
 
 \section{Device Specifications}
 
-\begin{table}[h]
+\begin{table}[H]
     \caption{Inputs}
     \begin{tabularx}{\textwidth}{l | c | X}
         \thickhline
@@ -60,7 +62,7 @@ _Description
 \end{tabularx}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[H]
     \caption{Outputs}
     \begin{tabularx}{\textwidth}{l | c | X}
         \thickhline
@@ -71,7 +73,7 @@ _Description
 \end{tabularx}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[H]
     \caption{Device Specifications}
     \begin{tabularx}{\textwidth}{l | c c c | c | X}
         \thickhline
@@ -82,15 +84,14 @@ _Description
         \hline
         Latency    & 0 & - & - & gt & From input to dropper activation. \\
         \hline
-        MC Version & 1.16 & 1.19.3 & - & MCV & Latest version at time of writing: 1.20.4\\
+        MC Version & 1.16 & 1.19.3 & - & MCV & Latest version at time of writing: 1.21.4\\
         \hline
         Dimensions & & 11 x 60 x 19 & & Blocks & \\
         \thickhline
 \end{tabularx}
 \end{table}
-\newpage
 \section{Testing Data}
-\begin{table}[h]
+\begin{table}[H]
 \caption{Executed Tests}
 \begin{tabularx}{\textwidth}{l | X}
     \thickhline
@@ -102,13 +103,13 @@ _Description
 \end{table}
 
 \section{Download Information}
-\begin{table}[h]
+\begin{table}[H]
     \caption{Download Information}
     \begin{tabularx}{\textwidth}{l | l | l | X}
         \thickhline
         \textbf{Identifier} & \textbf{MC} & \textbf{File} & \textbf{Description} \\
         \hline
-        _Identifier & 1.19.3 & _SchematicFile & Schematic of device. \\
+        _Identifier & 1.21.4 & _SchematicFile & Schematic of device. \\
         \hline
         \thickhline
     \end{tabularx}

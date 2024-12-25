@@ -1,5 +1,5 @@
 # logic-and-computation
-8 Result(s)
+9 Result(s)
 
 # [1.13; 1.17.1; -] [LC01](LC01%201%20Wide%20Redcoder): [1 Wide Redcoder](LC01%201%20Wide%20Redcoder/LC01_1_Wide_Redcoder.pdf)
 ### *By Andrews54757*
@@ -143,3 +143,24 @@ The LC08 Precision Timings Serial Input Parallel Output (SIPO) Register seperate
 |Identifier   | MC       | File                                                                                                                                                  | Description           |
 |------------ |:-------- |:----------------------------------------------------------------------------------------------------------------------------------------------------- |:----------------------|
 |LC08         | 1.19.3   | [LC08_Precision_Timings_SIPO_Register.litematic](LC08%20Precision%20Timings%20SIPO%20Register/LC08_Precision_Timings_SIPO_Register.litematic?raw=1)   | Schematic of device.  |
+
+
+
+# [1.13; 1.21.4; -] [LC09](LC09%20Tiny%20Request%20Manager): [Tiny Request Manager](LC09%20Tiny%20Request%20Manager/LC09_Tiny_Request_Manager.pdf)
+### *By Basil, Heilz, & Skyzy*
+
+The LC09 Tiny Request Manager is a device that can be used to queue requests in a system. It ensures that only one request is processed at a time regardless of random request timings. The device is infinitely expandable and can be paused. Note: Reset input is not rapid input proof.
+
+<img src="LC09%20Tiny%20Request%20Manager/pic.png?raw=1" height="300px">
+
+#### Features:
+- Random input proof
+- Infinitely expandable
+- Pausable
+- Compact. 8x4x5 volume.
+
+#### Download Info:
+|Identifier   | MC       | File                                                                                                                             | Description                                    |
+|------------ |:-------- |:-------------------------------------------------------------------------------------------------------------------------------- |:-----------------------------------------------|
+|LC09         | 1.21.4   | [LC09_Tiny_Request_Manager.litematic](LC09%20Tiny%20Request%20Manager/LC09_Tiny_Request_Manager.litematic?raw=1)                 | Schematic of device. Includes three variants.  |
+|LC09B        | 1.19.3   | [LC09_Tiny_Request_Manager_1.19.3.litematic](LC09%20Tiny%20Request%20Manager/LC09_Tiny_Request_Manager_1.19.3.litematic?raw=1)   | Schematic of device for older versions.        |

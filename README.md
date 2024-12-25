@@ -10,6 +10,7 @@ First two letters indicate category. Next two numbers indicate index (incrementi
 
 | Category                                                | Code |
 |---------------------------------------------------------|------|
+| [autocrafting](Archive/autocrafting/)                   | AC   |
 | [box-variable](Archive/box-variable/)                   | BV   |
 | [chest-halls](Archive/chest-halls/)                     | CH   |
 | [data-storage](Archive/data-storage/)                   | DS   |

@@ -65,7 +65,7 @@ The DH03 quad display slice has 4 box displays with passive read ability and par
 
 
 # [1.13; 1.19; -] [DH04](DH04%20Quad%20Display%20Slice%20With%20Slider%20Top%20Display): [Quad Display Slice With Slider Top Display](DH04%20Quad%20Display%20Slice%20With%20Slider%20Top%20Display/DH04_Quad_Display_Slice_With_Slider_Top_Display.pdf)
-### *By JayRoi*
+### *By Basil, & JayRoi*
 
 The DH04 quad display slice has 4 box displays with passive read ability. It has a fully hopperlocked layout with no visible pistons. The bottom displays has one buffer box with global first box placement. Box collection is not fully reliable. Top display will break if used aggressively by activating with adjacent slices. Two alternative layouts are available.
 

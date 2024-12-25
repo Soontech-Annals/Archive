@@ -149,6 +149,7 @@ module.exports = async function preprocess() {
 
         let texHash = crypto.createHash('sha256').update(texDocumentContents).digest('hex');
         try {
+            // throw new Error("No build cache found");
             const cache = JSON.parse(await fsp.readFile(buildCache, "utf8"));
             
             if (cache.texHash === texHash) {

@@ -1,5 +1,5 @@
 # item-memory
-3 Result(s)
+6 Result(s)
 
 # [1.13; 1.17.1; -] [IM01](IM01%20100%20Item%20RAM): [100 Item RAM](IM01%20100%20Item%20RAM/IM01_100_Item_RAM.pdf)
 ### *By Andrews54757*
@@ -62,3 +62,66 @@ The IM03 Compact Disk Drive Temp Storage is a device that stores boxes in a temp
 |------------ |:-------- |:------------------------------------------------------------------------------------------------------------------------------------------------------- |:--------------------------------------------|
 |IM03         | 1.17.1   | [IM03_Compact_Disk_Drive_Temp_Storage.zip](IM03%20Compact%20Disk%20Drive%20Temp%20Storage/IM03_Compact_Disk_Drive_Temp_Storage.zip?raw=1)               | World download of device.                   |
 |IM03         | 1.17.1   | [IM03_Compact_Disk_Drive_Temp_Storage.litematic](IM03%20Compact%20Disk%20Drive%20Temp%20Storage/IM03_Compact_Disk_Drive_Temp_Storage.litematic?raw=1)   | Schematic of device. Inventories included.  |
+
+
+
+# [1.13; 1.19.3; -] [IM04](IM04%20Compact%201000%20Item%20RAM): [Compact 1000 Item RAM](IM04%20Compact%201000%20Item%20RAM/IM04_Compact_1000_Item_RAM.pdf)
+### *By Andrews54757*
+
+The IM04 is able to store and retrieve items with a specific decimal code. This may be useful as a temp storage in an encoded dynamic sorting system.
+
+<img src="IM04%20Compact%201000%20Item%20RAM/imageassa.png?raw=1" height="300px">
+
+#### Features:
+- Has 1000 different codes/item types. a dropper of storage per code.
+- Random access. Can insert and retrieve items in constant time in any order.
+- Compact. Each address is packed into a 1x1 area.
+- 46gt latency from call request to item.
+- Fully hopperlocked.
+
+#### Download Info:
+|Identifier   | MC       | File                                                                                                                    | Description           |
+|------------ |:-------- |:----------------------------------------------------------------------------------------------------------------------- |:----------------------|
+|IM04         | 1.19.3   | [IM04_Compact_1000_Item_RAM.litematic](IM04%20Compact%201000%20Item%20RAM/IM04_Compact_1000_Item_RAM.litematic?raw=1)   | Schematic of device.  |
+
+
+
+# [1.17; 1.19.3; -] [IM05](IM05%201000%20Non-Box%20Item%20RAM): [1000 Non-Box Item RAM](IM05%201000%20Non-Box%20Item%20RAM/IM05_1000_Non-Box_Item_RAM.pdf)
+### *By Andrews54757*
+
+The IM05 is able to store and retrieve non-box items with a specific decimal code. This may be useful for implementing dictionaries in an encoded dynamic sorting system. The device uses a 50-address item memory system with a hoppercart based slot cycling system to store and retrieve 1000 different items at near constant time.
+
+<img src="IM05%201000%20Non-Box%20Item%20RAM/image_1%20(1).png?raw=1" height="300px">
+
+#### Features:
+- Has 1000 different codes/item types. Items are stored in slots inside shulker boxes inside a dropper.
+- Random access. Can insert and retrieve items in constant time in any order.
+- Compact. 22x10x19 volume.
+- Maximum 55gt latency from call request to item.
+
+#### Download Info:
+|Identifier   | MC       | File                                                                                                                    | Description                                        |
+|------------ |:-------- |:----------------------------------------------------------------------------------------------------------------------- |:---------------------------------------------------|
+|IM05         | 1.19.3   | [IM05_1000_Non-Box_Item_RAM.litematic](IM05%201000%20Non-Box%20Item%20RAM/IM05_1000_Non-Box_Item_RAM.litematic?raw=1)   | Schematic of device. Includes dummy item storage.  |
+
+
+
+# [1.17; 1.19.3; -] [IM06](IM06%208bit%20Disk%20Drive%20Temp%20Storage): [8bit Disk Drive Temp Storage](IM06%208bit%20Disk%20Drive%20Temp%20Storage/IM06_8bit_Disk_Drive_Temp_Storage.pdf)
+### *By disharmonica_*
+
+The IM06 can temporarily store and retrieve boxes with a binary code. Intended for keeping the leftover partials of bulk items, for future merging operations. 256 different types can be held by this device.
+
+<img src="IM06%208bit%20Disk%20Drive%20Temp%20Storage/area_render_35_.png?raw=1" height="300px">
+
+#### Features:
+- Extremely compact, 13x9x7 lwh
+- Very accessible inputs, output into waterstream, perfect for plumbing
+- Has simple temp logic that gives out both boxes, if another one was in storage already
+- Uses water buckets as placeholders, turns them into buckets to store very compact when not needed
+- Quick cycle and reset, min.102gt - max.598gt = 17.5 seconds on average per request
+- Only uses 21 hoppers, wiring for hopperlocking included
+
+#### Download Info:
+|Identifier   | MC       | File                                                                                                                                           | Description           |
+|------------ |:-------- |:---------------------------------------------------------------------------------------------------------------------------------------------- |:----------------------|
+|IM06         | 1.20.1   | [IM06_8bit_Disk_Drive_Temp_Storage.litematic](IM06%208bit%20Disk%20Drive%20Temp%20Storage/IM06_8bit_Disk_Drive_Temp_Storage.litematic?raw=1)   | Schematic of device.  |

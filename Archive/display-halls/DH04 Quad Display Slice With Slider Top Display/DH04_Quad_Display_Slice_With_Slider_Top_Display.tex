@@ -10,13 +10,15 @@
 % tikz is used to draw images in this example, but you can
 % also use \includegraphics{}.
 \usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
 
 % These define global texts that are used in headers and titles.
 \title{DH04: Quad Display Slice With Slider Top Display}
-\author{JayRoi}
+\author{Basil, JayRoi}
 \tags{display-halls, quad-display, slice, passive-read}
 \date{23 December 2023}
-\revision{Revision 1}
+\revision{Revision 2}
 \begin{document}
 \maketitle
 
@@ -40,7 +42,7 @@ The DH04 quad display slice has 4 box displays with passive read ability. It has
 
 \vfill\break
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.48\textwidth]{slice2.png}
     \caption{\centering Quad Display Slice With Slider Top Display}
@@ -52,7 +54,7 @@ The DH04 quad display slice has 4 box displays with passive read ability. It has
 
 \section{Device Specifications}
 
-\begin{table}[h]
+\begin{table}[H]
     \caption{Device Specifications}
     \begin{tabularx}{\textwidth}{l | c c c | c | X}
         \thickhline
@@ -67,9 +69,8 @@ The DH04 quad display slice has 4 box displays with passive read ability. It has
         \thickhline
 \end{tabularx}
 \end{table}
-\newpage
 \section{Testing Data}
-\begin{table}[h]
+\begin{table}[H]
 \caption{Executed Tests}
 \begin{tabularx}{\textwidth}{l | X}
     \thickhline
@@ -81,13 +82,13 @@ The DH04 quad display slice has 4 box displays with passive read ability. It has
 \end{table}
 
 \section{Download Information}
-\begin{table}[h]
+\begin{table}[H]
     \caption{Download Information}
     \begin{tabularx}{\textwidth}{l | l | l | X}
         \thickhline
         \textbf{Identifier} & \textbf{MC} & \textbf{File} & \textbf{Description} \\
         \hline
-        DH04 & 1.19 & \href{https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/display-halls/DH04\%20Quad\%20Display\%20Slice\%20With\%20Slider\%20Top\%20Display/DH04\_Quad\_Display\_Slice\_With\_Slider\_Top\_Display.litematic?raw=1}{DH04\_Quad\_Display\_Slice\_With\_Slider\_Top\_Display.litematic} & Schematic of device. Side with rails in waterstream incompatible with MCV \textless 1.17\\
+        DH04 & 1.19 & \href{https://github.com/Soontech-Annals/Archive/blob/8413f90a054b6c415703bae02badeba7541344f6/Archive/display-halls/DH04\%20Quad\%20Display\%20Slice\%20With\%20Slider\%20Top\%20Display/DH04\_Quad\_Display\_Slice\_With\_Slider\_Top\_Display.litematic?raw=1}{DH04\_Quad\_Display\_Slice\_With\_Slider\_Top\_Display.litematic} & Schematic of device. Side with rails in waterstream incompatible with MCV \textless 1.17\\
         \hline
         \thickhline
     \end{tabularx}
