@@ -1,5 +1,5 @@
 # encoders
-6 Result(s)
+7 Result(s)
 
 # [1.16; 1.16.5; -] [EC01](EC01%20Hopperspeed%20Encoder%20V2): [Hopperspeed Encoder V2](EC01%20Hopperspeed%20Encoder%20V2/EC01_Hopperspeed_Encoder_V2.pdf)
 ### *By Andrews54757*
@@ -118,3 +118,24 @@ The EC06 Item to Binary Encoder With Safety Features is a 10 bit encoder with up
 |------------ |:-------- |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:----------------------|
 |EC06         | 1.17.1   | [EC06_Item_to_Binary_Encoder_With_Safety_Features.zip](EC06%20Item%20to%20Binary%20Encoder%20With%20Safety%20Features/EC06_Item_to_Binary_Encoder_With_Safety_Features.zip?raw=1)               | WDL of device.        |
 |EC06         | 1.17.1   | [EC06_Item_to_Binary_Encoder_With_Safety_Features.litematic](EC06%20Item%20to%20Binary%20Encoder%20With%20Safety%20Features/EC06_Item_to_Binary_Encoder_With_Safety_Features.litematic?raw=1)   | Schematic of device.  |
+
+
+
+# [1.21; 1.21.4; -] [EC07](EC07%20Unstackable%20Item%20Encoder): [Unstackable Item Encoder](EC07%20Unstackable%20Item%20Encoder/EC07_Unstackable_Item_Encoder.pdf)
+### *By Basil, Pyra, & 77*
+
+The EC07 Unstackable Item Encoder is a device that sorts unstackable items using Pyra's unstackable sorter and then outputs boxes of the sorted items along with an encoded signal. The device features a built-in queue to output boxes of items upon request. The device is fully hopperlocked and is designed to sort music discs, enchanted books, potions, flint & steel, shears, powdered snow buckets, lava buckets, water buckets, boats, armor and minecarts in that order. Item codes can be set by modifying the read-only memory of the device. See the corresponding [explanation video on Youtube](https://www.youtube.com/watch?v=1yDuKrriiYI).
+
+<img src="EC07%20Unstackable%20Item%20Encoder/area_render_33_.png?raw=1" height="300px">
+
+#### Features:
+- Uses Pyra's unstackable sorter to sort items at hopperspeed.
+- Built-in box loaders for each item type.
+- Sorts music discs, enchanted books, potions, flint & steel, shears, powdered snow buckets, lava buckets, water buckets, boats, armor and minecarts in that order.
+- Fully hopperlocked.
+- Built-in queue for output.
+
+#### Download Info:
+|Identifier   | MC     | File                                                                                                                           | Description           |
+|------------ |:------ |:------------------------------------------------------------------------------------------------------------------------------ |:----------------------|
+|EC07         | 1.21   | [EC07_Unstackable_Item_Encoder.litematic](EC07%20Unstackable%20Item%20Encoder/EC07_Unstackable_Item_Encoder.litematic?raw=1)   | Schematic of device.  |

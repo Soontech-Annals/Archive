@@ -1,6 +1,7 @@
 {
     "version": 1,
     "categories": [
+        "autocrafting",
         "box-variable",
         "chest-halls",
         "data-storage",
@@ -20,6 +21,75 @@
         "wiring"
     ],
     "entries": [
+        {
+            "path": [
+                "autocrafting",
+                "AC01 Box Color Swapper"
+            ],
+            "identifier": "AC01",
+            "title": "Box Color Swapper",
+            "authors": [
+                "Basil"
+            ],
+            "tags": [
+                "autocrafting",
+                "box-color"
+            ],
+            "date": "25 December 2024",
+            "revision": "1",
+            "description": "The AC01 Box Color Swapper is a device that recolors shulker boxes using color dyes and a crafter. The device's item to color map is set using the built-in encoder. The device is designed to be safe, with features that prevent dry firing and ensure that the dyes are present. Without the necessary dyes, the device will not recolor the box. See the corresponding  \\href{https://www.youtube.com/watch?v=nnvas8g5LmQ}{explanation video on Youtube}. Inspired by Obi's encoder design.",
+            "image": "area_render_30_.png",
+            "tex": "AC01_Box_Color_Swapper.tex",
+            "pdf": "AC01_Box_Color_Swapper.pdf",
+            "features": [
+                "Safety features: Dry fire proof and checks if dyes are present",
+                "No idle hoppercarts",
+                "Fully hopperlocked",
+                "Small and compact"
+            ],
+            "applications": [
+                "Recoloring shulker boxes before sending them to storage"
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "typ": "125"
+                },
+                "Latency": {
+                    "unit": "gt",
+                    "conditions": "From input to crafter activation.",
+                    "typ": "120"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.21.4",
+                    "min": "1.21",
+                    "typ": "1.21.4"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "23 x 12 x 7"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "AC01",
+                    "mc": "1.21",
+                    "file": "AC01_Box_Color_Swapper.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/autocrafting/AC01%20Box%20Color%20Swapper/AC01_Box_Color_Swapper.litematic?raw=1",
+                    "description": "Schematic of device.",
+                    "sha256": "916bc24adb12712f15dd3bd5e205d2df48e2805d1f9fae6fe3b2619b09eabe55"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Throughput test",
+                    "result": "Device was able to correctly recolor boxes with multiple boxes input simultaneously"
+                }
+            ]
+        },
         {
             "path": [
                 "box-variable",
@@ -82,7 +152,7 @@
                     "identifier": "BV01",
                     "mc": "1.17.1",
                     "file": "BV01_hopperspeed_grouper_p1.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/box-variable/BV01%20Simple%20Hopperspeed%20Grouper/BV01_hopperspeed_grouper_p1.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/box-variable/BV01%20Simple%20Hopperspeed%20Grouper/BV01_hopperspeed_grouper_p1.litematic?raw=1",
                     "description": "Litematic of grouper device",
                     "sha256": "286c51558f89ea7fd86f764922eef816fa99ac889e1d93c38940c12bf0e51630"
                 }
@@ -178,7 +248,7 @@
                     "identifier": "CH01",
                     "mc": "1.18.2",
                     "file": "CH01_encoded_chest_hall_p30.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/chest-halls/CH01%20Parallelized%20Encoded%20Chest%20Hall/CH01_encoded_chest_hall_p30.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/chest-halls/CH01%20Parallelized%20Encoded%20Chest%20Hall/CH01_encoded_chest_hall_p30.litematic?raw=1",
                     "description": "Litematic of chest hall with inventories.",
                     "sha256": "70f0ae9110df998b62cd06ee2cee12fcd096514b88a048e71ddac1451b5b8310"
                 }
@@ -209,6 +279,88 @@
                 {
                     "test": "Auto-Fix Toggles",
                     "result": "The storage was purposefully broken at various toggles and a repair was attempted with the auto-fix sequence. The system was always successfully repaired with multiple invokations of the auto-fix sequence."
+                }
+            ]
+        },
+        {
+            "path": [
+                "chest-halls",
+                "CH02 Parallelized Encoded Chest Hall Using Discs"
+            ],
+            "identifier": "CH02",
+            "title": "Parallelized Encoded Chest Hall Using Discs",
+            "authors": [
+                "JayRoi"
+            ],
+            "tags": [
+                "chest-halls",
+                "parallelized",
+                "decimal-encoding",
+                "hopperlocked",
+                "10-chests",
+                "disc-encoding"
+            ],
+            "date": "25 December 2024",
+            "revision": "1",
+            "description": "The CH02 Parallelized Encoded Chest Hall Using Discs is a demonstrative prototype of a parallelized unloading logic inspired by Andrews54757's chest hall. However, the system is designed to be more compact and efficient by using discs to encode the chest locations instead of embedded redstone memory.\n\nSingle shulkerboxes and their codes can be custom ordered to specific unloading conditions as chosen by the player, though the intention is these orders would be externally automated. Orders can be programmed to unload a single box to a certain amount from the box, insert additional boxes, or only insert boxes. The hall can process up to 10 orders at a time, allowing for roughly 10x hopperspeed parallelization.",
+            "image": "pic.png",
+            "tex": "CH02_Parallelized_Encoded_Chest_Hall_Using_Discs.tex",
+            "pdf": "CH02_Parallelized_Encoded_Chest_Hall_Using_Discs.pdf",
+            "features": [
+                "540 chests, 10 chests per slice.",
+                "25 block wide slices.",
+                "Fully parallelizable (10x hopperspeed for items, 1x hopperspeed for box insertion)",
+                "100% hopperlocked with sectional unlocking",
+                "Self-repairable toggle states with Auto-Fix sequence"
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "HS",
+                    "conditions": "Normal Usage",
+                    "min": "1",
+                    "max": "10"
+                },
+                "Hopper Count": {
+                    "unit": "Hoppers",
+                    "conditions": "",
+                    "typ": "597"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.19.2",
+                    "min": "1.20",
+                    "typ": "1.20.1"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "25 x 71 x 65"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "CH02",
+                    "mc": "1.20.1",
+                    "file": "CH02_Parallelized_Encoded_Chest_Hall_Using_Discs.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/chest-halls/CH02%20Parallelized%20Encoded%20Chest%20Hall%20Using%20Discs/CH02_Parallelized_Encoded_Chest_Hall_Using_Discs.litematic?raw=1",
+                    "description": "Schematic of device.",
+                    "sha256": "f7b2ca20f421dd74337a110196a72c27b9c3a3e29c291c0bc57df22e4cfb89de"
+                }
+            ],
+            "relatedComponents": [
+                {
+                    "identifier": "CH01",
+                    "description": "Parallelized Encoded Chest Hall"
+                },
+                {
+                    "identifier": "DC02",
+                    "description": "10BPS 2 Digit Decimal Decoder"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Item insertion",
+                    "result": "Items were successfully inserted in specific locations in parallel."
                 }
             ]
         },
@@ -286,7 +438,7 @@
                     "identifier": "DS011600",
                     "mc": "1.17.1",
                     "file": "DS011600_1600_bit_RAM_p1.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/data-storage/DS01%20Streamable%20Bit%20RAM/DS011600_1600_bit_RAM_p1.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/data-storage/DS01%20Streamable%20Bit%20RAM/DS011600_1600_bit_RAM_p1.litematic?raw=1",
                     "description": "Litematic of RAM with 1600 bits. Inventories not included.",
                     "sha256": "ee8f81873c022cc98e9fd9518b306471588b0995a7a9e9378618fb7129d18e47"
                 },
@@ -294,7 +446,7 @@
                     "identifier": "DS01600",
                     "mc": "1.18.2",
                     "file": "DS01600_600_bit_ram.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/data-storage/DS01%20Streamable%20Bit%20RAM/DS01600_600_bit_ram.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/data-storage/DS01%20Streamable%20Bit%20RAM/DS01600_600_bit_ram.litematic?raw=1",
                     "description": "Litematic of RAM with 600 bits. Wired slightly better. 36x32x36 blocks. Inventories not included.",
                     "sha256": "e1afd8c91b2a562c37dc2deb0bc30eb1c603d44ae151b476f46025feffe0a521"
                 }
@@ -375,7 +527,7 @@
                     "identifier": "DC01",
                     "mc": "1.17.1",
                     "file": "DC01_6bit_decoder.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/decoders/DC01%206%20Bit%20Binary%20Decoder/DC01_6bit_decoder.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/decoders/DC01%206%20Bit%20Binary%20Decoder/DC01_6bit_decoder.litematic?raw=1",
                     "description": "Litematic of decoder.",
                     "sha256": "3b0c023db197148a1e6337619c0552430ffde2769a97a9f64cab576957c1ea6f"
                 }
@@ -454,7 +606,7 @@
                     "identifier": "DC02",
                     "mc": "1.17.1",
                     "file": "DC02_2Digit_Decimal_Decoder.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/decoders/DC02%202%20Digit%20Decimal%20Decoder/DC02_2Digit_Decimal_Decoder.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/decoders/DC02%202%20Digit%20Decimal%20Decoder/DC02_2Digit_Decimal_Decoder.litematic?raw=1",
                     "description": "Litematic of decoder. Includes subregions for testing.",
                     "sha256": "b23fb063982792213dd6140afa94fdd475455b4b945f9c3e37bc96d0854e5294"
                 }
@@ -539,7 +691,7 @@
                     "identifier": "DC03",
                     "mc": "1.18.2",
                     "file": "DC03_10BPS_decimal_decoder_1.18.2.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/decoders/DC03%2010BPS%202%20Digit%20Decimal%20Decoder/DC03_10BPS_decimal_decoder_1.18.2.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/decoders/DC03%2010BPS%202%20Digit%20Decimal%20Decoder/DC03_10BPS_decimal_decoder_1.18.2.litematic?raw=1",
                     "description": "Litematic of decoder. Includes subregions for testing. Does not include inventories.",
                     "sha256": "3978ec7c190a9f50aebe9a07c8d4f5a197cbbee5fb57861b947a78a0d15551eb"
                 }
@@ -626,7 +778,7 @@
                     "identifier": "DC04",
                     "mc": "1.17",
                     "file": "DC04_Dual_Sided_6_Bit_Binary_Decoder_1.17.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/decoders/DC04%20Dual%20Sided%206%20Bit%20Binary%20Decoder/DC04_Dual_Sided_6_Bit_Binary_Decoder_1.17.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/decoders/DC04%20Dual%20Sided%206%20Bit%20Binary%20Decoder/DC04_Dual_Sided_6_Bit_Binary_Decoder_1.17.litematic?raw=1",
                     "description": "Litematic of decoder.",
                     "sha256": "5fadf9588a3d178e74b649ee13b989ed71bec79356eaed7c0c3b574c9b285f3e"
                 }
@@ -639,6 +791,77 @@
                 {
                     "test": "Throughput test",
                     "result": "Device was able to decode at 8gt throughput."
+                }
+            ]
+        },
+        {
+            "path": [
+                "decoders",
+                "DC05 4-9 Bit Binary Decoder With Top Output"
+            ],
+            "identifier": "DC05",
+            "title": "4-9 Bit Binary Decoder With Top Output",
+            "authors": [
+                "Basil",
+                "Crain"
+            ],
+            "tags": [
+                "decoders",
+                "binary"
+            ],
+            "date": "25 December 2024",
+            "revision": "1",
+            "description": "The DC05 decoder takes 4 bits and outputs a pulse at one of 16 slices corresponding to the code. The device can be expanded to 9 bits of input. The output can be taken from the top of the device.",
+            "image": "decoderpic.png",
+            "tex": "DC05_4-9_Bit_Binary_Decoder_With_Top_Output.tex",
+            "pdf": "DC05_4-9_Bit_Binary_Decoder_With_Top_Output.pdf",
+            "features": [
+                "Can be expanded to up to 9 bits of input.",
+                "Outputs can be taken from the top. (Observe rail state for output)",
+                "11 gt latency and 8 gt throughput."
+            ],
+            "applications": [
+                "Decoding binary signals for use in encoded systems"
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "8"
+                },
+                "Latency": {
+                    "unit": "gt",
+                    "conditions": "From input to output observer activation.",
+                    "min": "11",
+                    "typ": "11",
+                    "max": "11"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.21.4",
+                    "min": "1.13",
+                    "typ": "1.19.3"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "5 x 6 x 20"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "DC05",
+                    "mc": "1.19.3",
+                    "file": "DC05_4-9_Bit_Binary_Decoder_With_Top_Output.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/decoders/DC05%204-9%20Bit%20Binary%20Decoder%20With%20Top%20Output/DC05_4-9_Bit_Binary_Decoder_With_Top_Output.litematic?raw=1",
+                    "description": "Schematic of device.",
+                    "sha256": "9e37b3740d3b08c30aa7d3ba1271b336143a3fdcacfc84a62794ed3d34fc09f8"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Throughput test",
+                    "result": "Device was able to function with 8gt clocked input."
                 }
             ]
         },
@@ -696,7 +919,7 @@
                     "identifier": "DH01",
                     "mc": "1.18.2",
                     "file": "DH01_quad_display_slice.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/display-halls/DH01%20Quad%20Display%20Slice%20With%20Reliable%20Collection/DH01_quad_display_slice.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/display-halls/DH01%20Quad%20Display%20Slice%20With%20Reliable%20Collection/DH01_quad_display_slice.litematic?raw=1",
                     "description": "Litematic of slice.",
                     "sha256": "48257f3cb5b26a47054e9736600f6d2050d2c43f0c1a3a66add33f68e2a48a2b"
                 }
@@ -769,7 +992,7 @@
                     "identifier": "DH02",
                     "mc": "1.17.1",
                     "file": "DH02_quadbulk_slice_2w_dev1.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/display-halls/DH02%20Quad%20Display%20Slice%20With%20Passive%20Read/DH02_quadbulk_slice_2w_dev1.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/display-halls/DH02%20Quad%20Display%20Slice%20With%20Passive%20Read/DH02_quadbulk_slice_2w_dev1.litematic?raw=1",
                     "description": "Litematic of slice.",
                     "sha256": "1236913f2445e19d90aaa82fd3b0b4edd9583cbc49ae24c25e4dfe43a4d71dee"
                 }
@@ -840,7 +1063,7 @@
                     "identifier": "DH03",
                     "mc": "1.17.1",
                     "file": "DH03_QuadBulk_V5_3.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/display-halls/DH03%20Parallelized%20Quad%20Display%20Slice%20With%20Passive%20Read/DH03_QuadBulk_V5_3.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/display-halls/DH03%20Parallelized%20Quad%20Display%20Slice%20With%20Passive%20Read/DH03_QuadBulk_V5_3.litematic?raw=1",
                     "description": "Litematic of slice.",
                     "sha256": "5d7c31461b0888ce0a2d7f428586789abe5de97d5176d05cf2a206298b8e7147"
                 }
@@ -860,6 +1083,7 @@
             "identifier": "DH04",
             "title": "Quad Display Slice With Slider Top Display",
             "authors": [
+                "Basil",
                 "JayRoi"
             ],
             "tags": [
@@ -869,7 +1093,7 @@
                 "passive-read"
             ],
             "date": "23 December 2023",
-            "revision": "1",
+            "revision": "2",
             "description": "The DH04 quad display slice has 4 box displays with passive read ability. It has a fully hopperlocked layout with no visible pistons. The bottom displays has one buffer box with global first box placement. Box collection is not fully reliable. Top display will break if used aggressively by activating with adjacent slices. Two alternative layouts are available.",
             "image": "slice2.png",
             "tex": "DH04_Quad_Display_Slice_With_Slider_Top_Display.tex",
@@ -906,7 +1130,7 @@
                     "identifier": "DH04",
                     "mc": "1.19",
                     "file": "DH04_Quad_Display_Slice_With_Slider_Top_Display.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/display-halls/DH04%20Quad%20Display%20Slice%20With%20Slider%20Top%20Display/DH04_Quad_Display_Slice_With_Slider_Top_Display.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/display-halls/DH04%20Quad%20Display%20Slice%20With%20Slider%20Top%20Display/DH04_Quad_Display_Slice_With_Slider_Top_Display.litematic?raw=1",
                     "description": "Schematic of device. Side with rails in waterstream incompatible with MCV \\textless 1.17",
                     "sha256": "127b3f4a00c5594d8547ed9bfe15295d0f5d87b2a66606fba1e219153c583195"
                 }
@@ -958,7 +1182,7 @@
                     "identifier": "ES01",
                     "mc": "1.12.2",
                     "file": "ES01_V3.100.schematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/encoded-systems/ES01%20Palla%20Encoded%20V3.100/ES01_V3.100.schematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/encoded-systems/ES01%20Palla%20Encoded%20V3.100/ES01_V3.100.schematic?raw=1",
                     "description": "Schematic of system.",
                     "sha256": "0b019239bba6a9878e899b9726b425eed49ee56416fbbe55df75a534868b64db"
                 }
@@ -1020,7 +1244,7 @@
                     "identifier": "ES02",
                     "mc": "1.19.2",
                     "file": "ES02_Scicraft_Hybrid_Main_Storage.zip",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/0217557ba593aba728720062e998e88705146aba/Archive/encoded-systems/ES02%20Scicraft%20Hybrid%20Main%20Storage/ES02_Scicraft_Hybrid_Main_Storage.zip?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/encoded-systems/ES02%20Scicraft%20Hybrid%20Main%20Storage/ES02_Scicraft_Hybrid_Main_Storage.zip?raw=1",
                     "description": "WDL of storage system.",
                     "sha256": "def04ec887eea7c9eac83801805e826616f674d96de3ff6cbcf63ffd133d77dd"
                 }
@@ -1091,7 +1315,7 @@
                     "identifier": "EC01",
                     "mc": "1.16.5",
                     "file": "EC01_Hopperspeed_Encoder_V2-r1.zip",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/encoders/EC01%20Hopperspeed%20Encoder%20V2/EC01_Hopperspeed_Encoder_V2-r1.zip?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/encoders/EC01%20Hopperspeed%20Encoder%20V2/EC01_Hopperspeed_Encoder_V2-r1.zip?raw=1",
                     "description": "World download of encoder",
                     "sha256": "e155977b3e8abb93a0bc24d3ba991a1c1644c95c4f293305fcf6dab5ed314ee1"
                 }
@@ -1165,7 +1389,7 @@
                     "identifier": "EC01",
                     "mc": "1.17.1",
                     "file": "EC02_small_decimal_encoder.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/encoders/EC02%20Small%20Decimal%20Encoder/EC02_small_decimal_encoder.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/encoders/EC02%20Small%20Decimal%20Encoder/EC02_small_decimal_encoder.litematic?raw=1",
                     "description": "Schematic of encoder.",
                     "sha256": "d295d52c4ed82e0ac3da00896992296099a91dec669794c2af2bbae55c03d4a1"
                 }
@@ -1240,7 +1464,7 @@
                     "identifier": "EC03",
                     "mc": "1.18.2",
                     "file": "EC03_16gt_encoder_core_p2.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/encoders/EC03%2016gt%20Item%20Encoder/EC03_16gt_encoder_core_p2.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/encoders/EC03%2016gt%20Item%20Encoder/EC03_16gt_encoder_core_p2.litematic?raw=1",
                     "description": "Schematic of encoder.",
                     "sha256": "e599f19630b13adba967904cbd22f603aded9dcea9a9f1f003eee77ab3036dc6"
                 },
@@ -1248,7 +1472,7 @@
                     "identifier": "EC03B",
                     "mc": "1.19",
                     "file": "EC03_16gt_encoder_core_dispenser_1.19_p2.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/encoders/EC03%2016gt%20Item%20Encoder/EC03_16gt_encoder_core_dispenser_1.19_p2.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/encoders/EC03%2016gt%20Item%20Encoder/EC03_16gt_encoder_core_dispenser_1.19_p2.litematic?raw=1",
                     "description": "Schematic of encoder with 1.19+ cart dispenser.",
                     "sha256": "67ba6d9ca8269cd7de8433bb57168e44a92601289c4e3fb4182e3722bf2d8f6b"
                 }
@@ -1323,7 +1547,7 @@
                     "identifier": "EC04",
                     "mc": "1.19.3",
                     "file": "EC04_16gt_Item_Encoder_With_Slime_And_Honey.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/encoders/EC04%2016gt%20Item%20Encoder%20With%20Slime%20And%20Honey/EC04_16gt_Item_Encoder_With_Slime_And_Honey.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/encoders/EC04%2016gt%20Item%20Encoder%20With%20Slime%20And%20Honey/EC04_16gt_Item_Encoder_With_Slime_And_Honey.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "eab688faab4644985424dded5f29dd8224861eb54af159766b1f29563f1b47f2"
                 }
@@ -1398,7 +1622,7 @@
                     "identifier": "EC05",
                     "mc": "1.19.3",
                     "file": "EC05_Hopperspeed_Encoder_With_Minimal_Code_Items.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/encoders/EC05%20Hopperspeed%20Encoder%20With%20Minimal%20Code%20Items/EC05_Hopperspeed_Encoder_With_Minimal_Code_Items.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/encoders/EC05%20Hopperspeed%20Encoder%20With%20Minimal%20Code%20Items/EC05_Hopperspeed_Encoder_With_Minimal_Code_Items.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "4af47aabd3adb05045c5318f23f5ef4cbf8a84ad406548f012ddb2b2bfbdac7d"
                 }
@@ -1471,7 +1695,7 @@
                     "identifier": "EC06",
                     "mc": "1.17.1",
                     "file": "EC06_Item_to_Binary_Encoder_With_Safety_Features.zip",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/encoders/EC06%20Item%20to%20Binary%20Encoder%20With%20Safety%20Features/EC06_Item_to_Binary_Encoder_With_Safety_Features.zip?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/encoders/EC06%20Item%20to%20Binary%20Encoder%20With%20Safety%20Features/EC06_Item_to_Binary_Encoder_With_Safety_Features.zip?raw=1",
                     "description": "WDL of device.",
                     "sha256": "77e3a2b0258a7bea8b30575d2288b4cda183e6fed00b5a0147fdd7fb3ef9097f"
                 },
@@ -1479,7 +1703,7 @@
                     "identifier": "EC06",
                     "mc": "1.17.1",
                     "file": "EC06_Item_to_Binary_Encoder_With_Safety_Features.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/encoders/EC06%20Item%20to%20Binary%20Encoder%20With%20Safety%20Features/EC06_Item_to_Binary_Encoder_With_Safety_Features.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/encoders/EC06%20Item%20to%20Binary%20Encoder%20With%20Safety%20Features/EC06_Item_to_Binary_Encoder_With_Safety_Features.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "4b1bc143bb2cc029df8b3048e7255ef63355876858e6db8dc7659e1a39054737"
                 }
@@ -1488,6 +1712,77 @@
                 {
                     "test": "Encoding test",
                     "result": "Device was able to encode properly with random input."
+                }
+            ]
+        },
+        {
+            "path": [
+                "encoders",
+                "EC07 Unstackable Item Encoder"
+            ],
+            "identifier": "EC07",
+            "title": "Unstackable Item Encoder",
+            "authors": [
+                "Basil",
+                "Pyra",
+                "77"
+            ],
+            "tags": [
+                "encoders",
+                "unstackable"
+            ],
+            "date": "25 December 2024",
+            "revision": "1",
+            "description": "The EC07 Unstackable Item Encoder is a device that sorts unstackable items using Pyra's unstackable sorter and then outputs boxes of the sorted items along with an encoded signal. The device features a built-in queue to output boxes of items upon request. The device is fully hopperlocked and is designed to sort music discs, enchanted books, potions, flint & steel, shears, powdered snow buckets, lava buckets, water buckets, boats, armor and minecarts in that order. Item codes can be set by modifying the read-only memory of the device. See the corresponding \\href{https://www.youtube.com/watch?v=1yDuKrriiYI}{explanation video on Youtube}.",
+            "image": "area_render_33_.png",
+            "tex": "EC07_Unstackable_Item_Encoder.tex",
+            "pdf": "EC07_Unstackable_Item_Encoder.pdf",
+            "features": [
+                "Uses Pyra's unstackable sorter to sort items at hopperspeed.",
+                "Built-in box loaders for each item type.",
+                "Sorts music discs, enchanted books, potions, flint & steel, shears, powdered snow buckets, lava buckets, water buckets, boats, armor and minecarts in that order.",
+                "Fully hopperlocked.",
+                "Built-in queue for output."
+            ],
+            "applications": [
+                "Sorting and encoding unstackable items."
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "gt",
+                    "conditions": "Item input",
+                    "min": "8"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.21.4",
+                    "min": "1.21",
+                    "typ": "1.21.4"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "8 x 22 x 14"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "EC07",
+                    "mc": "1.21",
+                    "file": "EC07_Unstackable_Item_Encoder.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/encoders/EC07%20Unstackable%20Item%20Encoder/EC07_Unstackable_Item_Encoder.litematic?raw=1",
+                    "description": "Schematic of device.",
+                    "sha256": "f2423e1ef97734043e4f3dc1d89b73e6303ad396576eacd275813841e4993eff"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Throughput test",
+                    "result": "Device was able to function with various unstackable input"
+                },
+                {
+                    "test": "Output test",
+                    "result": "Device was able to output boxes with item codes"
                 }
             ]
         },
@@ -1540,7 +1835,7 @@
                     "identifier": "MX01",
                     "mc": "1.18.2",
                     "file": "MX01_morning_flower_alarm_loop.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/everything-bagel/MX01%20Morning%20Flower%20Alarm%20Loop/MX01_morning_flower_alarm_loop.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/everything-bagel/MX01%20Morning%20Flower%20Alarm%20Loop/MX01_morning_flower_alarm_loop.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "beb7905640eb22ee7c489bbc7a14f1b6b90765d54e287185a64525bdc6259531"
                 }
@@ -1601,7 +1896,7 @@
                     "identifier": "MX02",
                     "mc": "1.19.3",
                     "file": "MX02_Jeopardy_Theme_Loop.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/everything-bagel/MX02%20Jeopardy%20Theme%20Loop/MX02_Jeopardy_Theme_Loop.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/everything-bagel/MX02%20Jeopardy%20Theme%20Loop/MX02_Jeopardy_Theme_Loop.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "795771ef3489660e20912a227687e90e13cfcff087b7245ba314dfe4b1b30e04"
                 }
@@ -1610,6 +1905,137 @@
                 {
                     "test": "Music test",
                     "result": "Device was able to produce the desired music."
+                }
+            ]
+        },
+        {
+            "path": [
+                "everything-bagel",
+                "MX03 Bob The Builder Loop"
+            ],
+            "identifier": "MX03",
+            "title": "Bob The Builder Loop",
+            "authors": [
+                "Andrews54757"
+            ],
+            "tags": [
+                "everything-bagel",
+                "music"
+            ],
+            "date": "25 December 2024",
+            "revision": "1",
+            "description": "The MX03 Bob The Builder Loop generates music to the tune of the \\href{https://www.youtube.com/watch?v=HdVg-2jn2OU}{Bob The Builder} theme song.\n\n``Can we fix it? Yes we can!\"",
+            "image": "bob.png",
+            "tex": "MX03_Bob_The_Builder_Loop.tex",
+            "pdf": "MX03_Bob_The_Builder_Loop.pdf",
+            "features": [
+                "Repeatedly outputs the Bob The Builder theme song"
+            ],
+            "applications": [
+                "Inspirational music."
+            ],
+            "specifications": {
+                "Music Length": {
+                    "unit": "gt",
+                    "conditions": "Time between loops.",
+                    "min": "384"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.21.4",
+                    "min": "1.13",
+                    "typ": "1.20.4"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "15 x 10 x 16"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "MX03",
+                    "mc": "1.20.4",
+                    "file": "MX03_Bob_The_Builder_Loop.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/everything-bagel/MX03%20Bob%20The%20Builder%20Loop/MX03_Bob_The_Builder_Loop.litematic?raw=1",
+                    "description": "Schematic of device.",
+                    "sha256": "f7af5eb5e22368d168a14509aa2344899cff87c4a6e4b4cd95d1e98c6b837d5c"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Music test",
+                    "result": "Device was able to produce the desired music."
+                }
+            ]
+        },
+        {
+            "path": [
+                "external-bulk",
+                "EB01 Minewave Fixed Bulk Slice"
+            ],
+            "identifier": "EB01",
+            "title": "Minewave Fixed Bulk Slice",
+            "authors": [
+                "Basil"
+            ],
+            "tags": [
+                "external-bulk",
+                "fixed-bulk",
+                "multi-slice"
+            ],
+            "date": "25 December 2024",
+            "revision": "1",
+            "description": "The EB01 Minewave Fixed Bulk Slice is a device that can be stacked to create a fixed external bulk storage system. The device interfaces with an decoder (not included) and a controller (not included) to automatically store and retrieve items with redstone control. Multi-slicing, the ability to set multiple slices to the same code, is supported. These multi-sliced slices need not be adjacent.",
+            "image": "area_render_15_.png",
+            "tex": "EB01_Minewave_Fixed_Bulk_Slice.tex",
+            "pdf": "EB01_Minewave_Fixed_Bulk_Slice.pdf",
+            "features": [
+                "1.1 million item capacity",
+                "Multi-slicing compatible",
+                "Input overflow protection",
+                "Fully hopperlocked"
+            ],
+            "applications": [
+                "External bulk storage"
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "gt",
+                    "conditions": "Input/output throughput",
+                    "min": "8"
+                },
+                "Latency": {
+                    "unit": "gt",
+                    "conditions": "From output trigger to dropper activation.",
+                    "min": "18"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.21.4",
+                    "min": "1.16",
+                    "typ": "1.21.4"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "1 x 26 x 29"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "EB01",
+                    "mc": "1.21.4",
+                    "file": "EB01_Minewave_Fixed_Bulk_Slice.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/external-bulk/EB01%20Minewave%20Fixed%20Bulk%20Slice/EB01_Minewave_Fixed_Bulk_Slice.litematic?raw=1",
+                    "description": "Schematic of device.",
+                    "sha256": "d2e24708e0f4944231663cdac6394eb1b38b5b60449c9abdd4c82187eeeccbf5"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Output test",
+                    "result": "Device was able to output boxes correctly using the output triggers."
                 }
             ]
         },
@@ -1672,7 +2098,7 @@
                     "identifier": "IM01",
                     "mc": "1.17.1",
                     "file": "IM01_100_item_memory_1.17.1.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/item-memory/IM01%20100%20Item%20RAM/IM01_100_item_memory_1.17.1.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/item-memory/IM01%20100%20Item%20RAM/IM01_100_item_memory_1.17.1.litematic?raw=1",
                     "description": "Litematic of item RAM device.",
                     "sha256": "24ae02fe85023bb4509ccf9c224438a2a4c5bbd143277a2ba30e230c254b4628"
                 }
@@ -1747,7 +2173,7 @@
                     "identifier": "IM02",
                     "mc": "1.17.1",
                     "file": "IM02_1000_item_RAM_p2.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/item-memory/IM02%201000%20Item%20RAM/IM02_1000_item_RAM_p2.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/item-memory/IM02%201000%20Item%20RAM/IM02_1000_item_RAM_p2.litematic?raw=1",
                     "description": "Litematic of item RAM device.",
                     "sha256": "98d264ac5f9ac5f3410d7e20efcc5eb6e6d01f1613cb393d7962303eec618faf"
                 }
@@ -1828,7 +2254,7 @@
                     "identifier": "IM03",
                     "mc": "1.17.1",
                     "file": "IM03_Compact_Disk_Drive_Temp_Storage.zip",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/item-memory/IM03%20Compact%20Disk%20Drive%20Temp%20Storage/IM03_Compact_Disk_Drive_Temp_Storage.zip?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/item-memory/IM03%20Compact%20Disk%20Drive%20Temp%20Storage/IM03_Compact_Disk_Drive_Temp_Storage.zip?raw=1",
                     "description": "World download of device.",
                     "sha256": "159b0e1bd74c39b9c8f60f5c7455d39c668cefe69b2a1e16079412f22ad65af6"
                 },
@@ -1836,9 +2262,228 @@
                     "identifier": "IM03",
                     "mc": "1.17.1",
                     "file": "IM03_Compact_Disk_Drive_Temp_Storage.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/item-memory/IM03%20Compact%20Disk%20Drive%20Temp%20Storage/IM03_Compact_Disk_Drive_Temp_Storage.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/item-memory/IM03%20Compact%20Disk%20Drive%20Temp%20Storage/IM03_Compact_Disk_Drive_Temp_Storage.litematic?raw=1",
                     "description": "Schematic of device. Inventories included.",
                     "sha256": "53c9944e8f6a9cb2a8beeeb36ee8ca943ecb5174e5e84fb91bbd0c5d88b63f48"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Pair generation test",
+                    "result": "Device was able to produce pairs corresponding to the address."
+                }
+            ]
+        },
+        {
+            "path": [
+                "item-memory",
+                "IM04 Compact 1000 Item RAM"
+            ],
+            "identifier": "IM04",
+            "title": "Compact 1000 Item RAM",
+            "authors": [
+                "Andrews54757"
+            ],
+            "tags": [
+                "item-memory",
+                "random-access"
+            ],
+            "date": "25 December 2024",
+            "revision": "1",
+            "description": "The IM04 is able to store and retrieve items with a specific decimal code. This may be useful as a temp storage in an encoded dynamic sorting system.",
+            "image": "imageassa.png",
+            "tex": "IM04_Compact_1000_Item_RAM.tex",
+            "pdf": "IM04_Compact_1000_Item_RAM.pdf",
+            "features": [
+                "Has 1000 different codes/item types. a dropper of storage per code.",
+                "Random access. Can insert and retrieve items in constant time in any order.",
+                "Compact. Each address is packed into a 1x1 area.",
+                "46gt latency from call request to item.",
+                "Fully hopperlocked."
+            ],
+            "applications": [
+                "Temp storage for merging.",
+                "Dynamic bulk mapping storage."
+            ],
+            "specifications": {
+                "Order Execution Interval": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "32"
+                },
+                "Hopper Count": {
+                    "unit": "Hoppers",
+                    "conditions": "",
+                    "typ": "1055"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.21.4",
+                    "min": "1.13",
+                    "typ": "1.19.3"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "17 x 41 x 33"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "IM04",
+                    "mc": "1.19.3",
+                    "file": "IM04_Compact_1000_Item_RAM.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/item-memory/IM04%20Compact%201000%20Item%20RAM/IM04_Compact_1000_Item_RAM.litematic?raw=1",
+                    "description": "Schematic of device.",
+                    "sha256": "a380681cd7a4a6f2de2d318e0f3e007a9c091b846f5d41ae549594178be9731b"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Insertion",
+                    "result": "Items were successfully inserted in all positions."
+                },
+                {
+                    "test": "Retrieval",
+                    "result": "Items were successfully retrieved from all positions."
+                }
+            ]
+        },
+        {
+            "path": [
+                "item-memory",
+                "IM05 1000 Non-Box Item RAM"
+            ],
+            "identifier": "IM05",
+            "title": "1000 Non-Box Item RAM",
+            "authors": [
+                "Andrews54757"
+            ],
+            "tags": [
+                "item-memory",
+                "random-access",
+                "non-box"
+            ],
+            "date": "25 December 2024",
+            "revision": "1",
+            "description": "The IM05 is able to store and retrieve non-box items with a specific decimal code. This may be useful for implementing dictionaries in an encoded dynamic sorting system. The device uses a 50-address item memory system with a hoppercart based slot cycling system to store and retrieve 1000 different items at near constant time.",
+            "image": "image_1 (1).png",
+            "tex": "IM05_1000_Non-Box_Item_RAM.tex",
+            "pdf": "IM05_1000_Non-Box_Item_RAM.pdf",
+            "features": [
+                "Has 1000 different codes/item types. Items are stored in slots inside shulker boxes inside a dropper.",
+                "Random access. Can insert and retrieve items in constant time in any order.",
+                "Compact. 22x10x19 volume.",
+                "Maximum 55gt latency from call request to item."
+            ],
+            "applications": [
+                "Dynamic code to item mapping.",
+                "Linked-list dynamic bulk mapping storage. See \\href{https://www.youtube.com/watch?v=x6W-ZWkIdPE}{explanation video on Youtube}."
+            ],
+            "specifications": {
+                "Latency": {
+                    "unit": "gt",
+                    "conditions": "From call request to item.",
+                    "min": "36",
+                    "max": "55"
+                },
+                "Hopper Count": {
+                    "unit": "Hoppers",
+                    "conditions": "",
+                    "typ": "88"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.21.4",
+                    "min": "1.17",
+                    "typ": "1.19.3"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "22 x 10 x 19"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "IM05",
+                    "mc": "1.19.3",
+                    "file": "IM05_1000_Non-Box_Item_RAM.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/item-memory/IM05%201000%20Non-Box%20Item%20RAM/IM05_1000_Non-Box_Item_RAM.litematic?raw=1",
+                    "description": "Schematic of device. Includes dummy item storage.",
+                    "sha256": "faab6738f6a1b0f24f95da5df765bfe60f38e6e36c3cc9cac892028de8465e5b"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Insertion",
+                    "result": "Items were successfully inserted in all positions."
+                },
+                {
+                    "test": "Retrieval",
+                    "result": "Items were successfully retrieved from all positions."
+                }
+            ]
+        },
+        {
+            "path": [
+                "item-memory",
+                "IM06 8bit Disk Drive Temp Storage"
+            ],
+            "identifier": "IM06",
+            "title": "8bit Disk Drive Temp Storage",
+            "authors": [
+                "disharmonica_"
+            ],
+            "tags": [
+                "item-memory",
+                "disk-drive",
+                "temp-storage"
+            ],
+            "date": "25 December 2024",
+            "revision": "1",
+            "description": "The IM06 can temporarily store and retrieve boxes with a binary code. Intended for keeping the leftover partials of bulk items, for future merging operations. 256 different types can be held by this device.",
+            "image": "area_render_35_.png",
+            "tex": "IM06_8bit_Disk_Drive_Temp_Storage.tex",
+            "pdf": "IM06_8bit_Disk_Drive_Temp_Storage.pdf",
+            "features": [
+                "Extremely compact, 13x9x7 lwh",
+                "Very accessible inputs, output into waterstream, perfect for plumbing",
+                "Has simple temp logic that gives out both boxes, if another one was in storage already",
+                "Uses water buckets as placeholders, turns them into buckets to store very compact when not needed",
+                "Quick cycle and reset, min.102gt - max.598gt = 17.5 seconds on average per request",
+                "Only uses 21 hoppers, wiring for hopperlocking included"
+            ],
+            "applications": [
+                "Dynamic sorting partial box merging loop"
+            ],
+            "specifications": {
+                "Minimum Latency": {
+                    "unit": "gt",
+                    "conditions": "From input to pair output",
+                    "min": "102",
+                    "max": "598"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.21.4",
+                    "min": "1.17",
+                    "typ": "1.19.3"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "13 x 9 x 7"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "IM06",
+                    "mc": "1.20.1",
+                    "file": "IM06_8bit_Disk_Drive_Temp_Storage.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/item-memory/IM06%208bit%20Disk%20Drive%20Temp%20Storage/IM06_8bit_Disk_Drive_Temp_Storage.litematic?raw=1",
+                    "description": "Schematic of device.",
+                    "sha256": "9fdb64f4d4eeff47db78b3d30c255791a0073bd3e5c487d5c90bbf2e82502afb"
                 }
             ],
             "testData": [
@@ -1898,7 +2543,7 @@
                     "identifier": "LC01",
                     "mc": "1.17.1",
                     "file": "LC01_1w_redcoder.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/logic-and-computation/LC01%201%20Wide%20Redcoder/LC01_1w_redcoder.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/logic-and-computation/LC01%201%20Wide%20Redcoder/LC01_1w_redcoder.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "9618d59aada73fea71e7971ee5037950b395c756b0ffe704e769e3618569a590"
                 }
@@ -1966,7 +2611,7 @@
                     "identifier": "LC02",
                     "mc": "1.17.1",
                     "file": "LC02_hopperspeed_hex_to_bin.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/logic-and-computation/LC02%20Hopperspeed%20Hex%20to%20Binary/LC02_hopperspeed_hex_to_bin.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/logic-and-computation/LC02%20Hopperspeed%20Hex%20to%20Binary/LC02_hopperspeed_hex_to_bin.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "2982da7cdcd9143f83ec2ef4e4eb526443d7b87276245557cbeaeeb6cb931c93"
                 }
@@ -2032,7 +2677,7 @@
                     "identifier": "LC03",
                     "mc": "1.17.1",
                     "file": "LC03_await_latch.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/logic-and-computation/LC03%20Await%20Latch/LC03_await_latch.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/logic-and-computation/LC03%20Await%20Latch/LC03_await_latch.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "961e642181549f1037c45cba952beab068d8898d124b43e5c030a75f2ec7da56"
                 }
@@ -2092,7 +2737,7 @@
                     "identifier": "LC04",
                     "mc": "1.17.1",
                     "file": "LC04_2gt_binary_stream_splitter_p1.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/logic-and-computation/LC04%202gt%20Binary%20Stream%20Splitter/LC04_2gt_binary_stream_splitter_p1.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/logic-and-computation/LC04%202gt%20Binary%20Stream%20Splitter/LC04_2gt_binary_stream_splitter_p1.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "7eb769b1949ca7f0ba7377d2ab09a42ce9aafb730aabe1509003a13d4e0c09e1"
                 }
@@ -2158,7 +2803,7 @@
                     "identifier": "LC05",
                     "mc": "1.17.1",
                     "file": "LC05_stateless_find_nearest.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/logic-and-computation/LC05%20Stateless%20Find%20Nearest/LC05_stateless_find_nearest.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/logic-and-computation/LC05%20Stateless%20Find%20Nearest/LC05_stateless_find_nearest.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "c48bf2ed2945249ce63610c08ab9c86a5416cf925e186fc596827b5427516b94"
                 }
@@ -2225,7 +2870,7 @@
                     "identifier": "LC06",
                     "mc": "1.17.1",
                     "file": "LC06_stateless_10bit_double_dabble.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/logic-and-computation/LC06%20Stateless%2010%20Bit%20Double%20Dabble/LC06_stateless_10bit_double_dabble.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/logic-and-computation/LC06%20Stateless%2010%20Bit%20Double%20Dabble/LC06_stateless_10bit_double_dabble.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "5305acbae644456a9f34ee434f72eacd8b0f5494cbcb970b2a7e412659b79fa5"
                 }
@@ -2295,7 +2940,7 @@
                     "identifier": "LC07",
                     "mc": "1.19.3",
                     "file": "LC07_Decimal_Delay_Generator.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/logic-and-computation/LC07%20Decimal%20Delay%20Generator/LC07_Decimal_Delay_Generator.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/logic-and-computation/LC07%20Decimal%20Delay%20Generator/LC07_Decimal_Delay_Generator.litematic?raw=1",
                     "description": "Schematic of device. Test input regions included.",
                     "sha256": "463918433e3d9a74de338b62cf6eb91a019494feca79e1e9f193421fe0758fad"
                 }
@@ -2357,7 +3002,7 @@
                     "identifier": "LC08",
                     "mc": "1.19.3",
                     "file": "LC08_Precision_Timings_SIPO_Register.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/logic-and-computation/LC08%20Precision%20Timings%20SIPO%20Register/LC08_Precision_Timings_SIPO_Register.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/logic-and-computation/LC08%20Precision%20Timings%20SIPO%20Register/LC08_Precision_Timings_SIPO_Register.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "7bd9d1c88d650d119137c74511bf0d2f664215a8e7c5b25d2066606514cb68ce"
                 }
@@ -2366,6 +3011,89 @@
                 {
                     "test": "SIPO test",
                     "result": "Device was able to seperate signal order sent in same game tick."
+                }
+            ]
+        },
+        {
+            "path": [
+                "logic-and-computation",
+                "LC09 Tiny Request Manager"
+            ],
+            "identifier": "LC09",
+            "title": "Tiny Request Manager",
+            "authors": [
+                "Basil",
+                "Heilz",
+                "Skyzy"
+            ],
+            "tags": [
+                "logic-and-computation",
+                "request-manager"
+            ],
+            "date": "25 December 2024",
+            "revision": "1",
+            "description": "The LC09 Tiny Request Manager is a device that can be used to queue requests in a system. It ensures that only one request is processed at a time regardless of random request timings. The device is infinitely expandable and can be paused. Note: Reset input is not rapid input proof.",
+            "image": "pic.png",
+            "tex": "LC09_Tiny_Request_Manager.tex",
+            "pdf": "LC09_Tiny_Request_Manager.pdf",
+            "features": [
+                "Random input proof",
+                "Infinitely expandable",
+                "Pausable",
+                "Compact. 8x4x5 volume."
+            ],
+            "applications": [
+                "Safely queueing procesess in a system."
+            ],
+            "specifications": {
+                "Throughput": {
+                    "unit": "gt",
+                    "conditions": "Normal Usage",
+                    "min": "10"
+                },
+                "Latency": {
+                    "unit": "gt",
+                    "conditions": "From lever input to torch depowering.",
+                    "min": "16"
+                },
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.21.4",
+                    "min": "1.13",
+                    "typ": "1.21.4"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "8 x 4 x 5"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "LC09",
+                    "mc": "1.21.4",
+                    "file": "LC09_Tiny_Request_Manager.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/logic-and-computation/LC09%20Tiny%20Request%20Manager/LC09_Tiny_Request_Manager.litematic?raw=1",
+                    "description": "Schematic of device. Includes three variants.",
+                    "sha256": "e96b29bdb6b07fdee27a3e2ff000b7ca79302ddb8b716ebd0898881e8e5efdb2"
+                },
+                {
+                    "identifier": "LC09B",
+                    "mc": "1.19.3",
+                    "file": "LC09_Tiny_Request_Manager_1.19.3.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/logic-and-computation/LC09%20Tiny%20Request%20Manager/LC09_Tiny_Request_Manager_1.19.3.litematic?raw=1",
+                    "description": "Schematic of device for older versions.",
+                    "sha256": "e4016bd30107d02385b21d83d9debf691a15b0241794b15ad9508c0344754075"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Throughput test",
+                    "result": "Device was able to function with 10gt clocked input. Note: levers must not go from all off to on while clocking. Invalid toggle-state position was observed in this case."
+                },
+                {
+                    "test": "Random input test",
+                    "result": "Device was able to process requests correctly with random lever inputs."
                 }
             ]
         },
@@ -2423,7 +3151,7 @@
                     "identifier": "MG01",
                     "mc": "1.19.3",
                     "file": "MG01_Merging_Pair_Optimizer.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/merging/MG01%20Merging%20Pair%20Optimizer/MG01_Merging_Pair_Optimizer.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/merging/MG01%20Merging%20Pair%20Optimizer/MG01_Merging_Pair_Optimizer.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "583f2726b5a60d2d9edf9a3b34298ae0f88b4430343ecab95413b8aa6a35d525"
                 },
@@ -2431,7 +3159,7 @@
                     "identifier": "MG01",
                     "mc": "1.19.3",
                     "file": "MG01S_Merging_Pair_Optimizer_With_Sorter.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/merging/MG01%20Merging%20Pair%20Optimizer/MG01S_Merging_Pair_Optimizer_With_Sorter.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/merging/MG01%20Merging%20Pair%20Optimizer/MG01S_Merging_Pair_Optimizer_With_Sorter.litematic?raw=1",
                     "description": "Schematic of device with fill level sorter.",
                     "sha256": "d8e7a9cb821a67b94f7778e3559e1b163be25e3752bf572c829c2fbf5bf6d23c"
                 }
@@ -2446,6 +3174,66 @@
                 {
                     "test": "Pairing test",
                     "result": "Device was able to pair according to most-least pairing algorithm with random box input."
+                }
+            ]
+        },
+        {
+            "path": [
+                "merging",
+                "MG02 Minimum Hopper Box Merger"
+            ],
+            "identifier": "MG02",
+            "title": "Minimum Hopper Box Merger",
+            "authors": [
+                "Floppydonkey"
+            ],
+            "tags": [
+                "merging",
+                "minimum-hopper",
+                "box-merger"
+            ],
+            "date": "25 December 2024",
+            "revision": "1",
+            "description": "The MG02 Minimum Hopper Box Merger is a device that can two partial shulker boxes into a full shulker box. The device is fully hopperlocked and uses the minimum number of hoppers required for a shulker box merger. Box comparison device for determining which box should be loaded/unloaded is not included.",
+            "image": "area_render.png",
+            "tex": "MG02_Minimum_Hopper_Box_Merger.tex",
+            "pdf": "MG02_Minimum_Hopper_Box_Merger.pdf",
+            "features": [
+                "Uses only 3 hoppers per slice, the minimum required for a shulker box merger",
+                "Fully hopperlocked",
+                "Compact. 8x10x23 volume",
+                "Includes 8 merger slices to merge multiple boxes simultaneously"
+            ],
+            "applications": [
+                "Merging partial boxes in a dynamic sorting system"
+            ],
+            "specifications": {
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.21.4",
+                    "min": "1.16",
+                    "typ": "1.17.1"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "8 x 10 x 23"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "MG02",
+                    "mc": "1.17.1",
+                    "file": "MG02_Minimum_Hopper_Box_Merger.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/merging/MG02%20Minimum%20Hopper%20Box%20Merger/MG02_Minimum_Hopper_Box_Merger.litematic?raw=1",
+                    "description": "Schematic of device.",
+                    "sha256": "4f7e3d92eb669dd8ede891a2b24c73a29d18fe8384ba19370da8b9dbc18a8469"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Merging test",
+                    "result": "Device was able to merge multiple boxes simultaneously."
                 }
             ]
         },
@@ -2493,7 +3281,7 @@
                     "identifier": "SG01",
                     "mc": "1.17.1",
                     "file": "SG01_Shulker_Box_Splitter_Array.zip",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/splitting/SG01%20Shulker%20Box%20Splitter%20Array/SG01_Shulker_Box_Splitter_Array.zip?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/splitting/SG01%20Shulker%20Box%20Splitter%20Array/SG01_Shulker_Box_Splitter_Array.zip?raw=1",
                     "description": "World download of device.",
                     "sha256": "b08eccb6e3ea3d8be8ffb1fcd576fd6a41e5518864f8d514449c1aadc659ac85"
                 }
@@ -2508,10 +3296,10 @@
         {
             "path": [
                 "splitting",
-                "SG02 Shulker Box Splitter"
+                "SG02 Global Clock Shulker Box Splitter"
             ],
             "identifier": "SG02",
-            "title": "Shulker Box Splitter",
+            "title": "Global Clock Shulker Box Splitter",
             "authors": [
                 "Obi"
             ],
@@ -2519,11 +3307,11 @@
                 "splitting"
             ],
             "date": "21 December 2022",
-            "revision": "2",
+            "revision": "3",
             "description": "Splits mixed boxes into smaller boxes of the same type. This design uses the hopper dueling mechanism for a \"filter itemless\" setup. It uses a global clock to allow for it to be paused during operation. Control wiring is comparatively tricky to do because of the global clock. Can lose empty boxes (although will not break) if they are input with no items. So don't do that.",
             "image": "globalclocksplitter1.png",
-            "tex": "SG02_Shulker_Box_Splitter.tex",
-            "pdf": "SG02_Shulker_Box_Splitter.pdf",
+            "tex": "SG02_Global_Clock_Shulker_Box_Splitter.tex",
+            "pdf": "SG02_Global_Clock_Shulker_Box_Splitter.pdf",
             "features": [
                 "2wABt, fully hopper locked",
                 "Globally clocked, allowing the array to be paused in operation",
@@ -2548,8 +3336,8 @@
                 {
                     "identifier": "SG02",
                     "mc": "1.17.1",
-                    "file": "SG02_Shulker_Box_Splitter.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/splitting/SG02%20Shulker%20Box%20Splitter/SG02_Shulker_Box_Splitter.litematic?raw=1",
+                    "file": "SG02_Global_Clock_Shulker_Box_Splitter.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/splitting/SG02%20Global%20Clock%20Shulker%20Box%20Splitter/SG02_Global_Clock_Shulker_Box_Splitter.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "62a2afea7e0fb037c684e3a1edb7f1abcae34d9e50f979d200ab97731f5724ab"
                 }
@@ -2624,7 +3412,7 @@
                     "identifier": "SG03",
                     "mc": "1.19.3",
                     "file": "SG03_High_Speed_Cart_Based_Ideal_Splitter.zip",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/splitting/SG03%20High%20Speed%20Cart%20Based%20Ideal%20Splitter/SG03_High_Speed_Cart_Based_Ideal_Splitter.zip?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/splitting/SG03%20High%20Speed%20Cart%20Based%20Ideal%20Splitter/SG03_High_Speed_Cart_Based_Ideal_Splitter.zip?raw=1",
                     "description": "WDL of device. Cart unloader version included. Inventories included.",
                     "sha256": "f2f14a76bcf2fa767988e63e78ef8d6405bf7c456b03563aaad2ada31708a726"
                 }
@@ -2633,6 +3421,74 @@
                 {
                     "test": "Ideal splitting test",
                     "result": "Device was able to split HermitCraft boxes correctly with minimum partial boxes."
+                }
+            ]
+        },
+        {
+            "path": [
+                "splitting",
+                "SG04 Compact Shulker Box Splitter Array"
+            ],
+            "identifier": "SG04",
+            "title": "Compact Shulker Box Splitter Array",
+            "authors": [
+                "Basil",
+                "Kizu"
+            ],
+            "tags": [
+                "splitting"
+            ],
+            "date": "25 December 2024",
+            "revision": "1",
+            "description": "The SG04 is a compact shulker box splitter array that can split mixed item shulker boxes into smaller boxes of the same type. The design uses the hopper dueling mechanism for a \"filter itemless\" setup. It uses a global clock to allow for it to be paused during operation. Note: It is not empty box input proof. Inspired by Obi's design.",
+            "image": "area_render_20_.png",
+            "tex": "SG04_Compact_Shulker_Box_Splitter_Array.tex",
+            "pdf": "SG04_Compact_Shulker_Box_Splitter_Array.pdf",
+            "features": [
+                "Compact design. 20x17x7",
+                "Seperate output for unstackable items.",
+                "Fully hopperlocked.",
+                "Filter itemless. (kissing hoppers)",
+                "Pausable. Will only break sorted boxes if running.",
+                "Automatic refill of empty boxes.",
+                "Will ensure empty boxes are present before starting and will pause if empty boxes run out."
+            ],
+            "applications": [
+                "Splitting mixed item shulker boxes for dynamic sorting systems."
+            ],
+            "specifications": {
+                "MC Version": {
+                    "unit": "MCV",
+                    "conditions": "Latest version at time of writing: 1.21.4",
+                    "min": "1.16",
+                    "typ": "1.21.4"
+                },
+                "Dimensions": {
+                    "unit": "Blocks",
+                    "conditions": "",
+                    "typ": "20 x 17 x 7"
+                }
+            },
+            "downloadInfo": [
+                {
+                    "identifier": "SG04",
+                    "mc": "1.21.4",
+                    "file": "SG04_Compact_Shulker_Box_Splitter_Array.litematic",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/splitting/SG04%20Compact%20Shulker%20Box%20Splitter%20Array/SG04_Compact_Shulker_Box_Splitter_Array.litematic?raw=1",
+                    "description": "Schematic of device.",
+                    "sha256": "1128d8466f60ac31b021d562bc749859f52bae2d7123211df90f6fd7f28e0201"
+                }
+            ],
+            "relatedComponents": [
+                {
+                    "identifier": "SG02",
+                    "description": "Global Clock Shulker Box Splitter"
+                }
+            ],
+            "testData": [
+                {
+                    "test": "Splitting test",
+                    "result": "Device was able to split mixed boxes correctly."
                 }
             ]
         },
@@ -2687,7 +3543,7 @@
                     "identifier": "TP01",
                     "mc": "1.17.1",
                     "file": "TP01_Decimal_Encoded_Variable_Instant_Dropperline.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/transport/TP01%20Decimal%20Encoded%20Variable%20Instant%20Dropperline/TP01_Decimal_Encoded_Variable_Instant_Dropperline.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/transport/TP01%20Decimal%20Encoded%20Variable%20Instant%20Dropperline/TP01_Decimal_Encoded_Variable_Instant_Dropperline.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "02587019e77a90213983605a69679e73be5979fc35a2cae9f867efb65bbee101"
                 }
@@ -2750,7 +3606,7 @@
                     "identifier": "TP02",
                     "mc": "1.17.1",
                     "file": "TP02_Pipelined_Encoded_Variable_Waterstream.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/transport/TP02%20Pipelined%20Encoded%20Variable%20Waterstream/TP02_Pipelined_Encoded_Variable_Waterstream.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/transport/TP02%20Pipelined%20Encoded%20Variable%20Waterstream/TP02_Pipelined_Encoded_Variable_Waterstream.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "3be07cd233b6aec9526343337ebae0de9db04833f58c6f30264ad37bb03b3fb5"
                 }
@@ -2812,7 +3668,7 @@
                     "identifier": "WI01",
                     "mc": "1.17.1",
                     "file": "WI01_6gt-able_Instant_Comparator_Wire.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/wiring/WI01%206gt-able%20Instant%20Comparator%20Wire/WI01_6gt-able_Instant_Comparator_Wire.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/wiring/WI01%206gt-able%20Instant%20Comparator%20Wire/WI01_6gt-able_Instant_Comparator_Wire.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "77657730d3f1ddb13c1291e10888e7d59dc94fd125ad25096034011f5f1b71d4"
                 }
@@ -2875,7 +3731,7 @@
                     "identifier": "WI02",
                     "mc": "1.17.1",
                     "file": "WI02_Instant_Upwards_Comparator_Wire.litematic",
-                    "link": "https://github.com/Soontech-Annals/Archive/blob/364bde8dbcbc2e5337489ff435bcda9b387017e2/Archive/wiring/WI02%20Instant%20Upwards%20Comparator%20Wire/WI02_Instant_Upwards_Comparator_Wire.litematic?raw=1",
+                    "link": "https://github.com/Soontech-Annals/Archive/blob/b56572c0d2b4f182d9e9d41449d8cb2963b923ae/Archive/wiring/WI02%20Instant%20Upwards%20Comparator%20Wire/WI02_Instant_Upwards_Comparator_Wire.litematic?raw=1",
                     "description": "Schematic of device.",
                     "sha256": "0851ceecbc13e1678eefae313e757cd26850a3296b40cd214d1acce65a7fd822"
                 }
